@@ -1,0 +1,15 @@
+.DS_Store
+.next/
+node_modules/
+node_modules
+*.tsbuildinfo
+dist/
+out/
+.env
+.env.*
+!.env.example
+*.zip
+*.tif
+*.tiff
+content-export/
+imported-frontend/
