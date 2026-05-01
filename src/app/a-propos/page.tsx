@@ -26,7 +26,7 @@ export default function AboutPage() {
             <SectionIntro
               eyebrow="Histoire"
               title="Un groupe construit autour de l'accompagnement et de la création"
-              lead="Compañeros couvre principalement l'assistance voyage, les cours de langues, les préparations aux concours et les services éducatifs. JBK couvre la production audiovisuelle, l'événementiel, le e-commerce et les services créatifs."
+              lead="Compañeros couvre principalement l'assistance voyage, les cours de langues, les préparations aux concours et les services éducatifs. JBK couvre la production audiovisuelle, l'événementiel et les services créatifs."
             />
             <p className="lead">
               L'ensemble est porté par Banderas Kouam, pédagogue, réalisateur, producteur et acteur. Cette vision relie l'accompagnement humain, la formation, la création et le service professionnel.

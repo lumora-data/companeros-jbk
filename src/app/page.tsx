@@ -43,7 +43,7 @@ export default function HomePage() {
           <Film size={44} />
           <div>
             <h2>JBK & SERVICES</h2>
-            <p>Production audiovisuelle, communication, événementiel, talents, shop et services créatifs.</p>
+            <p>Production audiovisuelle, communication, événementiel, talents et services créatifs.</p>
           </div>
           <Link className="button light" href="/jbk">
             Découvrir JBK <ArrowRight size={18} />
@@ -56,7 +56,7 @@ export default function HomePage() {
           <SectionIntro
             eyebrow="Qui sommes-nous ?"
             title="Une alliance stratégique au service de votre réussite et de votre créativité"
-            lead="Compañeros-JBK Empire réunit des services utiles au quotidien : préparer un départ, apprendre une langue, réussir un concours, produire une vidéo, organiser un événement ou commander des articles personnalisés."
+            lead="Compañeros-JBK Empire réunit des services utiles au quotidien : préparer un départ, apprendre une langue, réussir un concours, produire une vidéo ou organiser un événement."
             centered
           />
           <div className="grid three value-grid">
@@ -99,7 +99,7 @@ export default function HomePage() {
           <Sparkles size={42} color="var(--blue)" style={{ marginInline: "auto" }} />
           <h2 className="title">Besoin d'un accompagnement ?</h2>
           <p className="lead" style={{ maxWidth: 720, marginInline: "auto" }}>
-            L'équipe vous oriente vers le bon service selon votre projet : voyage, cours, traduction, production, événement ou boutique.
+            L'équipe vous oriente vers le bon service selon votre projet : voyage, cours, traduction, production ou événement.
           </p>
           <div className="button-row" style={{ justifyContent: "center", marginTop: 24 }}>
             <Link className="button primary" href="/contact">Nous contacter</Link>

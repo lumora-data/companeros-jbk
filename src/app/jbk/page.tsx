@@ -18,7 +18,7 @@ export default function JbkPage() {
     ["Brenda", "long-metrage-07.jpg"],
     ["Halte !", "long-metrage-09.jpg"],
     ["Mirando Pa'a Cuenca", "long-metrage-10.jpg"],
-    ["Par elles pour elles", "long-metrage-11.jpg"],
+    ["Par Elles Pour Elles", "long-metrage-11.jpg"],
     ["20.000 Cedis", "long-metrage-12.jpg"],
     ["Potion de séduction", "long-metrage-15.jpg"],
     ["PFFF", "long-metrage-16.jpg"],
@@ -38,7 +38,7 @@ export default function JbkPage() {
         image={hero}
         eyebrow="JBK & SERVICES"
         title="Films, événementiel, communication et services créatifs"
-        lead="JBK Films réunit une maison de production, une équipe technique, une agence d'acteurs, des services événementiels et une boutique."
+        lead="JBK Films réunit une maison de production, une équipe technique, une agence d'acteurs et des services créatifs."
       >
         <Link className="button red" href="/contact">Demander un service</Link>
         <a className="button light" href={contact.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
@@ -49,7 +49,7 @@ export default function JbkPage() {
           <SectionIntro
             eyebrow="À propos de JBK Films"
             title="Une maison de production et un écosystème créatif"
-            lead={direction.body[0] ?? "JBK Films réunit une maison de production, une équipe technique, une agence d'acteurs, des services événementiels et une boutique."}
+            lead={direction.body[0] ?? "JBK Films réunit une maison de production, une équipe technique, une agence d'acteurs et des services créatifs."}
             light
           />
         </div>
@@ -85,7 +85,7 @@ export default function JbkPage() {
         <div className="container">
           <SectionIntro
             eyebrow="Productions"
-            title="Longs métrages et courts métrages"
+            title="Courts métrages et longs métrages"
             lead={productions.body[0] ?? "JBK développe des productions audiovisuelles portées par une équipe de réalisation, de production et d'acteurs."}
             light
           />
@@ -143,7 +143,7 @@ export default function JbkPage() {
           <article className="card">
             <Film size={34} color="var(--red)" />
             <h3>Productions JBK Films</h3>
-            <p>Courts métrages, longs métrages, séries, top productions et contenus créatifs portés par l'équipe.</p>
+            <p>Courts métrages et longs métrages portés par l'équipe de production et les talents JBK.</p>
           </article>
         </div>
       </section>
@@ -153,7 +153,7 @@ export default function JbkPage() {
           <Sparkles size={42} color="var(--red)" style={{ marginInline: "auto" }} />
           <h2 className="title">Une idée à produire ou un événement à préparer ?</h2>
           <p className="lead" style={{ maxWidth: 760, marginInline: "auto" }}>
-            JBK peut vous accompagner pour une vidéo, une publicité, un shooting, un événement, une formation ou une commande boutique.
+            JBK peut vous accompagner pour une vidéo, une publicité, un shooting, un événement ou une formation.
           </p>
           <div className="button-row" style={{ justifyContent: "center", marginTop: 24 }}>
             <Link className="button red" href="/contact">Démarrer un projet</Link>

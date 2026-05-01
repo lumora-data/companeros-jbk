@@ -138,15 +138,6 @@ export const jbkEvents = [
   "Shooting photos",
 ];
 
-export const jbkShop = [
-  "Survêtements",
-  "Maillots",
-  "Maillots professionnels",
-  "Polos et t-shirts imprimables",
-  "Godasses",
-  "Matériels de sport",
-];
-
 export const team = [
   ["Banderas Kouam", "Président Directeur Général, fondateur de JBK"],
   ["Faddel Emvoutou", "Directeur Administratif"],
@@ -308,14 +299,8 @@ export function getJbkPageData() {
       {
         title: "Productions JBK Films",
         body: text.slice(70, 78),
-        bullets: ["Courts métrages", "Longs métrages", "Séries", "Top productions", "JBK Ciné Études"],
+        bullets: ["Courts métrages", "Longs métrages"],
         images: pageImages("03-jbk-services", page, 72, 10),
-      },
-      {
-        title: "JBK Shop",
-        body: text.slice(78, 88),
-        bullets: jbkShop,
-        images: pageImages("03-jbk-services", page, 80, 8),
       },
     ] satisfies ServiceSection[],
   };

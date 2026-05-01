@@ -12,7 +12,7 @@ export default function ContactPage() {
         image={hero}
         eyebrow="Contact"
         title="Parlons de votre projet"
-        lead="Voyage, formation, traduction, production audiovisuelle, événementiel, boutique ou partenariat : contactez l'équipe Compañeros-JBK Empire."
+        lead="Voyage, formation, traduction, production audiovisuelle, événementiel ou partenariat : contactez l'équipe Compañeros-JBK Empire."
       >
         <a className="button whatsapp" href={contact.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
         <a className="button light" href={`mailto:${contact.email}`}>Envoyer un email</a>
@@ -67,7 +67,7 @@ export default function ContactPage() {
                 <option>Compañeros - Cours de soutien</option>
                 <option>JBK - Audiovisuel</option>
                 <option>JBK - Événementiel</option>
-                <option>JBK - Shop</option>
+                <option>JBK - Services créatifs</option>
                 <option>Partenariat</option>
                 <option>Autre</option>
               </select>
