@@ -779,6 +779,10 @@ main {
   line-height: 1.7;
 }
 
+.language-learning-section {
+  overflow: visible;
+}
+
 .compact-grid {
   gap: 14px;
 }
@@ -1568,6 +1572,24 @@ textarea {
   .language-card img {
     min-height: 260px;
   }
+
+  .language-learning-section,
+  .language-learning-section .section-intro,
+  .language-learning-section .language-card {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+
+  .language-learning-section .grid.two {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .language-learning-section .language-card {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1648,6 +1670,24 @@ textarea {
   .actor-feature span {
     letter-spacing: 0.08em;
     font-size: 0.7rem;
+  }
+
+  .language-learning-section .section-intro {
+    margin-bottom: 24px;
+  }
+
+  .language-learning-section .language-card > div {
+    padding: 18px;
+  }
+
+  .language-learning-section .language-card h3 {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .language-learning-section .language-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   .partner-logo {

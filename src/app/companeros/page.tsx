@@ -36,7 +36,7 @@ export default function CompanerosPage() {
         <Link className="button light" href="/contact">Demander une orientation</Link>
       </Hero>
 
-      <section className="section">
+      <section className="section language-learning-section">
         <div className="container">
           <SectionIntro
             eyebrow="Services"
