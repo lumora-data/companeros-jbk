@@ -35,21 +35,5 @@
       "href": "http://maps.google.com/?q=https%3A%2F%2Fwww.google.com%2Fsearch%3Fclient%3Dfirefox-b-d%26amp%3Bq%3Dcompaneros%252FJbkfilms%2Bmaps"
     }
   ],
-  "images": [
-    {
-      "file": "images/03-400-60f36a965f0b9-4e5d5a84.jpg",
-      "originalUrl": "https://images.cdn-files-a.com/ready_uploads/media/8653140/400_60f36a965f0b9.jpg",
-      "alt": ""
-    },
-    {
-      "file": "images/04-400-6373c9b76bdcb-8f68da69.jpg",
-      "originalUrl": "https://images.cdn-files-a.com/ready_uploads/media/9052187/400_6373c9b76bdcb.jpg",
-      "alt": ""
-    },
-    {
-      "file": "images/09-800-686553125c61f-3cd75252.jpg",
-      "originalUrl": "https://files.cdn-files-a.com/uploads/10951229/800_686553125c61f.jpg",
-      "alt": ""
-    }
-  ]
+  "images": []
 }
