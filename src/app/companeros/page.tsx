@@ -9,18 +9,18 @@ export default function CompanerosPage() {
   const [travel, , languages, , tutoring] = data.sections;
   const languageGroups = [
     {
-      title: "Langues nationales",
-      text: "Cours oraux et écrits pour transmettre et pratiquer les langues nationales du Cameroun avec méthode.",
-      items: ["Héritage culturel", "Expression orale", "Cours encadrés", "Pratique progressive"],
-      image: languages.images[1] ?? languages.images[0],
-      icon: Languages,
-    },
-    {
       title: "Langues internationales",
       text: "Programmes pour apprendre ou renforcer une langue utile aux études, aux voyages et au travail.",
       items: ["Anglais", "Espagnol", "Chinois", "Français", "Russe", "Portugais", "Italien"],
       image: languages.images[2] ?? languages.images[0],
       icon: BookOpen,
+    },
+    {
+      title: "Langues nationales",
+      text: "Cours oraux et écrits pour transmettre et pratiquer les langues nationales du Cameroun avec méthode.",
+      items: ["Héritage culturel", "Expression orale", "Cours encadrés", "Pratique progressive"],
+      image: languages.images[1] ?? languages.images[0],
+      icon: Languages,
     },
   ];
 
