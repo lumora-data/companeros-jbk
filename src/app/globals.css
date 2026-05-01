@@ -1546,6 +1546,15 @@ textarea {
     padding: 64px 0;
   }
 
+  .section,
+  .section-intro,
+  .reveal-card,
+  .business-card,
+  .story-media-panel {
+    opacity: 1;
+    transform: none;
+  }
+
   .dual-grid {
     margin-top: 0;
     padding-top: 18px;
@@ -1584,6 +1593,10 @@ textarea {
     padding: 62px 0;
   }
 
+  .hero {
+    min-height: auto;
+  }
+
   .hero-content h1 {
     font-size: clamp(1.7rem, 9vw, 2.2rem);
     line-height: 1.08;
@@ -1607,6 +1620,16 @@ textarea {
   .poster-grid,
   .actors-grid {
     grid-template-columns: 1fr;
+  }
+
+  .production-card {
+    overflow: visible;
+  }
+
+  .production-card div {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
   }
 
   .section-intro .title {
