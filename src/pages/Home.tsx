@@ -50,7 +50,7 @@ export default function Home() {
               alt="Compañeros-JBK Empire"
               className="h-full w-full object-cover opacity-70"
             />
-            <div className="absolute inset-0 bg-linear-to-b from-noir-deep/52 via-noir-deep/42 to-noir-deep/58"></div>
+            <div className="absolute inset-0 bg-linear-to-b from-noir-deep/62 via-noir-deep/54 to-noir-deep/70"></div>
           </div>
 
           <div className="max-w-7xl mx-auto px-6 py-20 text-center relative z-10 w-full">
