@@ -96,16 +96,16 @@ export const COMPANEROS_SERVICES: Service[] = [
   },
   {
     id: "culture",
-    title: "Activités culturelles",
-    description: "Développez vos talents artistiques dans un cadre stimulant.",
+    title: "ESCUELA DE FLAMENCO DE ANDALUCÍA",
+    description: "Devenez professionnel de danse Flamenco et participez aux événements internationaux de danse Flamenco grâce à la EFA.",
     icon: "Music",
     details: [
-      "Cours d'instruments (Piano, Guitare)",
-      "Chant & Chorale",
-      "Activités d'éveil pour enfants",
-      "Camps de vacances culturels",
-      "Ateliers de théâtre & art oratoire",
-      "Danse traditionnelle & moderne"
+      "Formation professionnelle en danse Flamenco",
+      "Techniques de compás et palmas",
+      "Préparation scénique et performance",
+      "Participation aux festivals internationaux",
+      "Ateliers culturels andalous",
+      "Encadrement par la EFA"
     ]
   },
 ];
