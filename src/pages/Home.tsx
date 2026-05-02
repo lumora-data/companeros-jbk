@@ -46,7 +46,7 @@ export default function Home() {
         <div className="relative w-full overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
             <img
-              src="/main/hero-accueil.jpg"
+              src="/main/hero-acceuil.jpg"
               alt="Compañeros-JBK Empire"
               className="h-full w-full object-cover opacity-70"
             />
