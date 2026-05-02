@@ -97,7 +97,7 @@ export const COMPANEROS_SERVICES: Service[] = [
   {
     id: "culture",
     title: "ESCUELA DE FLAMENCO DE ANDALUCÍA",
-    description: "Devenez professionnel de danse et participez aux événements internationaux de danse Flamenco grâce à la EFA.",
+    description: "Devenez professionnel et participez aux événements internationaux de danse Flamenco grâce à la EFA.",
     icon: "Music",
     details: [
       "Formation professionnelle en danse Flamenco",
