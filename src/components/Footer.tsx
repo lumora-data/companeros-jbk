@@ -47,8 +47,8 @@ export default function Footer() {
           >
             <h4 className="text-text-main font-black mb-8 uppercase tracking-widest text-xs">Navigation</h4>
             <ul className="space-y-4 text-text-soft font-bold text-sm tracking-tight">
-              <li><Link href="/companeros" className="hover:text-gold transition-colors inline-block hover:translate-x-1 transition-transform">Compañeros & Services</Link></li>
-              <li><Link href="/jbk" className="hover:text-gold transition-colors inline-block hover:translate-x-1 transition-transform">JBK & Services</Link></li>
+              <li><Link href="/companeros" className="hover:text-gold transition-colors inline-block hover:translate-x-1 transition-transform">Compaños & Services</Link></li>
+              <li><Link href="/jbk" className="hover:text-gold transition-colors inline-block hover:translate-x-1 transition-transform">JBK Films & Services</Link></li>
               <li><Link href="/a-propos" className="hover:text-gold transition-colors inline-block hover:translate-x-1 transition-transform">À Propos</Link></li>
               <li><Link href="/contact" className="hover:text-gold transition-colors inline-block hover:translate-x-1 transition-transform">Contact</Link></li>
             </ul>
