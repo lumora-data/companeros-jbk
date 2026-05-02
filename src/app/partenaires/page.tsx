@@ -1,68 +1,33 @@
-import Link from "next/link";
-import { Handshake, Network, Users } from "lucide-react";
-import { Hero, PartnerMarquee, SectionIntro } from "@/components/Blocks";
-import { contact, getContentPage, publicImagePath } from "@/lib/content";
+import { PARTNERS } from "@/src/constants";
 
-export default function PartnersPage() {
-  const page = getContentPage("07-partenaires-1");
-  const hero = page.images[0] ? publicImagePath("07-partenaires-1", page.images[0]) : "";
-  const images = page.images.map((image) => publicImagePath("07-partenaires-1", image));
-
+export default function Page() {
   return (
-    <main>
-      <Hero
-        image={hero}
-        eyebrow="Partenaires"
-        title="Un réseau pour apprendre, créer et collaborer"
-        lead="Compañeros-JBK Empire développe des collaborations avec des structures éducatives, culturelles, créatives et commerciales."
-      >
-        <Link className="button primary" href="/contact">Devenir partenaire</Link>
-        <a className="button light" href={contact.whatsapp} target="_blank" rel="noreferrer">Proposer une collaboration</a>
-      </Hero>
-
-      <section className="section">
-        <div className="container">
-          <SectionIntro
-            eyebrow="Collaborations"
-            title="Des partenaires qui renforcent notre impact"
-            lead="Chaque collaboration ouvre de nouvelles possibilités pour la formation, la culture, la création et les services aux communautés."
-          />
-          <PartnerMarquee images={images} />
-        </div>
-      </section>
-
-      <section className="section band">
-        <div className="container grid three">
-          <article className="card">
-            <Handshake size={34} color="var(--blue)" />
-            <h3>Partenariats éducatifs</h3>
-            <p>Collaborations autour des langues, concours, voyages, formations et activités culturelles.</p>
-          </article>
-          <article className="card">
-            <Network size={34} color="var(--blue)" />
-            <h3>Partenariats créatifs</h3>
-            <p>Projets audiovisuels, événementiels, communication, contenus et productions.</p>
-          </article>
-          <article className="card">
-            <Users size={34} color="var(--blue)" />
-            <h3>Devenir partenaire</h3>
-            <p>Écoles, entreprises, associations, artistes et institutions peuvent proposer une collaboration.</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container card" style={{ textAlign: "center" }}>
-          <h2>Construisons une collaboration utile</h2>
-          <p className="lead" style={{ maxWidth: 720, marginInline: "auto" }}>
-            Présentez votre structure, votre idée ou votre besoin. L'équipe vous répondra avec les possibilités de partenariat.
+    <section className="min-h-screen bg-noir-deep px-6 pb-24 pt-36 md:pt-44">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-14 max-w-3xl">
+          <p className="mb-5 inline-block rounded-full bg-gold px-5 py-1.5 text-[10px] font-black uppercase tracking-widest text-noir-deep">
+            Réseau de confiance
           </p>
-          <div className="button-row" style={{ justifyContent: "center", marginTop: 24 }}>
-            <Link className="button primary" href="/contact">Nous contacter</Link>
-            <a className="button whatsapp" href={contact.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
-          </div>
+          <h1 className="font-display text-4xl font-black uppercase leading-tight tracking-tighter text-white md:text-7xl">
+            Nos partenaires
+          </h1>
         </div>
-      </section>
-    </main>
+
+        <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
+          {PARTNERS.map((partner) => (
+            <div
+              key={partner.id}
+              className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-white/5 bg-noir-card p-6"
+            >
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                className="max-h-24 w-full object-contain grayscale transition-all duration-300 hover:grayscale-0"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

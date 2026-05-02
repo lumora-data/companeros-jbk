@@ -1,0 +1,372 @@
+"use client";
+
+import { motion } from "motion/react";
+import { ArrowRight, Plane, Globe, FileText, Languages, BookOpen, Music, CheckCircle2, MessageCircle } from "lucide-react";
+import Link from "next/link";
+import { COMPANEROS_SERVICES } from "../constants";
+
+export default function Companeros() {
+  const iconMap = {
+    Plane: Plane,
+    Globe: Globe,
+    FileText: FileText,
+    Languages: Languages,
+    BookOpen: BookOpen,
+    Music: Music,
+  };
+
+  return (
+    <div className="flex flex-col">
+      {/* Hero */}
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+        <motion.div 
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.5 }}
+          className="absolute inset-0 z-0"
+        >
+          <img
+            src="/main/hero.jpg"
+            alt="Hero Compañeros"
+            className="w-full h-full object-cover opacity-40 grayscale"
+          />
+          <div className="absolute inset-0 bg-linear-to-b from-noir-deep/80 via-noir-deep/40 to-noir-deep"></div>
+        </motion.div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="gold-gradient text-noir-deep px-5 md:px-6 py-1.5 rounded-full text-[10px] md:text-xs font-black tracking-widest uppercase mb-6 md:mb-8 inline-block shadow-lg shadow-gold/20"
+          >
+            Voyages • Langues • Concours
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-8xl font-display font-black tracking-tighter mb-6 md:mb-8 uppercase leading-[0.9]"
+          >
+            Voyages, langues, <br />
+            <span className="text-gold italic">concours & études</span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-text-para text-lg md:text-2xl max-w-3xl mx-auto mb-10 md:mb-12 leading-relaxed font-medium px-4"
+          >
+            Depuis 2013, Compañeros accompagne les projets de mobilité, de formation et de réussite scolaire avec des services concrets et un suivi humain.
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6"
+          >
+            <a
+              href={`https://wa.me/237678032746?text=${encodeURIComponent("Bonjour, je souhaite prendre rendez-vous avec l'équipe Compañeros.")}`}
+              className="gold-gradient text-noir-deep px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black text-base md:text-lg hover:scale-105 transition-all shadow-2xl gold-glow w-full sm:w-auto text-center"
+            >
+              PRENDRE RENDEZ-VOUS
+            </a>
+            <Link
+              href="/contact"
+              className="bg-noir-card border border-white/10 text-text-main px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black text-base md:text-lg hover:bg-gris-sep transition-all w-full sm:w-auto text-center"
+            >
+              DEMANDER UNE ORIENTATION
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 md:py-32 bg-noir-deep">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16 md:mb-24"
+          >
+            <h2 className="text-3xl md:text-7xl font-display font-black uppercase tracking-tighter mb-6">Nos Services</h2>
+            <p className="text-text-para text-base md:text-xl max-w-2xl mx-auto font-medium">
+              Chaque service répond à un besoin clair : préparer un départ, réussir un concours, apprendre une langue ou renforcer son niveau.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+            {COMPANEROS_SERVICES.map((service, idx) => {
+              const Icon = iconMap[service.icon as keyof typeof iconMap];
+              return (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  whileHover={{ y: -10 }}
+                  className="bg-noir-card border border-white/5 p-8 rounded-[2rem] hover:border-gold/50 transition-all group relative overflow-hidden flex flex-col h-full"
+                >
+                  <Icon className="w-10 h-10 text-gold mb-6 group-hover:scale-110 transition-transform duration-500" />
+                  <h3 className="text-xl font-black mb-4 uppercase tracking-tight leading-tight">{service.title}</h3>
+                  <p className="text-text-para text-sm md:text-base leading-relaxed mb-8 flex-grow">
+                    {service.description}
+                  </p>
+                   <a
+                    href={`https://wa.me/237678032746?text=${encodeURIComponent(`Bonjour, je souhaite en savoir plus sur le service : ${service.title}`)}`}
+                    className="flex items-center gap-2 text-gold font-black text-xs group-hover:gap-4 transition-all uppercase tracking-widest mt-auto border-t border-white/5 pt-6"
+                  >
+                    En savoir plus <ArrowRight className="w-4 h-4" />
+                  </a>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Voyages Detail */}
+      <section className="py-20 md:py-32 bg-noir-card overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-8">Un dossier préparé <br /><span className="text-gold italic">étape par étape</span></h2>
+              <div className="space-y-6 md:space-y-8">
+                {[
+                  "Études, travail, tourisme, immigration et sport",
+                  "Assistance visa, bourse et volontariat",
+                  "Admission, inscription, légalisation et traduction",
+                  "Réservation, assurance et préparation consulaire"
+                ].map((item, idx) => (
+                  <motion.div 
+                    key={idx} 
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="flex items-center gap-4 md:gap-6 group"
+                  >
+                     <div className="bg-gold/10 p-2 md:p-3 rounded-lg md:rounded-xl group-hover:bg-gold group-hover:text-noir-deep transition-all">
+                      <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-gold group-hover:text-noir-deep" />
+                     </div>
+                     <span className="text-lg md:text-xl font-bold group-hover:text-gold transition-colors">{item}</span>
+                  </motion.div>
+                ))}
+              </div>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                className="mt-12 md:mt-16"
+              >
+                 <a
+                  href={`https://wa.me/237678032746?text=${encodeURIComponent("Bonjour, je souhaite préparer mon voyage avec Compañeros.")}`}
+                  className="gold-gradient text-noir-deep px-8 py-5 md:px-12 md:py-5 rounded-xl md:rounded-2xl font-black text-base md:text-lg inline-flex items-center gap-4 gold-glow shadow-2xl w-full sm:w-auto justify-center"
+                >
+                  PRÉPARER UN VOYAGE <MessageCircle className="w-6 h-6" />
+                </a>
+              </motion.div>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, x: 50, rotate: 2 }}
+              whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+              viewport={{ once: true }}
+              className="relative hidden md:block"
+            >
+              <img
+                src="/main/image.jpg"
+                alt="Préparation de dossier Compañeros"
+                className="w-full h-auto rounded-[3rem] shadow-2xl grayscale border border-white/5"
+              />
+               <motion.div 
+                 initial={{ opacity: 0, scale: 0.8 }}
+                 whileInView={{ opacity: 1, scale: 1 }}
+                 viewport={{ once: true }}
+                 transition={{ delay: 0.6 }}
+                 className="absolute -bottom-10 -right-10 bg-gold text-noir-deep p-12 rounded-[2.5rem] font-black text-2xl rotate-3 shadow-2xl uppercase tracking-tighter"
+               >
+                Études • Travail • Tourisme
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Langues Section */}
+      <section className="py-20 md:py-32 bg-noir-deep overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row justify-between items-end mb-16 md:mb-24 gap-12 text-center md:text-left">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-3xl"
+            >
+               <h2 className="text-3xl md:text-7xl font-display font-black uppercase tracking-tighter mb-6 md:underline md:decoration-gold md:underline-offset-8 md:decoration-4">Apprendre une langue</h2>
+               <p className="text-text-soft text-base md:text-lg italic leading-relaxed">
+                 En tenant compte de la grande diversité culturelle au Cameroun, du pluralisme linguistique et du vivre ensemble, Compañeros aide à la transmission de l’héritage culturel linguistique.
+               </p>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 text-center md:text-left">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-noir-card border border-white/5 p-8 md:p-16 rounded-[2rem] md:rounded-[3rem]"
+            >
+              <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-8 md:mb-10 text-gold">Langues internationales</h3>
+              <p className="text-text-para mb-8 md:mb-10 text-base md:text-lg">Programmes utiles aux études, aux voyages et au travail.</p>
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                {["Anglais", "Espagnol", "Chinois", "Français", "Russe", "Portugais", "Italien"].map((l, idx) => (
+                  <motion.span 
+                    key={l}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.05 }}
+                    className="bg-gris-sep px-4 py-2 md:px-6 md:py-3 rounded-full font-black uppercase tracking-widest text-[10px] md:text-xs border border-white/5 text-text-para hover:bg-gold transition-colors cursor-default hover:text-noir-deep"
+                  >
+                    {l}
+                  </motion.span>
+                ))}
+              </div>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-noir-card border border-white/5 p-8 md:p-16 rounded-[2rem] md:rounded-[3rem]"
+            >
+              <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-8 md:mb-10 text-gold">Langues nationales</h3>
+              <p className="text-text-para mb-8 md:mb-10 text-base md:text-lg">Cours oraux et écrits pour transmettre et pratiquer l'héritage culturel camerounais.</p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 text-left">
+                {["Héritage culturel", "Expression orale", "Cours encadrés", "Pratique progressive"].map((item, idx) => (
+                  <motion.li 
+                    key={item} 
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="flex items-center gap-3 font-bold text-text-main"
+                  >
+                    <div className="w-2 h-2 bg-gold rounded-full"></div>
+                    {item}
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Soutien Scolaire */}
+      <section className="py-20 md:py-32 bg-noir-card">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-noir-deep p-8 md:p-20 rounded-[2rem] md:rounded-[4rem] border border-gold/20 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 p-12 opacity-5 hidden lg:block">
+              <BookOpen className="w-64 h-64 text-gold" />
+            </div>
+            <div className="relative z-10 text-center md:text-left">
+              <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-6 md:mb-8 text-white">Cours de Soutien</h2>
+              <p className="text-lg md:text-xl text-text-para max-w-3xl mb-10 md:mb-12 leading-relaxed">
+                Compañeros propose des cours de renforcement des capacités pour les élèves et étudiants des classes d'examen. Évitez la note de 0/20 avec un suivi spécialisé.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mb-12 md:mb-16">
+                 <div>
+                   <h4 className="text-gold font-bold uppercase tracking-widest text-xs md:text-sm mb-6">Matières Clés</h4>
+                   <div className="flex flex-wrap gap-2 md:gap-3 justify-center md:justify-start">
+                     {["Mathématiques", "Physique-chimie", "Anglais", "Espagnol", "Allemand", "SVT", "Français"].map((m) => (
+                       <span key={m} className="bg-gris-sep px-4 py-2 md:px-5 md:py-2.5 rounded-lg md:rounded-xl text-sm md:text-base font-bold border border-white/5">{m}</span>
+                     ))}
+                   </div>
+                 </div>
+                 <div className="space-y-6">
+                   <h4 className="text-gold font-bold uppercase tracking-widest text-xs md:text-sm mb-6">Tarifs Avantageux</h4>
+                   <div className="space-y-4 text-left">
+                     <div className="flex justify-between items-center border-b border-white/5 pb-4">
+                       <span className="font-bold text-sm md:text-base">Primaire / Secondaire</span>
+                       <span className="text-gold font-black text-sm md:text-base">10.000 F / mois</span>
+                     </div>
+                     <div className="flex justify-between items-center border-b border-white/5 pb-4">
+                       <span className="font-bold text-sm md:text-base">Forfait (3 matières)</span>
+                       <span className="text-gold font-black text-sm md:text-base">25.000 F CFA</span>
+                     </div>
+                      <div className="flex justify-between items-center">
+                       <span className="font-bold text-sm md:text-base">Université (par UE)</span>
+                       <span className="text-gold font-black text-sm md:text-base">3.000 F CFA</span>
+                     </div>
+                   </div>
+                 </div>
+              </div>
+
+               <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href={`https://wa.me/237678032746?text=${encodeURIComponent("Bonjour, je souhaite inscrire mon enfant aux cours de soutien Compañeros.")}`}
+                className="gold-gradient text-noir-deep px-8 py-4 md:px-12 md:py-5 rounded-xl md:rounded-2xl font-black text-base md:text-lg inline-flex items-center gap-4 gold-glow shadow-2xl w-full sm:w-auto justify-center"
+              >
+                PRENDRE RENDEZ-VOUS <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
+              </motion.a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      <section className="py-32 md:py-40 bg-gold text-noir-deep relative overflow-hidden">
+         <motion.div 
+           animate={{ rotate: 360 }}
+           transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+           className="absolute top-[-50%] right-[-10%] w-[800px] h-[800px] bg-white/10 rounded-full blur-[100px]"
+         />
+         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+           <motion.h2 
+             initial={{ opacity: 0, y: 30 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             className="text-3xl md:text-7xl font-display font-black uppercase tracking-tighter mb-8 md:mb-10 leading-tight"
+           >
+             Un projet à préparer ?
+           </motion.h2>
+           <motion.p 
+             initial={{ opacity: 0 }}
+             whileInView={{ opacity: 1 }}
+             viewport={{ once: true }}
+             transition={{ delay: 0.2 }}
+             className="text-lg md:text-2xl font-bold opacity-80 mb-10 md:mb-16 leading-relaxed"
+           >
+             L'équipe Compañeros peut vous orienter vers le bon service et vous indiquer les prochaines étapes pour votre projet.
+           </motion.p>
+           <motion.div 
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ delay: 0.3 }}
+             className="flex flex-col sm:flex-row items-center justify-center gap-6"
+           >
+             <a
+                href={`https://wa.me/237678032746?text=${encodeURIComponent("Bonjour, j'ai un projet à préparer et je souhaite être orienté par l'équipe Compañeros.")}`}
+                className="bg-noir-deep text-text-main px-10 py-5 md:px-12 md:py-6 rounded-xl md:rounded-2xl font-black text-lg md:text-xl shadow-2xl hover:scale-105 transition-all w-full sm:w-auto text-center"
+              >
+                ÉCRIRE SUR WHATSAPP
+              </a>
+           </motion.div>
+         </div>
+      </section>
+    </div>
+  );
+}

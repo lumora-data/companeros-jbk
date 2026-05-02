@@ -1,22 +1,17 @@
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
+
 # Compañeros-JBK Empire
 
-Site Next.js App Router pour présenter les deux pôles `COMPAÑEROS & SERVICES` et `JBK & SERVICES`.
+Site migré vers Next.js App Router pour déploiement Vercel.
 
 ## Développement
 
-```bash
-npm install
-npm run dev
-```
+1. Installer les dépendances avec `npm install`.
+2. Lancer le serveur local avec `npm run dev`.
+3. Construire pour Vercel avec `npm run build`.
 
-## Build
+## Déploiement Vercel
 
-```bash
-npm run build
-```
-
-## Assets et contenu
-
-- Les images servies par le site sont dans `public/organized-content/` et `public/brand/`.
-- Les textes utilisés par les pages sont dans les fichiers JSON de `organized-content/`.
-- Vercel doit utiliser le preset `Next.js`, avec `npm run build` comme commande de build.
+Utiliser le preset `Next.js`, la racine du dépôt comme root directory, et `npm run build` comme build command.
