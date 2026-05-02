@@ -17,7 +17,7 @@ export default function Contact() {
         <img
           src="/main/hero.jpg"
           alt="Hero contact"
-          className="absolute inset-0 h-full w-full object-cover opacity-25 grayscale"
+          className="absolute inset-0 h-full w-full object-cover opacity-35"
         />
         <div className="absolute inset-0 bg-linear-to-b from-noir-deep/85 via-noir-deep/65 to-noir-deep"></div>
         <div className="relative z-10 mx-auto max-w-4xl">

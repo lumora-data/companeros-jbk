@@ -33,7 +33,7 @@ export default function Jbk() {
           <img
             src="/main/hero.jpg"
             alt="Hero JBK Films"
-            className="w-full h-full object-cover opacity-60"
+            className="h-full w-full object-cover opacity-75"
           />
           <div className="absolute inset-0 bg-linear-to-b from-noir-deep/80 via-noir-deep/40 to-noir-deep"></div>
         </motion.div>
@@ -142,7 +142,7 @@ export default function Jbk() {
             <p className="text-text-para text-base md:text-lg max-w-sm mb-2 font-bold uppercase tracking-tight opacity-70">Courts & Longs Métrages</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-8">
             {PRODUCTIONS.map((prod, idx) => (
               <motion.div
                 key={prod.id}
@@ -151,21 +151,23 @@ export default function Jbk() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="group relative aspect-[800/1067] bg-noir-deep rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
+                className="group rounded-[1.3rem] border border-white/10 bg-noir-deep p-3 shadow-2xl"
               >
-                 <img 
+                <div className="aspect-[800/1067] overflow-hidden rounded-xl bg-black/20">
+                  <img
                     src={prod.image}
                     alt={prod.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                 />
-                 <div className="absolute inset-0 bg-linear-to-t from-noir-deep via-noir-deep/40 to-transparent"></div>
-                 <div className="absolute inset-x-0 bottom-0 p-8 md:p-10 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                    <span className="text-gold text-[10px] font-black uppercase tracking-[0.2em] mb-4 block">Production JBK</span>
-                    <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter leading-tight group-hover:text-gold transition-colors">{prod.title}</h3>
-                    <div className="mt-8 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center gap-2 text-[10px] font-black text-white/50 tracking-widest">
-                       EN SAVOIR PLUS <ArrowRight className="w-4 h-4 text-gold" />
-                    </div>
-                 </div>
+                    className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </div>
+                <div className="px-1 pb-1 pt-4 text-center">
+                  <span className="mb-2 block text-[10px] font-black uppercase tracking-[0.2em] text-gold">
+                    Production JBK
+                  </span>
+                  <h3 className="text-xl font-black uppercase leading-tight tracking-tighter text-white md:text-2xl">
+                    {prod.title}
+                  </h3>
+                </div>
               </motion.div>
             ))}
           </div>

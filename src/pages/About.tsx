@@ -20,7 +20,7 @@ export default function About() {
         <img
           src="/main/hero.jpg"
           alt="Hero À propos"
-          className="absolute inset-0 h-full w-full object-cover opacity-25 grayscale"
+          className="absolute inset-0 h-full w-full object-cover opacity-35"
         />
         <div className="absolute inset-0 bg-linear-to-b from-noir-deep/80 via-noir-deep/60 to-noir-deep"></div>
         <div className="relative z-10 mx-auto max-w-5xl">
@@ -60,7 +60,7 @@ export default function About() {
            <img
               src="/main/image.jpg"
               alt="Histoire Compañeros-JBK Empire"
-              className="w-full h-auto rounded-[2rem] md:rounded-[3rem] shadow-2xl grayscale"
+              className="h-auto w-full rounded-[2rem] shadow-2xl md:rounded-[3rem]"
             />
            <div className="text-center md:text-left">
               <History className="w-10 h-10 md:w-12 md:h-12 text-gold mb-6 md:mb-8 mx-auto md:mx-0" />
@@ -86,7 +86,7 @@ export default function About() {
                     <img
                       src="/organized-content/jbk/images/Banderas-Kouam-CEO.jpg"
                       alt="Banderas Kouam"
-                      className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      className="h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
                     />
                  </div>
               </motion.div>

@@ -124,19 +124,19 @@ export const JBK_SERVICES: Service[] = [
 ];
 
 export const PRODUCTIONS: Production[] = [
-  { title: "PAR ELLES POUR ELLES", id: "1", image: "/organized-content/jbk/images/long-metrage-01.jpg" },
-  { title: "Affaire Poulet", id: "2", image: "/organized-content/jbk/images/long-metrage-02.jpg" },
-  { title: "Métamorphose à outrance", id: "3", image: "/organized-content/jbk/images/long-metrage-03.jpg" },
-  { title: "Le partage", id: "4", image: "/organized-content/jbk/images/long-metrage-04.jpg" },
-  { title: "Suprématie artificielle", id: "5", image: "/organized-content/jbk/images/long-metrage-05.jpg" },
-  { title: "Empoisonnement", id: "6", image: "/organized-content/jbk/images/long-metrage-06.jpg" },
-  { title: "Le Photographe", id: "7", image: "/organized-content/jbk/images/long-metrage-07.jpg" },
-  { title: "Brenda", id: "8", image: "/organized-content/jbk/images/long-metrage-09.jpg" },
-  { title: "Halte !", id: "9", image: "/organized-content/jbk/images/long-metrage-10.jpg" },
-  { title: "Mirando Pa'a Cuenca", id: "10", image: "/organized-content/jbk/images/long-metrage-11.jpg" },
+  { title: "Affaire Poulet", id: "1", image: "/organized-content/jbk/images/long-metrage-01.jpg" },
+  { title: "Métamorphose à outrance", id: "2", image: "/organized-content/jbk/images/long-metrage-02.jpg" },
+  { title: "Le partage", id: "3", image: "/organized-content/jbk/images/long-metrage-03.jpg" },
+  { title: "Suprématie artificielle", id: "4", image: "/organized-content/jbk/images/long-metrage-04.jpg" },
+  { title: "Empoisonnement", id: "5", image: "/organized-content/jbk/images/long-metrage-05.jpg" },
+  { title: "Le photographe", id: "6", image: "/organized-content/jbk/images/long-metrage-06.jpg" },
+  { title: "Brenda", id: "7", image: "/organized-content/jbk/images/long-metrage-07.jpg" },
+  { title: "Halte!", id: "8", image: "/organized-content/jbk/images/long-metrage-09.jpg" },
+  { title: "Mirando Pa' Cuenca", id: "9", image: "/organized-content/jbk/images/long-metrage-10.jpg" },
+  { title: "Par elles pour elles", id: "10", image: "/organized-content/jbk/images/long-metrage-11.jpg" },
   { title: "20.000 Cedis", id: "11", image: "/organized-content/jbk/images/long-metrage-12.jpg" },
   { title: "Potion de séduction", id: "12", image: "/organized-content/jbk/images/long-metrage-15.jpg" },
-  { title: "PFFF", id: "13", image: "/organized-content/jbk/images/long-metrage-16.jpg" },
+  { title: "Pfff", id: "13", image: "/organized-content/jbk/images/long-metrage-16.jpg" },
   { title: "Nouveau Stock", id: "14", image: "/organized-content/jbk/images/long-metrage-17.jpg" },
 ];
 

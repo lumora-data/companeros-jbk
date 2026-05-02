@@ -22,7 +22,7 @@ export default function Page() {
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="max-h-24 w-full object-contain grayscale transition-all duration-300 hover:grayscale-0"
+                className="max-h-24 w-full object-contain transition-all duration-300"
               />
             </div>
           ))}

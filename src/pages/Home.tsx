@@ -47,7 +47,7 @@ export default function Home() {
           <img
             src="/main/hero.jpg"
             alt="Compañeros-JBK Empire"
-            className="h-full w-full object-cover opacity-30 grayscale"
+            className="h-full w-full object-cover opacity-45"
           />
           <div className="absolute inset-0 bg-linear-to-b from-noir-deep/80 via-noir-deep/70 to-noir-deep"></div>
         </div>
@@ -101,6 +101,21 @@ export default function Home() {
             Deux pôles complémentaires accompagnent vos projets : <span className="text-white">Compañeros</span> pour la formation, les langues et les voyages ; <span className="text-gold">JBK</span> pour l'audiovisuel, l'événementiel et les services créatifs.
           </motion.p>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.45 }}
+          className="relative z-10 mb-12 w-full max-w-6xl px-6"
+        >
+          <div className="overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+            <img
+              src="/main/hero.jpg"
+              alt="Hero Compañeros-JBK Empire"
+              className="h-auto w-full object-cover"
+            />
+          </div>
+        </motion.div>
 
         {/* Dual Cards */}
         <div className="max-w-[1400px] mx-auto w-full px-6 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-20 md:mb-32">
@@ -204,7 +219,7 @@ export default function Home() {
                 key={idx} 
                 src={partner.logo} 
                 alt={partner.name} 
-                className="h-10 md:h-14 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer"
+                className="h-10 cursor-pointer opacity-90 transition-all hover:opacity-100 md:h-14"
               />
             ))}
           </motion.div>

@@ -28,7 +28,7 @@ export default function Companeros() {
           <img
             src="/main/hero.jpg"
             alt="Hero Compañeros"
-            className="w-full h-full object-cover opacity-40 grayscale"
+            className="h-full w-full object-cover opacity-55"
           />
           <div className="absolute inset-0 bg-linear-to-b from-noir-deep/80 via-noir-deep/40 to-noir-deep"></div>
         </motion.div>
@@ -182,7 +182,7 @@ export default function Companeros() {
               <img
                 src="/main/image.jpg"
                 alt="Préparation de dossier Compañeros"
-                className="w-full h-auto rounded-[3rem] shadow-2xl grayscale border border-white/5"
+                className="h-auto w-full rounded-[3rem] border border-white/5 shadow-2xl"
               />
                <motion.div 
                  initial={{ opacity: 0, scale: 0.8 }}
