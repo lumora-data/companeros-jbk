@@ -21,7 +21,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Accueil", path: "/" },
-    { name: "Compaños & Services", path: "/companeros" },
+    { name: "Compańeros & Services", path: "/companeros" },
     { name: "JBK Films & Services", path: "/jbk" },
     { name: "À Propos", path: "/a-propos" },
     { name: "Contact", path: "/contact" },

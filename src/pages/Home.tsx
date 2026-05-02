@@ -116,7 +116,7 @@ export default function Home() {
               <div className="bg-white/10 w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl flex items-center justify-center mb-8 md:mb-10 group-hover:bg-white/20 transition-all text-white">
                 <Globe className="w-6 h-6 md:w-8 md:h-8" />
               </div>
-              <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-white leading-tight">Compaños <br />& Services</h2>
+              <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-white leading-tight">Compańeros <br />& Services</h2>
               <p className="text-text-para text-base md:text-lg mb-8 md:mb-12 max-w-sm">Voyages, concours, langues, traduction, cours de soutien et activités culturelles.</p>
               <Link href="/companeros" className="bg-white text-noir-deep px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black inline-flex items-center gap-4 hover:bg-white/90 transition-all uppercase text-xs md:text-sm tracking-tighter w-fit">
                 DÉCOUVRIR LE CENTRE <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
