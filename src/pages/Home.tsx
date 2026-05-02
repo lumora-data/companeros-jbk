@@ -42,64 +42,66 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Dual Hero Section */}
-      <section className="relative min-h-screen pt-20 flex flex-col items-center overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <img
-            src="/main/hero-accueil.jpg"
-            alt="Compañeros-JBK Empire"
-            className="h-full w-full object-cover opacity-70"
-          />
-          <div className="absolute inset-0 bg-linear-to-b from-noir-deep/45 via-noir-deep/35 to-noir-deep/50"></div>
-        </div>
+      <section className="relative min-h-screen pt-20 flex flex-col items-center">
+        <div className="relative w-full overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none">
+            <img
+              src="/main/hero-accueil.jpg"
+              alt="Compañeros-JBK Empire"
+              className="h-full w-full object-cover opacity-70"
+            />
+            <div className="absolute inset-0 bg-linear-to-b from-noir-deep/45 via-noir-deep/35 to-noir-deep/50"></div>
+          </div>
 
-        <div className="max-w-7xl mx-auto px-6 py-20 text-center relative z-10 w-full">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="flex items-center justify-center space-x-3 mb-8"
-          >
-            <motion.div 
-              initial={{ width: 0 }}
-              animate={{ width: 48 }}
-              className="h-[1px] bg-gold"
-            ></motion.div>
-            <span className="text-gold font-black uppercase tracking-[0.4em] text-xs">Compañeros-JBK Empire</span>
-            <motion.div 
-              initial={{ width: 0 }}
-              animate={{ width: 48 }}
-              transition={{ delay: 0.1 }}
-              className="h-[1px] bg-gold"
-            ></motion.div>
-          </motion.div>
-          
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-4xl sm:text-5xl md:text-9xl font-display font-black tracking-tighter mb-8 md:mb-12 uppercase leading-[0.95] md:leading-[0.85]"
-          >
-            <motion.span 
-              initial={{ opacity: 0, y: 50 }}
+          <div className="max-w-7xl mx-auto px-6 py-20 text-center relative z-10 w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="block"
-            >L'excellence</motion.span>
-            <motion.span 
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-gold italic block"
-            >à 360 degrés</motion.span>
-          </motion.h1>
+              className="flex items-center justify-center space-x-3 mb-8"
+            >
+              <motion.div 
+                initial={{ width: 0 }}
+                animate={{ width: 48 }}
+                className="h-[1px] bg-gold"
+              ></motion.div>
+              <span className="text-gold font-black uppercase tracking-[0.4em] text-xs">Compañeros-JBK Empire</span>
+              <motion.div 
+                initial={{ width: 0 }}
+                animate={{ width: 48 }}
+                transition={{ delay: 0.1 }}
+                className="h-[1px] bg-gold"
+              ></motion.div>
+            </motion.div>
+            
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="text-4xl sm:text-5xl md:text-9xl font-display font-black tracking-tighter mb-8 md:mb-12 uppercase leading-[0.95] md:leading-[0.85]"
+            >
+              <motion.span 
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="block"
+              >L'excellence</motion.span>
+              <motion.span 
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="text-gold italic block"
+              >à 360 degrés</motion.span>
+            </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 1 }}
-            className="text-text-para text-lg md:text-2xl max-w-4xl mx-auto mb-12 md:mb-16 leading-relaxed font-medium px-4"
-          >
-            Deux pôles complémentaires accompagnent vos projets : <span className="text-white">Compañeros</span> pour la formation, les langues et les voyages ; <span className="text-gold">JBK</span> pour l'audiovisuel, l'événementiel et les services créatifs.
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 1 }}
+              className="text-text-para text-lg md:text-2xl max-w-4xl mx-auto mb-12 md:mb-16 leading-relaxed font-medium px-4"
+            >
+              Deux pôles complémentaires accompagnent vos projets : <span className="text-white">Compañeros</span> pour la formation, les langues et les voyages ; <span className="text-gold">JBK</span> pour l'audiovisuel, l'événementiel et les services créatifs.
+            </motion.p>
+          </div>
         </div>
 
         {/* Dual Cards */}
