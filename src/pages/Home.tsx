@@ -5,6 +5,7 @@ import { ArrowRight, Globe, Camera, MessageCircle, Mail, Crown, BookOpen, Plane 
 import Link from "next/link";
 import { STATS, PARTNERS } from "../constants";
 import { useEffect, useRef } from "react";
+import { SITE_CONTENT } from "@/src/content/site-content";
 
 interface CounterProps {
   value: number;
@@ -39,6 +40,8 @@ function Counter({ value, label, suffix = "", prefix = "" }: any) {
 }
 
 export default function Home() {
+  const { home } = SITE_CONTENT.pages;
+
   return (
     <div className="flex flex-col">
       {/* Dual Hero Section */}
@@ -46,8 +49,8 @@ export default function Home() {
         <div className="relative w-full overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
             <img
-              src="/main/hero-acceuil.jpg"
-              alt="Compañeros-JBK Empire"
+              src={home.hero.backgroundImage}
+              alt={home.hero.backgroundAlt}
               className="h-full w-full object-cover opacity-70"
             />
             <div className="absolute inset-0 bg-linear-to-b from-noir-deep/62 via-noir-deep/54 to-noir-deep/70"></div>
@@ -64,7 +67,7 @@ export default function Home() {
                 animate={{ width: 48 }}
                 className="h-[1px] bg-gold"
               ></motion.div>
-              <span className="text-gold font-black uppercase tracking-[0.4em] text-xs">Compañeros-JBK Empire</span>
+              <span className="text-gold font-black uppercase tracking-[0.4em] text-xs">{home.hero.badge}</span>
               <motion.div 
                 initial={{ width: 0 }}
                 animate={{ width: 48 }}
@@ -84,13 +87,13 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
                 className="block"
-              >L'excellence</motion.span>
+              >{home.hero.titleLine1}</motion.span>
               <motion.span 
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
                 className="text-gold italic block"
-              >à 360 degrés</motion.span>
+              >{home.hero.titleLine2}</motion.span>
             </motion.h1>
 
             <motion.p
@@ -99,7 +102,7 @@ export default function Home() {
               transition={{ delay: 0.4, duration: 1 }}
               className="text-text-para text-lg md:text-2xl max-w-4xl mx-auto mb-12 md:mb-16 leading-relaxed font-medium px-4"
             >
-              Deux pôles complémentaires accompagnent vos projets : <span className="text-white">Compañeros</span> pour la formation, les langues et les voyages ; <span className="text-gold">JBK</span> pour l'audiovisuel, l'événementiel et les services créatifs.
+              {home.hero.description}
             </motion.p>
           </div>
         </div>
@@ -118,10 +121,10 @@ export default function Home() {
               <div className="bg-white/10 w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl flex items-center justify-center mb-8 md:mb-10 group-hover:bg-white/20 transition-all text-white">
                 <Globe className="w-6 h-6 md:w-8 md:h-8" />
               </div>
-              <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-white leading-tight">Compańeros <br />& Services</h2>
-              <p className="text-text-para text-base md:text-lg mb-8 md:mb-12 max-w-sm">Voyages, concours, langues, traduction, cours de soutien et activités culturelles.</p>
+              <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-white leading-tight">{home.cards.companeros.titleLine1} <br />{home.cards.companeros.titleLine2}</h2>
+              <p className="text-text-para text-base md:text-lg mb-8 md:mb-12 max-w-sm">{home.cards.companeros.description}</p>
               <Link href="/companeros" className="bg-white text-noir-deep px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black inline-flex items-center gap-4 hover:bg-white/90 transition-all uppercase text-xs md:text-sm tracking-tighter w-fit">
-                DÉCOUVRIR LE CENTRE <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                {home.cards.companeros.ctaLabel} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
             <div className="absolute top-0 right-0 p-4 md:p-8 opacity-[0.03] pointer-events-none group-hover:opacity-10 transition-opacity">
@@ -141,10 +144,10 @@ export default function Home() {
               <div className="bg-gold/20 w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl flex items-center justify-center mb-8 md:mb-10 group-hover:bg-gold/30 transition-all text-gold">
                 <Camera className="w-6 h-6 md:w-8 md:h-8" />
               </div>
-              <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-gold leading-tight">JBK Films <br />& Services</h2>
-              <p className="text-text-para text-base md:text-lg mb-8 md:mb-12 max-w-sm">Production audiovisuelle, communication, événementiel, talents et services créatifs.</p>
+              <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-gold leading-tight">{home.cards.jbk.titleLine1} <br />{home.cards.jbk.titleLine2}</h2>
+              <p className="text-text-para text-base md:text-lg mb-8 md:mb-12 max-w-sm">{home.cards.jbk.description}</p>
               <Link href="/jbk" className="gold-gradient text-noir-deep px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black inline-flex items-center gap-4 hover:brightness-110 transition-all gold-glow shadow-2xl uppercase text-xs md:text-sm tracking-tighter w-fit text-center">
-                DÉCOUVRIR JBK <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                {home.cards.jbk.ctaLabel} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
             <div className="absolute top-0 right-0 p-4 md:p-8 opacity-[0.07] pointer-events-none group-hover:opacity-15 transition-opacity text-gold">
@@ -191,7 +194,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 mb-12">
           <div className="flex items-center gap-4">
             <div className="h-[1px] bg-gold/30 flex-grow"></div>
-            <h3 className="text-text-soft text-[10px] uppercase tracking-[0.4em] font-black">Nos Partenaires de Confiance</h3>
+            <h3 className="text-text-soft text-[10px] uppercase tracking-[0.4em] font-black">{home.partnersMarqueeTitle}</h3>
             <div className="h-[1px] bg-gold/30 flex-grow"></div>
           </div>
         </div>
@@ -229,7 +232,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-4xl md:text-7xl font-display font-black uppercase tracking-tighter mb-10 text-noir-deep leading-tight"
             >
-              Besoin d'un accompagnement ?
+              {home.cta.heading}
             </motion.h2>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -239,7 +242,7 @@ export default function Home() {
               className="flex flex-col sm:flex-row items-center justify-center gap-6"
             >
                <Link href="/contact" className="bg-noir-deep text-text-main px-12 py-6 rounded-2xl font-black text-xl hover:scale-105 hover:bg-noir-deep/90 transition-all shadow-2xl">
-                  NOUS CONTACTER
+                  {home.cta.buttonLabel}
                </Link>
             </motion.div>
          </div>

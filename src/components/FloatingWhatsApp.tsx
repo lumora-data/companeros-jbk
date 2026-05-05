@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "motion/react";
+import { SITE_CONTENT } from "@/src/content/site-content";
 
 export default function FloatingWhatsApp() {
-  const phoneNumber = "237678032746";
-  const message = "Bonjour JBK FILMS, je souhaite avoir plus d'informations.";
+  const phoneNumber = SITE_CONTENT.common.whatsappNumber;
+  const message = SITE_CONTENT.floatingWhatsapp.message;
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (

@@ -4,8 +4,14 @@ import { motion } from "motion/react";
 import { ArrowRight, Plane, Globe, FileText, Languages, BookOpen, Music, CheckCircle2, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { COMPANEROS_SERVICES } from "../constants";
+import { SITE_CONTENT } from "@/src/content/site-content";
 
 export default function Companeros() {
+  const content = SITE_CONTENT.pages.companeros;
+  const whatsappNumber = SITE_CONTENT.common.whatsappNumber;
+  const toWhatsappUrl = (message: string) =>
+    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
   const iconMap = {
     Plane: Plane,
     Globe: Globe,
@@ -26,8 +32,8 @@ export default function Companeros() {
           className="absolute inset-0 z-0"
         >
           <img
-            src="/main/hero.jpg"
-            alt="Hero Compañeros"
+            src={content.hero.image}
+            alt={content.hero.imageAlt}
             className="h-full w-full object-cover opacity-55"
           />
           <div className="absolute inset-0 bg-linear-to-b from-noir-deep/80 via-noir-deep/40 to-noir-deep"></div>
@@ -39,7 +45,7 @@ export default function Companeros() {
             animate={{ opacity: 1, y: 0 }}
             className="gold-gradient text-noir-deep px-5 md:px-6 py-1.5 rounded-full text-[10px] md:text-xs font-black tracking-widest uppercase mb-6 md:mb-8 inline-block shadow-lg shadow-gold/20"
           >
-            Voyages • Langues • Concours
+            {content.hero.badge}
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -47,8 +53,8 @@ export default function Companeros() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-8xl font-display font-black tracking-tighter mb-6 md:mb-8 uppercase leading-[0.9]"
           >
-            Voyages, langues, <br />
-            <span className="text-gold italic">concours & études</span>
+            {content.hero.titleLine1} <br />
+            <span className="text-gold italic">{content.hero.titleHighlight}</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -56,7 +62,7 @@ export default function Companeros() {
             transition={{ delay: 0.3 }}
             className="text-text-para text-lg md:text-2xl max-w-3xl mx-auto mb-10 md:mb-12 leading-relaxed font-medium px-4"
           >
-            Depuis 2013, Compañeros accompagne les projets de mobilité, de formation et de réussite scolaire avec des services concrets et un suivi humain.
+            {content.hero.description}
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -65,16 +71,16 @@ export default function Companeros() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6"
           >
             <a
-              href={`https://wa.me/237678032746?text=${encodeURIComponent("Bonjour, je souhaite prendre rendez-vous avec l'équipe Compañeros.")}`}
+              href={toWhatsappUrl(content.hero.primaryWhatsappMessage)}
               className="gold-gradient text-noir-deep px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black text-base md:text-lg hover:scale-105 transition-all shadow-2xl gold-glow w-full sm:w-auto text-center"
             >
-              PRENDRE RENDEZ-VOUS
+              {content.hero.primaryButtonLabel}
             </a>
             <Link
               href="/contact"
               className="bg-noir-card border border-white/10 text-text-main px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black text-base md:text-lg hover:bg-gris-sep transition-all w-full sm:w-auto text-center"
             >
-              DEMANDER UNE ORIENTATION
+              {content.hero.secondaryButtonLabel}
             </Link>
           </motion.div>
         </div>
@@ -89,9 +95,9 @@ export default function Companeros() {
             viewport={{ once: true }}
             className="text-center mb-16 md:mb-24"
           >
-            <h2 className="text-3xl md:text-7xl font-display font-black uppercase tracking-tighter mb-6">Nos Services</h2>
+            <h2 className="text-3xl md:text-7xl font-display font-black uppercase tracking-tighter mb-6">{content.services.heading}</h2>
             <p className="text-text-para text-base md:text-xl max-w-2xl mx-auto font-medium">
-              Chaque service répond à un besoin clair : préparer un départ, réussir un concours, apprendre une langue ou renforcer son niveau.
+              {content.services.description}
             </p>
           </motion.div>
 
@@ -114,10 +120,10 @@ export default function Companeros() {
                     {service.description}
                   </p>
                    <a
-                    href={`https://wa.me/237678032746?text=${encodeURIComponent(`Bonjour, je souhaite en savoir plus sur le service : ${service.title}`)}`}
+                    href={toWhatsappUrl(content.services.cardWhatsappTemplate.replace("{{serviceTitle}}", service.title))}
                     className="flex items-center gap-2 text-gold font-black text-xs group-hover:gap-4 transition-all uppercase tracking-widest mt-auto border-t border-white/5 pt-6"
                   >
-                    En savoir plus <ArrowRight className="w-4 h-4" />
+                    {content.services.cardCtaLabel} <ArrowRight className="w-4 h-4" />
                   </a>
                 </motion.div>
               );
@@ -135,14 +141,9 @@ export default function Companeros() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-8">Un dossier préparé <br /><span className="text-gold italic">étape par étape</span></h2>
+              <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-8">{content.voyageDetail.headingLine1} <br /><span className="text-gold italic">{content.voyageDetail.headingHighlight}</span></h2>
               <div className="space-y-6 md:space-y-8">
-                {[
-                  "Études, travail, tourisme, immigration et sport",
-                  "Assistance visa, bourse et volontariat",
-                  "Admission, inscription, légalisation et traduction",
-                  "Réservation, assurance et préparation consulaire"
-                ].map((item, idx) => (
+                {content.voyageDetail.items.map((item, idx) => (
                   <motion.div 
                     key={idx} 
                     initial={{ opacity: 0, x: -20 }}
@@ -166,10 +167,10 @@ export default function Companeros() {
                 className="mt-12 md:mt-16"
               >
                  <a
-                  href={`https://wa.me/237678032746?text=${encodeURIComponent("Bonjour, je souhaite préparer mon voyage avec Compañeros.")}`}
+                  href={toWhatsappUrl(content.voyageDetail.ctaWhatsappMessage)}
                   className="gold-gradient text-noir-deep px-8 py-5 md:px-12 md:py-5 rounded-xl md:rounded-2xl font-black text-base md:text-lg inline-flex items-center gap-4 gold-glow shadow-2xl w-full sm:w-auto justify-center"
                 >
-                  PRÉPARER UN VOYAGE <MessageCircle className="w-6 h-6" />
+                  {content.voyageDetail.ctaLabel} <MessageCircle className="w-6 h-6" />
                 </a>
               </motion.div>
             </motion.div>
@@ -180,8 +181,8 @@ export default function Companeros() {
               className="relative hidden md:block"
             >
               <img
-                src="/main/image.jpg"
-                alt="Préparation de dossier Compañeros"
+                src={content.voyageDetail.image}
+                alt={content.voyageDetail.imageAlt}
                 className="h-auto w-full rounded-[3rem] border border-white/5 shadow-2xl"
               />
                <motion.div 
@@ -191,7 +192,7 @@ export default function Companeros() {
                  transition={{ delay: 0.6 }}
                  className="absolute -bottom-10 -right-10 bg-gold text-noir-deep p-12 rounded-[2.5rem] font-black text-2xl rotate-3 shadow-2xl uppercase tracking-tighter"
                >
-                Études • Travail • Tourisme
+                {content.voyageDetail.floatingBadge}
               </motion.div>
             </motion.div>
           </div>
@@ -208,9 +209,9 @@ export default function Companeros() {
               viewport={{ once: true }}
               className="max-w-3xl"
             >
-               <h2 className="text-3xl md:text-7xl font-display font-black uppercase tracking-tighter mb-6 md:underline md:decoration-gold md:underline-offset-8 md:decoration-4">Apprendre une langue</h2>
+               <h2 className="text-3xl md:text-7xl font-display font-black uppercase tracking-tighter mb-6 md:underline md:decoration-gold md:underline-offset-8 md:decoration-4">{content.languages.heading}</h2>
                <p className="text-text-soft text-base md:text-lg italic leading-relaxed">
-                 En tenant compte de la grande diversité culturelle au Cameroun, du pluralisme linguistique et du vivre ensemble, Compañeros aide à la transmission de l’héritage culturel linguistique.
+                 {content.languages.description}
                </p>
             </motion.div>
           </div>
@@ -222,10 +223,10 @@ export default function Companeros() {
               viewport={{ once: true }}
               className="bg-noir-card border border-white/5 p-8 md:p-16 rounded-[2rem] md:rounded-[3rem]"
             >
-              <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-8 md:mb-10 text-gold">Langues internationales</h3>
-              <p className="text-text-para mb-8 md:mb-10 text-base md:text-lg">Programmes utiles aux études, aux voyages et au travail.</p>
+              <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-8 md:mb-10 text-gold">{content.languages.international.title}</h3>
+              <p className="text-text-para mb-8 md:mb-10 text-base md:text-lg">{content.languages.international.description}</p>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                {["Anglais", "Espagnol", "Chinois", "Français", "Russe", "Portugais", "Italien"].map((l, idx) => (
+                {content.languages.international.items.map((l, idx) => (
                   <motion.span 
                     key={l}
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -245,10 +246,10 @@ export default function Companeros() {
               viewport={{ once: true }}
               className="bg-noir-card border border-white/5 p-8 md:p-16 rounded-[2rem] md:rounded-[3rem]"
             >
-              <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-8 md:mb-10 text-gold">Langues nationales</h3>
-              <p className="text-text-para mb-8 md:mb-10 text-base md:text-lg">Cours oraux et écrits pour transmettre et pratiquer l'héritage culturel camerounais.</p>
+              <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-8 md:mb-10 text-gold">{content.languages.national.title}</h3>
+              <p className="text-text-para mb-8 md:mb-10 text-base md:text-lg">{content.languages.national.description}</p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 text-left">
-                {["Héritage culturel", "Expression orale", "Cours encadrés", "Pratique progressive"].map((item, idx) => (
+                {content.languages.national.items.map((item, idx) => (
                   <motion.li 
                     key={item} 
                     initial={{ opacity: 0, y: 10 }}
@@ -280,35 +281,29 @@ export default function Companeros() {
               <BookOpen className="w-64 h-64 text-gold" />
             </div>
             <div className="relative z-10 text-center md:text-left">
-              <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-6 md:mb-8 text-white">Cours de Soutien</h2>
+              <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-6 md:mb-8 text-white">{content.support.heading}</h2>
               <p className="text-lg md:text-xl text-text-para max-w-3xl mb-10 md:mb-12 leading-relaxed">
-                Compañeros propose des cours de renforcement des capacités pour les élèves et étudiants des classes d'examen. Évitez la note de 0/20 avec un suivi spécialisé.
+                {content.support.description}
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mb-12 md:mb-16">
                  <div>
-                   <h4 className="text-gold font-bold uppercase tracking-widest text-xs md:text-sm mb-6">Matières Clés</h4>
+                   <h4 className="text-gold font-bold uppercase tracking-widest text-xs md:text-sm mb-6">{content.support.subjectsTitle}</h4>
                    <div className="flex flex-wrap gap-2 md:gap-3 justify-center md:justify-start">
-                     {["Mathématiques", "Physique-chimie", "Anglais", "Espagnol", "Allemand", "SVT", "Français"].map((m) => (
+                     {content.support.subjects.map((m) => (
                        <span key={m} className="bg-gris-sep px-4 py-2 md:px-5 md:py-2.5 rounded-lg md:rounded-xl text-sm md:text-base font-bold border border-white/5">{m}</span>
                      ))}
                    </div>
                  </div>
                  <div className="space-y-6">
-                   <h4 className="text-gold font-bold uppercase tracking-widest text-xs md:text-sm mb-6">Tarifs Avantageux</h4>
+                   <h4 className="text-gold font-bold uppercase tracking-widest text-xs md:text-sm mb-6">{content.support.pricingTitle}</h4>
                    <div className="space-y-4 text-left">
-                     <div className="flex justify-between items-center border-b border-white/5 pb-4">
-                       <span className="font-bold text-sm md:text-base">Primaire / Secondaire</span>
-                       <span className="text-gold font-black text-sm md:text-base">10.000 F / mois</span>
-                     </div>
-                     <div className="flex justify-between items-center border-b border-white/5 pb-4">
-                       <span className="font-bold text-sm md:text-base">Forfait (3 matières)</span>
-                       <span className="text-gold font-black text-sm md:text-base">25.000 F CFA</span>
-                     </div>
-                      <div className="flex justify-between items-center">
-                       <span className="font-bold text-sm md:text-base">Université (par UE)</span>
-                       <span className="text-gold font-black text-sm md:text-base">3.000 F CFA</span>
-                     </div>
+                     {content.support.pricingRows.map((row, idx) => (
+                      <div key={row.label} className={`flex justify-between items-center ${idx < content.support.pricingRows.length - 1 ? "border-b border-white/5 pb-4" : ""}`}>
+                        <span className="font-bold text-sm md:text-base">{row.label}</span>
+                        <span className="text-gold font-black text-sm md:text-base">{row.value}</span>
+                      </div>
+                     ))}
                    </div>
                  </div>
               </div>
@@ -316,10 +311,10 @@ export default function Companeros() {
                <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href={`https://wa.me/237678032746?text=${encodeURIComponent("Bonjour, je souhaite inscrire mon enfant aux cours de soutien Compañeros.")}`}
+                href={toWhatsappUrl(content.support.ctaWhatsappMessage)}
                 className="gold-gradient text-noir-deep px-8 py-4 md:px-12 md:py-5 rounded-xl md:rounded-2xl font-black text-base md:text-lg inline-flex items-center gap-4 gold-glow shadow-2xl w-full sm:w-auto justify-center"
               >
-                PRENDRE RENDEZ-VOUS <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
+                {content.support.ctaLabel} <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
               </motion.a>
             </div>
           </motion.div>
@@ -340,7 +335,7 @@ export default function Companeros() {
              viewport={{ once: true }}
              className="text-3xl md:text-7xl font-display font-black uppercase tracking-tighter mb-8 md:mb-10 leading-tight"
            >
-             Un projet à préparer ?
+             {content.finalCta.heading}
            </motion.h2>
            <motion.p 
              initial={{ opacity: 0 }}
@@ -349,7 +344,7 @@ export default function Companeros() {
              transition={{ delay: 0.2 }}
              className="text-lg md:text-2xl font-bold opacity-80 mb-10 md:mb-16 leading-relaxed"
            >
-             L'équipe Compañeros peut vous orienter vers le bon service et vous indiquer les prochaines étapes pour votre projet.
+             {content.finalCta.description}
            </motion.p>
            <motion.div 
              initial={{ opacity: 0, y: 20 }}
@@ -359,10 +354,10 @@ export default function Companeros() {
              className="flex flex-col sm:flex-row items-center justify-center gap-6"
            >
              <a
-                href={`https://wa.me/237678032746?text=${encodeURIComponent("Bonjour, j'ai un projet à préparer et je souhaite être orienté par l'équipe Compañeros.")}`}
+                href={toWhatsappUrl(content.finalCta.buttonWhatsappMessage)}
                 className="bg-noir-deep text-text-main px-10 py-5 md:px-12 md:py-6 rounded-xl md:rounded-2xl font-black text-lg md:text-xl shadow-2xl hover:scale-105 transition-all w-full sm:w-auto text-center"
               >
-                ÉCRIRE SUR WHATSAPP
+                {content.finalCta.buttonLabel}
               </a>
            </motion.div>
          </div>

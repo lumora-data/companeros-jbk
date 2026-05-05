@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "../index.css";
 import SiteShell from "@/src/components/SiteShell";
+import { SITE_CONTENT } from "@/src/content/site-content";
 
 export const metadata: Metadata = {
-  title: "Compañeros-JBK Empire",
-  description:
-    "Deux pôles complémentaires accompagnent vos projets : Compañeros pour la formation, les langues et les voyages ; JBK pour l'audiovisuel, l'événementiel et les services créatifs.",
+  title: SITE_CONTENT.metadata.title,
+  description: SITE_CONTENT.metadata.description,
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

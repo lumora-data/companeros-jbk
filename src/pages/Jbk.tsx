@@ -4,8 +4,14 @@ import { motion } from "motion/react";
 import { ArrowRight, Video, Camera, Smartphone, MessageCircle, Palette, Layout, Type, Mic, Wind, Tv, GraduationCap, Play, Globe, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { JBK_SERVICES, PRODUCTIONS } from "../constants";
+import { SITE_CONTENT } from "@/src/content/site-content";
 
 export default function Jbk() {
+  const content = SITE_CONTENT.pages.jbk;
+  const whatsappNumber = SITE_CONTENT.common.whatsappNumber;
+  const toWhatsappUrl = (message: string) =>
+    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
   const iconMap = {
     Palette: Palette,
     Camera: Camera,
@@ -31,8 +37,8 @@ export default function Jbk() {
           className="absolute inset-0 z-0"
         >
           <img
-            src="/main/hero.jpg"
-            alt="Hero JBK Films"
+            src={content.hero.image}
+            alt={content.hero.imageAlt}
             className="h-full w-full object-cover opacity-75"
           />
           <div className="absolute inset-0 bg-linear-to-b from-noir-deep/80 via-noir-deep/40 to-noir-deep"></div>
@@ -44,7 +50,7 @@ export default function Jbk() {
             animate={{ opacity: 1, scale: 1 }}
             className="gold-gradient text-noir-deep px-5 md:px-6 py-1.5 rounded-full text-[10px] md:text-xs font-black tracking-widest uppercase mb-6 md:mb-8 inline-block shadow-lg shadow-gold/20"
           >
-            Films • Événementiel • Communication
+            {content.hero.badge}
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -52,8 +58,8 @@ export default function Jbk() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-8xl font-display font-black tracking-tighter mb-6 md:mb-8 uppercase leading-[0.9]"
           >
-            Films, com & <br />
-            <span className="text-gold italic">services créatifs</span>
+            {content.hero.titleLine1} <br />
+            <span className="text-gold italic">{content.hero.titleHighlight}</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -61,7 +67,7 @@ export default function Jbk() {
             transition={{ delay: 0.2 }}
             className="text-text-para text-lg md:text-2xl max-w-4xl mx-auto mb-10 md:mb-12 font-medium leading-relaxed px-4"
           >
-            JBK Films réunit une maison de production, une équipe technique, une agence d'acteurs et des services créatifs pour marques et artistes.
+            {content.hero.description}
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -70,16 +76,16 @@ export default function Jbk() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6"
           >
             <a
-              href={`https://wa.me/237678032746?text=${encodeURIComponent("Bonjour, je souhaite demander un service à JBK Films.")}`}
+              href={toWhatsappUrl(content.hero.primaryWhatsappMessage)}
               className="gold-gradient text-noir-deep px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black text-base md:text-lg hover:scale-110 transition-all shadow-2xl gold-glow w-full sm:w-auto"
             >
-              DEMANDER UN SERVICE
+              {content.hero.primaryButtonLabel}
             </a>
              <a
-              href={`https://wa.me/237678032746?text=${encodeURIComponent("Bonjour, je souhaite contacter l'équipe JBK Films.")}`}
+              href={toWhatsappUrl(content.hero.secondaryWhatsappMessage)}
               className="bg-noir-card border border-white/10 text-white px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black text-base md:text-lg hover:bg-white hover:text-noir-deep transition-all flex items-center gap-3 w-full sm:w-auto justify-center"
             >
-              WHATSAPP <MessageCircle className="w-6 h-6" />
+              {content.hero.secondaryButtonLabel} <MessageCircle className="w-6 h-6" />
             </a>
           </motion.div>
         </div>
@@ -94,9 +100,9 @@ export default function Jbk() {
             viewport={{ once: true }}
             className="text-center mb-16 md:mb-24"
           >
-            <h2 className="text-3xl md:text-7xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6">Expertises JBK</h2>
+            <h2 className="text-3xl md:text-7xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6">{content.services.heading}</h2>
             <p className="text-text-para text-base md:text-xl max-w-2xl mx-auto font-medium">
-              Nous accompagnons vos projets de l'idée jusqu'à la diffusion avec des outils professionnels.
+              {content.services.description}
             </p>
           </motion.div>
 
@@ -119,10 +125,10 @@ export default function Jbk() {
                     {service.description}
                   </p>
                   <a 
-                    href={`https://wa.me/237678032746?text=${encodeURIComponent(`Bonjour, je souhaite en savoir plus sur l'expertise JBK : ${service.title}`)}`}
+                    href={toWhatsappUrl(content.services.cardWhatsappTemplate.replace("{{serviceTitle}}", service.title))}
                     className="flex items-center gap-2 text-gold font-black text-xs group-hover:gap-4 transition-all uppercase tracking-widest mt-auto border-t border-white/5 pt-6"
                   >
-                    En savoir plus <ArrowRight className="w-4 h-4" />
+                    {content.services.cardCtaLabel} <ArrowRight className="w-4 h-4" />
                   </a>
                 </motion.div>
               );
@@ -136,10 +142,10 @@ export default function Jbk() {
         <div className="max-w-7xl mx-auto px-6">
            <div className="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24 gap-8">
             <div className="max-w-xl">
-               <h2 className="text-4xl md:text-7xl font-display font-black uppercase tracking-tighter">Nos Productions</h2>
+               <h2 className="text-4xl md:text-7xl font-display font-black uppercase tracking-tighter">{content.productions.heading}</h2>
                <div className="w-32 h-1.5 md:h-2 bg-gold mt-6"></div>
             </div>
-            <p className="text-text-para text-base md:text-lg max-w-sm mb-2 font-bold uppercase tracking-tight opacity-70">Courts & Longs Métrages</p>
+            <p className="text-text-para text-base md:text-lg max-w-sm mb-2 font-bold uppercase tracking-tight opacity-70">{content.productions.subtitle}</p>
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-8">
@@ -162,7 +168,7 @@ export default function Jbk() {
                 </div>
                 <div className="px-1 pb-1 pt-4 text-center">
                   <span className="mb-2 block text-[10px] font-black uppercase tracking-[0.2em] text-gold">
-                    Production JBK
+                    {content.productions.badge}
                   </span>
                   <h3 className="text-xl font-black uppercase leading-tight tracking-tighter text-white md:text-2xl">
                     {prod.title}
@@ -190,7 +196,7 @@ export default function Jbk() {
                   viewport={{ once: true }}
                   className="text-gold font-black uppercase tracking-[0.3em] text-xs mb-8 block"
                 >
-                  Démarrer un projet
+                  {content.conversion.kicker}
                 </motion.div>
                 <motion.h2 
                   initial={{ opacity: 0, y: 30 }}
@@ -198,8 +204,8 @@ export default function Jbk() {
                   viewport={{ once: true }}
                   className="text-4xl md:text-7xl font-display font-black uppercase tracking-tighter mb-8 leading-[0.9]"
                 >
-                  Donnez vie <br />
-                  <span className="text-gold italic">à vos idées</span>
+                  {content.conversion.headingLine1} <br />
+                  <span className="text-gold italic">{content.conversion.headingHighlight}</span>
                 </motion.h2>
                 <motion.p 
                   initial={{ opacity: 0 }}
@@ -208,7 +214,7 @@ export default function Jbk() {
                   transition={{ delay: 0.2 }}
                   className="text-xl md:text-2xl text-text-para font-medium mb-12 leading-relaxed"
                 >
-                  Qu'il s'agisse d'un film, d'une campagne publicitaire ou d'un événement majeur, JBK Films transforme votre vision en réalité visuelle percutante.
+                  {content.conversion.description}
                 </motion.p>
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
@@ -218,16 +224,16 @@ export default function Jbk() {
                   className="flex flex-col sm:flex-row gap-6"
                 >
                   <a
-                    href="https://wa.me/237678032746"
+                    href={content.conversion.primaryWhatsappLink}
                     className="gold-gradient text-noir-deep px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-2xl gold-glow text-center"
                   >
-                    LANCER MON PROJET
+                    {content.conversion.primaryButtonLabel}
                   </a>
                   <Link
                     href="/contact"
                     className="bg-white/5 border border-white/10 text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-white hover:text-noir-deep transition-all text-center"
                   >
-                    DEVIS GRATUIT
+                    {content.conversion.secondaryButtonLabel}
                   </Link>
                 </motion.div>
               </div>
@@ -238,12 +244,7 @@ export default function Jbk() {
                 transition={{ delay: 0.4 }}
                 className="hidden lg:grid grid-cols-2 gap-4"
               >
-                {[
-                  { label: "Qualité 4K", desc: "Production ultra HD" },
-                  { label: "Expertise", desc: "10+ ans d'expérience" },
-                  { label: "Créativité", desc: "Concepts uniques" },
-                  { label: "Rapidité", desc: "Livraison optimisée" }
-                ].map((stat, i) => (
+                {content.conversion.stats.map((stat, i) => (
                   <div key={i} className="bg-noir-deep p-8 rounded-3xl border border-white/5 text-center">
                     <div className="text-gold font-black text-xl mb-1">{stat.label}</div>
                     <div className="text-text-soft text-xs font-bold uppercase tracking-widest">{stat.desc}</div>

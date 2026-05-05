@@ -1,0 +1,461 @@
+{
+  "metadata": {
+    "title": "Compañeros-JBK Empire",
+    "description": "Deux pôles complémentaires accompagnent vos projets : Compañeros pour la formation, les langues et les voyages ; JBK pour l'audiovisuel, l'événementiel et les services créatifs."
+  },
+  "common": {
+    "brandName": "Compañeros-JBK Empire",
+    "whatsappNumber": "237678032746",
+    "email": "jbkfilms2014@gmail.com",
+    "phones": "+237 678 032 746 / 698 058 931 / 698 329 535",
+    "address": "Carrefour Cradat - Rue pavés 3744, en face de l'auto école Kassap",
+    "hours": "Lundi au Vendredi - de 8h00 à 19h00"
+  },
+  "navbar": {
+    "links": [
+      { "name": "Accueil", "path": "/" },
+      { "name": "Compańeros & Services", "path": "/companeros" },
+      { "name": "JBK Films & Services", "path": "/jbk" },
+      { "name": "À Propos", "path": "/a-propos" },
+      { "name": "Contact", "path": "/contact" }
+    ],
+    "desktopWhatsappLabel": "WhatsApp",
+    "mobileWhatsappLabel": "DISCUTER SUR WHATSAPP",
+    "logos": {
+      "default": {
+        "src": "/main/logo.jpg",
+        "alt": "Logo Compañeros-JBK Empire"
+      },
+      "companeros": {
+        "src": "/main/logo-companeros.JPG",
+        "alt": "Logo Compañeros"
+      },
+      "jbk": {
+        "src": "/main/logo-jbk.JPG",
+        "alt": "Logo JBK Films"
+      }
+    }
+  },
+  "footer": {
+    "brandMain": "COMPAÑEROS-JBK",
+    "brandHighlight": "EMPIRE",
+    "description": "Deux pôles complémentaires pour accompagner vos projets : formation, voyages, langues, traduction, production audiovisuelle, événementiel et services créatifs.",
+    "navigationTitle": "Navigation",
+    "contactTitle": "Coordonnées",
+    "partnerLinkLabel": "Partenaires",
+    "copyright": "© 2026 Compañeros-JBK Empire. Tous droits réservés."
+  },
+  "floatingWhatsapp": {
+    "message": "Bonjour JBK FILMS, je souhaite avoir plus d'informations."
+  },
+  "constants": {
+    "companerosServices": [
+      {
+        "id": "voyage",
+        "title": "Suivis de voyages",
+        "description": "Un accompagnement complet pour vos projets de mobilité internationale.",
+        "icon": "Plane",
+        "details": [
+          "Études (Assistance admission & visa)",
+          "Travail & Immigration professionnelle",
+          "Tourisme & Visites familiales",
+          "Sport & Volontariat international",
+          "Bourses d'études & Prise en charge",
+          "Préparation aux entretiens consulaires"
+        ]
+      },
+      {
+        "id": "concours",
+        "title": "Préparation concours",
+        "description": "Réussissez vos examens d'entrée avec une méthodologie éprouvée.",
+        "icon": "FileText",
+        "details": [
+          "Concours de la Gendarmerie & Police",
+          "Douanes & Administration pénitentiaire",
+          "ENS & ENSET (Enseignement)",
+          "Infirmiers Diplômés d'État (IDE)",
+          "Simulations d'épreuves orales",
+          "Supports de cours & examens blancs"
+        ]
+      },
+      {
+        "id": "langues",
+        "title": "Cours de langues",
+        "description": "Maîtrisez une nouvelle langue pour vos études ou votre culture.",
+        "icon": "Globe",
+        "details": [
+          "Langues internationales (A1 à C2)",
+          "Préparation aux tests (TOEFL, IELTS, DELE)",
+          "Langues nationales (Patrimoine culturel)",
+          "Cours intensifs pour voyageurs",
+          "Clubs de conversation",
+          "Français langue étrangère"
+        ]
+      },
+      {
+        "id": "traduction",
+        "title": "Traduction & interprétation",
+        "description": "Des services linguistiques professionnels pour vos documents et événements.",
+        "icon": "Languages",
+        "details": [
+          "Traduction assermentée de documents officiels",
+          "Traduction technique & commerciale",
+          "Interprétariat de conférence",
+          "Révision & correction de textes",
+          "Demandes express de traduction",
+          "Sous-titrage de contenus vidéo"
+        ]
+      },
+      {
+        "id": "soutien",
+        "title": "Soutien scolaire",
+        "description": "Évitez l'échec scolaire avec un encadrement personnalisé.",
+        "icon": "BookOpen",
+        "details": [
+          "Matières scientifiques (Maths, PC, SVT)",
+          "Matières littéraires & Langues",
+          "Préparation au BEPC, Probatoire & BAC",
+          "Suivi universitaire par UE spécifique",
+          "Méthodologie d'apprentissage",
+          "Remise à niveau pendant les vacances"
+        ]
+      },
+      {
+        "id": "culture",
+        "title": "ESCUELA DE FLAMENCO DE ANDALUCÍA",
+        "description": "Devenez professionnel de danse Flamenco et participez aux événements internationaux de danse Flamenco grâce à la EFA.",
+        "icon": "Music",
+        "details": [
+          "Formation professionnelle en danse Flamenco",
+          "Techniques de compás et palmas",
+          "Préparation scénique et performance",
+          "Participation aux festivals internationaux",
+          "Ateliers culturels andalous",
+          "Encadrement par la EFA"
+        ]
+      }
+    ],
+    "jbkServices": [
+      {
+        "id": "graphisme",
+        "title": "Graphisme & Impression",
+        "description": "Design de logos, flyers, affiches et impressions tous supports.",
+        "icon": "Palette"
+      },
+      {
+        "id": "evenement",
+        "title": "Événementiel",
+        "description": "Couverture vidéo et photo complète de vos événements (mariages, concerts).",
+        "icon": "Camera"
+      },
+      {
+        "id": "web",
+        "title": "Création Web",
+        "description": "Développement de sites vitrines et plateformes e-commerce modernes.",
+        "icon": "Layout"
+      },
+      {
+        "id": "doublage",
+        "title": "Doublage & Sous-titrage",
+        "description": "Adaptation linguistique de vos films et contenus audiovisuels.",
+        "icon": "Type"
+      },
+      {
+        "id": "voix",
+        "title": "Voix Off",
+        "description": "Enregistrement de voix professionnelles pour publicités et documentaires.",
+        "icon": "Mic"
+      },
+      {
+        "id": "drone",
+        "title": "Prises de vue Drone",
+        "description": "Images aériennes spectaculaires en haute définition (4K).",
+        "icon": "Wind"
+      },
+      {
+        "id": "vente",
+        "title": "Vente de Matériel",
+        "description": "Équipements audiovisuels professionnels neufs et d'occasion.",
+        "icon": "Smartphone"
+      },
+      {
+        "id": "pub",
+        "title": "Publicité TV & Web",
+        "description": "Conception et réalisation de spots publicitaires impactants.",
+        "icon": "Tv"
+      },
+      {
+        "id": "com",
+        "title": "Communication Digitale",
+        "description": "Stratégie de présence en ligne et gestion des réseaux sociaux.",
+        "icon": "Globe"
+      },
+      {
+        "id": "formation",
+        "title": "Formation Pro",
+        "description": "Apprentissage des métiers de l'audiovisuel et du graphisme.",
+        "icon": "GraduationCap"
+      }
+    ],
+    "productions": [
+      { "title": "Affaire Poulet", "id": "1", "image": "/organized-content/jbk/images/long-metrage-01.jpg" },
+      { "title": "Métamorphose à outrance", "id": "2", "image": "/organized-content/jbk/images/long-metrage-02.jpg" },
+      { "title": "Le partage", "id": "3", "image": "/organized-content/jbk/images/long-metrage-03.jpg" },
+      { "title": "Suprématie artificielle", "id": "4", "image": "/organized-content/jbk/images/long-metrage-04.jpg" },
+      { "title": "Empoisonnement", "id": "5", "image": "/organized-content/jbk/images/long-metrage-05.jpg" },
+      { "title": "Le photographe", "id": "6", "image": "/organized-content/jbk/images/long-metrage-06.jpg" },
+      { "title": "Brenda", "id": "7", "image": "/organized-content/jbk/images/long-metrage-07.jpg" },
+      { "title": "Halte!", "id": "8", "image": "/organized-content/jbk/images/long-metrage-09.jpg" },
+      { "title": "Mirando Pa' Cuenca", "id": "9", "image": "/organized-content/jbk/images/long-metrage-10.jpg" },
+      { "title": "Par elles pour elles", "id": "10", "image": "/organized-content/jbk/images/long-metrage-11.jpg" },
+      { "title": "20.000 Cedis", "id": "11", "image": "/organized-content/jbk/images/long-metrage-12.jpg" },
+      { "title": "Potion de séduction", "id": "12", "image": "/organized-content/jbk/images/long-metrage-15.jpg" },
+      { "title": "Pfff", "id": "13", "image": "/organized-content/jbk/images/long-metrage-16.jpg" },
+      { "title": "Nouveau Stock", "id": "14", "image": "/organized-content/jbk/images/long-metrage-17.jpg" }
+    ],
+    "partners": [
+      { "id": "1", "name": "Partenaire 1", "logo": "/organized-content/partenaires/images/05-800-6871fa35c21f7-9a847c35.jpg" },
+      { "id": "2", "name": "Partenaire 2", "logo": "/organized-content/partenaires/images/06-800-6871fc6566bb1-3bcf15e0.png" },
+      { "id": "3", "name": "Partenaire 3", "logo": "/organized-content/partenaires/images/07-800-6874cd31445df-d22893f4.jpg" },
+      { "id": "4", "name": "Partenaire 4", "logo": "/organized-content/partenaires/images/08-800-6874cd6354a02-bec0579b.png" },
+      { "id": "5", "name": "Partenaire 5", "logo": "/organized-content/partenaires/images/09-800-686553125c61f-3cd75252.jpg" },
+      { "id": "6", "name": "Partenaire 6", "logo": "/organized-content/partenaires/images/10-800-filter-nobg-6870b9b2be84d-314f399c.png" },
+      { "id": "7", "name": "Partenaire 7", "logo": "/organized-content/partenaires/images/11-800-filter-nobg-6879f85ec9d07-6c462dd9.png" },
+      { "id": "8", "name": "Partenaire 8", "logo": "/organized-content/partenaires/images/12-800-filter-nobg-694698079d5a2-c89913a7.png" },
+      { "id": "9", "name": "Partenaire 9", "logo": "/organized-content/partenaires/images/13-800-6874ce44adb07-6e0dee31.jpg" },
+      { "id": "10", "name": "Partenaire 10", "logo": "/organized-content/partenaires/images/14-800-filter-nobg-6879f8d7dbd7b-c9ba2cbc.png" }
+    ],
+    "stats": [
+      { "label": "Expertise", "value": "2013" },
+      { "label": "Projets d'impact", "value": "500" },
+      { "label": "Followers", "value": "12000" },
+      { "label": "Engagement", "value": "100" }
+    ]
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "backgroundImage": "/main/hero-acceuil.jpg",
+        "backgroundAlt": "Compañeros-JBK Empire",
+        "badge": "Compañeros-JBK Empire",
+        "titleLine1": "L'excellence",
+        "titleLine2": "à 360 degrés",
+        "description": "Deux pôles complémentaires accompagnent vos projets : Compañeros pour la formation, les langues et les voyages ; JBK pour l'audiovisuel, l'événementiel et les services créatifs."
+      },
+      "cards": {
+        "companeros": {
+          "titleLine1": "Compańeros",
+          "titleLine2": "& Services",
+          "description": "Voyages, concours, langues, traduction, cours de soutien et activités culturelles.",
+          "ctaLabel": "DÉCOUVRIR LE CENTRE"
+        },
+        "jbk": {
+          "titleLine1": "JBK Films",
+          "titleLine2": "& Services",
+          "description": "Production audiovisuelle, communication, événementiel, talents et services créatifs.",
+          "ctaLabel": "DÉCOUVRIR JBK"
+        }
+      },
+      "partnersMarqueeTitle": "Nos Partenaires de Confiance",
+      "cta": {
+        "heading": "Besoin d'un accompagnement ?",
+        "buttonLabel": "NOUS CONTACTER"
+      }
+    },
+    "companeros": {
+      "hero": {
+        "image": "/main/hero.jpg",
+        "imageAlt": "Hero Compañeros",
+        "badge": "Voyages • Langues • Concours",
+        "titleLine1": "Voyages, langues,",
+        "titleHighlight": "concours & études",
+        "description": "Depuis 2013, Compañeros accompagne les projets de mobilité, de formation et de réussite scolaire avec des services concrets et un suivi humain.",
+        "primaryButtonLabel": "PRENDRE RENDEZ-VOUS",
+        "secondaryButtonLabel": "DEMANDER UNE ORIENTATION",
+        "primaryWhatsappMessage": "Bonjour, je souhaite prendre rendez-vous avec l'équipe Compañeros."
+      },
+      "services": {
+        "heading": "Nos Services",
+        "description": "Chaque service répond à un besoin clair : préparer un départ, réussir un concours, apprendre une langue ou renforcer son niveau.",
+        "cardCtaLabel": "En savoir plus",
+        "cardWhatsappTemplate": "Bonjour, je souhaite en savoir plus sur le service : {{serviceTitle}}"
+      },
+      "voyageDetail": {
+        "headingLine1": "Un dossier préparé",
+        "headingHighlight": "étape par étape",
+        "items": [
+          "Études, travail, tourisme, immigration et sport",
+          "Assistance visa, bourse et volontariat",
+          "Admission, inscription, légalisation et traduction",
+          "Réservation, assurance et préparation consulaire"
+        ],
+        "ctaLabel": "PRÉPARER UN VOYAGE",
+        "ctaWhatsappMessage": "Bonjour, je souhaite préparer mon voyage avec Compañeros.",
+        "image": "/main/image.jpg",
+        "imageAlt": "Préparation de dossier Compañeros",
+        "floatingBadge": "Études • Travail • Tourisme"
+      },
+      "languages": {
+        "heading": "Apprendre une langue",
+        "description": "En tenant compte de la grande diversité culturelle au Cameroun, du pluralisme linguistique et du vivre ensemble, Compañeros aide à la transmission de l’héritage culturel linguistique.",
+        "international": {
+          "title": "Langues internationales",
+          "description": "Programmes utiles aux études, aux voyages et au travail.",
+          "items": ["Anglais", "Espagnol", "Chinois", "Français", "Russe", "Portugais", "Italien"]
+        },
+        "national": {
+          "title": "Langues nationales",
+          "description": "Cours oraux et écrits pour transmettre et pratiquer l'héritage culturel camerounais.",
+          "items": ["Héritage culturel", "Expression orale", "Cours encadrés", "Pratique progressive"]
+        }
+      },
+      "support": {
+        "heading": "Cours de Soutien",
+        "description": "Compañeros propose des cours de renforcement des capacités pour les élèves et étudiants des classes d'examen. Évitez la note de 0/20 avec un suivi spécialisé.",
+        "subjectsTitle": "Matières Clés",
+        "subjects": ["Mathématiques", "Physique-chimie", "Anglais", "Espagnol", "Allemand", "SVT", "Français"],
+        "pricingTitle": "Tarifs Avantageux",
+        "pricingRows": [
+          { "label": "Primaire / Secondaire", "value": "10.000 F / mois" },
+          { "label": "Forfait (3 matières)", "value": "25.000 F CFA" },
+          { "label": "Université (par UE)", "value": "3.000 F CFA" }
+        ],
+        "ctaLabel": "PRENDRE RENDEZ-VOUS",
+        "ctaWhatsappMessage": "Bonjour, je souhaite inscrire mon enfant aux cours de soutien Compañeros."
+      },
+      "finalCta": {
+        "heading": "Un projet à préparer ?",
+        "description": "L'équipe Compañeros peut vous orienter vers le bon service et vous indiquer les prochaines étapes pour votre projet.",
+        "buttonLabel": "ÉCRIRE SUR WHATSAPP",
+        "buttonWhatsappMessage": "Bonjour, j'ai un projet à préparer et je souhaite être orienté par l'équipe Compañeros."
+      }
+    },
+    "jbk": {
+      "hero": {
+        "image": "/main/hero.jpg",
+        "imageAlt": "Hero JBK Films",
+        "badge": "Films • Événementiel • Communication",
+        "titleLine1": "Films, com &",
+        "titleHighlight": "services créatifs",
+        "description": "JBK Films réunit une maison de production, une équipe technique, une agence d'acteurs et des services créatifs pour marques et artistes.",
+        "primaryButtonLabel": "DEMANDER UN SERVICE",
+        "secondaryButtonLabel": "WHATSAPP",
+        "primaryWhatsappMessage": "Bonjour, je souhaite demander un service à JBK Films.",
+        "secondaryWhatsappMessage": "Bonjour, je souhaite contacter l'équipe JBK Films."
+      },
+      "services": {
+        "heading": "Expertises JBK",
+        "description": "Nous accompagnons vos projets de l'idée jusqu'à la diffusion avec des outils professionnels.",
+        "cardCtaLabel": "En savoir plus",
+        "cardWhatsappTemplate": "Bonjour, je souhaite en savoir plus sur l'expertise JBK : {{serviceTitle}}"
+      },
+      "productions": {
+        "heading": "Nos Productions",
+        "subtitle": "Courts & Longs Métrages",
+        "badge": "Production JBK"
+      },
+      "conversion": {
+        "kicker": "Démarrer un projet",
+        "headingLine1": "Donnez vie",
+        "headingHighlight": "à vos idées",
+        "description": "Qu'il s'agisse d'un film, d'une campagne publicitaire ou d'un événement majeur, JBK Films transforme votre vision en réalité visuelle percutante.",
+        "primaryButtonLabel": "LANCER MON PROJET",
+        "secondaryButtonLabel": "DEVIS GRATUIT",
+        "primaryWhatsappLink": "https://wa.me/237678032746",
+        "stats": [
+          { "label": "Qualité 4K", "desc": "Production ultra HD" },
+          { "label": "Expertise", "desc": "10+ ans d'expérience" },
+          { "label": "Créativité", "desc": "Concepts uniques" },
+          { "label": "Rapidité", "desc": "Livraison optimisée" }
+        ]
+      }
+    },
+    "about": {
+      "hero": {
+        "image": "/main/hero.jpg",
+        "imageAlt": "Hero À propos",
+        "badge": "Notre Histoire • Nos Valeurs",
+        "titleLine1": "Deux pôles, une",
+        "titleHighlight": "vision commune",
+        "description": "Compañeros-JBK Empire réunit l'accompagnement éducatif et voyage avec la production audiovisuelle, les services créatifs et l'événementiel."
+      },
+      "poles": {
+        "companerosTitle": "Compañeros",
+        "companerosDescription": "Pôle dédié à la formation, aux langues, aux concours et aux projets de mobilité internationale.",
+        "jbkTitle": "JBK Films",
+        "jbkDescription": "Pôle dédié à la création audiovisuelle, à la communication digitale et aux services créatifs."
+      },
+      "history": {
+        "image": "/main/image.jpg",
+        "imageAlt": "Histoire Compañeros-JBK Empire",
+        "headingLine1": "Un groupe construit",
+        "headingHighlight": "pour vous",
+        "description": "Porté par Banderas Kouam, pédagogue et réalisateur, l'ensemble est né d'une vision reliant formation humaine et création artistique."
+      },
+      "ceo": {
+        "image": "/organized-content/jbk/images/Banderas-Kouam-CEO.jpg",
+        "imageAlt": "Banderas Kouam",
+        "nameLine1": "Banderas",
+        "nameLine2": "Kouam",
+        "badge": "CEO Compañeros-JBK Empire",
+        "description": "Réalisateur, producteur et pédagogue passionné. Banderas Kouam insuffle une énergie créative et une rigueur éducative à chaque pôle du groupe, avec pour mission l'excellence et l'impact social au Cameroun.",
+        "visionButtonLabel": "DÉCOUVRIR SA VISION",
+        "visionWhatsappMessage": "Bonjour, je souhaite échanger avec l'équipe de Banderas Kouam."
+      },
+      "finalCta": {
+        "buttonLabel": "Discuter de votre vision"
+      }
+    },
+    "contact": {
+      "hero": {
+        "image": "/main/hero.jpg",
+        "imageAlt": "Hero contact",
+        "badge": "Compañeros-JBK Empire",
+        "titleLine1": "Parlons de",
+        "titleHighlight": "votre projet",
+        "description": "Voyage, formation, traduction, production audiovisuelle, événementiel ou partenariat : l'équipe Compañeros-JBK Empire est à votre service."
+      },
+      "coordinates": {
+        "title": "Coordonnées",
+        "items": [
+          { "label": "Téléphone / WhatsApp", "value": "+237 678 032 746 / 698 058 931 / 698 329 535", "icon": "Phone" },
+          { "label": "Email", "value": "jbkfilms2014@gmail.com", "icon": "Mail" },
+          { "label": "Adresse", "value": "Carrefour Cradat - Rue pavés 3744, en face de l'auto école Kassap", "icon": "MapPin" },
+          { "label": "Horaires", "value": "Lundi au Vendredi - de 8h00 à 19h00", "icon": "Clock" }
+        ],
+        "whatsappButtonLabel": "WHATSAPP",
+        "emailButtonLabel": "ENVOYER UN EMAIL",
+        "whatsappLink": "https://wa.me/237678032746",
+        "emailLink": "mailto:jbkfilms2014@gmail.com"
+      },
+      "form": {
+        "title": "Message Direct",
+        "labels": {
+          "fullName": "Nom complet",
+          "phone": "Téléphone",
+          "email": "Email",
+          "service": "Service demandé",
+          "message": "Message"
+        },
+        "placeholders": {
+          "fullName": "Votre nom...",
+          "phone": "Votre numéro...",
+          "email": "Votre email...",
+          "message": "Détails de votre projet..."
+        },
+        "serviceOptions": [
+          "Compañeros - Voyage",
+          "Compañeros - Langue / Concours",
+          "JBK - Production Audiovisuelle",
+          "JBK - Événementiel",
+          "Partenariat / Autre"
+        ],
+        "submitLabel": "ENVOYER"
+      }
+    },
+    "partenaires": {
+      "badge": "Réseau de confiance",
+      "title": "Nos partenaires"
+    }
+  }
+}

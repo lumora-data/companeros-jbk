@@ -1,15 +1,18 @@
 import { PARTNERS } from "@/src/constants";
+import { SITE_CONTENT } from "@/src/content/site-content";
 
 export default function Page() {
+  const { badge, title } = SITE_CONTENT.pages.partenaires;
+
   return (
     <section className="min-h-screen bg-noir-deep px-6 pb-24 pt-36 md:pt-44">
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 max-w-3xl">
           <p className="mb-5 inline-block rounded-full bg-gold px-5 py-1.5 text-[10px] font-black uppercase tracking-widest text-noir-deep">
-            Réseau de confiance
+            {badge}
           </p>
           <h1 className="font-display text-4xl font-black uppercase leading-tight tracking-tighter text-white md:text-7xl">
-            Nos partenaires
+            {title}
           </h1>
         </div>
 

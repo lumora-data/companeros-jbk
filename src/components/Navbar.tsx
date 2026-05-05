@@ -5,11 +5,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
+import { SITE_CONTENT } from "@/src/content/site-content";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const { links, desktopWhatsappLabel, mobileWhatsappLabel, logos } =
+    SITE_CONTENT.navbar;
+  const whatsappUrl = `https://wa.me/${SITE_CONTENT.common.whatsappNumber}`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,21 +23,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Accueil", path: "/" },
-    { name: "Compańeros & Services", path: "/companeros" },
-    { name: "JBK Films & Services", path: "/jbk" },
-    { name: "À Propos", path: "/a-propos" },
-    { name: "Contact", path: "/contact" },
-  ];
-
   const getLogo = () => {
     if (pathname === "/companeros") {
       return (
         <div className="flex items-center group">
           <img
-            src="/main/logo-companeros.JPG"
-            alt="Logo Compañeros"
+            src={logos.companeros.src}
+            alt={logos.companeros.alt}
             className="h-12 w-auto max-w-[170px] rounded-lg object-contain transition-transform duration-300 group-hover:scale-105 md:h-14"
           />
         </div>
@@ -43,8 +39,8 @@ export default function Navbar() {
       return (
         <div className="flex items-center group">
           <img
-            src="/main/logo-jbk.JPG"
-            alt="Logo JBK Films"
+            src={logos.jbk.src}
+            alt={logos.jbk.alt}
             className="h-12 w-auto max-w-[150px] rounded-lg object-contain transition-transform duration-300 group-hover:scale-105 md:h-14"
           />
         </div>
@@ -53,8 +49,8 @@ export default function Navbar() {
     return (
       <div className="flex items-center group">
         <img
-          src="/main/logo.jpg"
-          alt="Logo Compañeros-JBK Empire"
+          src={logos.default.src}
+          alt={logos.default.alt}
           className="h-12 w-auto max-w-[190px] rounded-lg object-contain transition-transform duration-300 group-hover:scale-105 md:h-14"
         />
       </div>
@@ -74,7 +70,7 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center space-x-8">
-          {navLinks.map((link, idx) => (
+          {links.map((link, idx) => (
             <motion.div
               key={link.path}
               initial={{ opacity: 0, y: -10 }}
@@ -96,10 +92,10 @@ export default function Navbar() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6 }}
-            href="https://wa.me/237678032746"
+            href={whatsappUrl}
             className="gold-gradient text-noir-deep px-6 py-2 rounded-full text-xs font-black transition-all transform hover:scale-105 active:scale-95 gold-glow uppercase tracking-tighter"
           >
-            WhatsApp
+            {desktopWhatsappLabel}
           </motion.a>
         </div>
 
@@ -129,7 +125,7 @@ export default function Navbar() {
               <X className="w-10 h-10" />
             </button>
             <div className="flex flex-col space-y-8">
-              {navLinks.map((link) => (
+              {links.map((link) => (
                 <Link
                   key={link.path}
                   href={link.path}
@@ -142,11 +138,11 @@ export default function Navbar() {
                 </Link>
               ))}
               <a
-                href="https://wa.me/237678032746"
+                href={whatsappUrl}
                 onClick={() => setIsOpen(false)}
                 className="gold-gradient text-noir-deep text-center py-5 rounded-2xl font-black text-xl gold-glow shadow-2xl"
               >
-                DISCUTER SUR WHATSAPP
+                {mobileWhatsappLabel}
               </a>
             </div>
           </motion.div>
