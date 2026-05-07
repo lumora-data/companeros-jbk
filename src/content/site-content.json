@@ -769,7 +769,7 @@
         "cardCtaLabel": "En savoir plus",
         "cardWhatsappTemplate": "Bonjour, je souhaite en savoir plus sur l'expertise JBK : {{serviceTitle}}",
         "redirectByServiceId": {
-          "evenement": "/jbk/evenements"
+          "doublage": "/jbk/evenements"
         }
       },
       "productions": {
