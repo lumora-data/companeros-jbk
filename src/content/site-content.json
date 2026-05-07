@@ -25,6 +25,7 @@
         "companerosFlamenco": "/companeros/flamenco",
         "jbkEvenements": "/jbk/evenements",
         "jbkDoublage": "/jbk/doublage",
+        "jbkVenteMateriel": "/jbk/vente-materiel",
         "jbk": "/jbk",
         "about": "/a-propos",
         "contact": "/contact",
@@ -771,7 +772,8 @@
         "cardWhatsappTemplate": "Bonjour, je souhaite en savoir plus sur l'expertise JBK : {{serviceTitle}}",
         "redirectByServiceId": {
           "evenement": "/jbk/evenements",
-          "doublage": "/jbk/doublage"
+          "doublage": "/jbk/doublage",
+          "vente": "/jbk/vente-materiel"
         }
       },
       "productions": {
@@ -833,6 +835,61 @@
           "embedUrl": "https://www.youtube.com/embed/wqFSAS23j30"
         }
       ]
+    },
+    "jbkVenteMateriel": {
+      "title": "Vente de matériel audio-visuel",
+      "introParagraphs": [
+        "JBK FILMS vous propose une vaste gamme de matériel audio-visuel d'origine, en neuf et en seconde main selon vos préférence.",
+        "Ceci est un exemple des appareils seconde main que nous proposons. Neanmoins, vous pouvez nous passer la commande de votre matériel en provenance d'Espagne et le recevoir dans les delais de 20 à 30 jours."
+      ],
+      "images": [
+        {
+          "src": "/organized-content/materiel-04.webp",
+          "alt": "Matériel audiovisuel JBK 1"
+        },
+        {
+          "src": "/organized-content/materiel-01.webp",
+          "alt": "Matériel audiovisuel JBK 2"
+        },
+        {
+          "src": "/organized-content/materiel-02.webp",
+          "alt": "Matériel audiovisuel JBK 3"
+        },
+        {
+          "src": "/organized-content/materiel-03.webp",
+          "alt": "Matériel audiovisuel JBK 4"
+        }
+      ],
+      "droneSection": {
+        "text": "En termes de drones, nous vous proposons de préférences les Mavic Pro, Mavic pro 2 et Mavic pro 3.",
+        "videos": [
+          {
+            "url": "https://www.youtube.com/watch?v=7SembcsxrQw&t=22s",
+            "embedUrl": "https://www.youtube.com/embed/7SembcsxrQw?start=22"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=r5kukRMmZNI",
+            "embedUrl": "https://www.youtube.com/embed/r5kukRMmZNI"
+          }
+        ]
+      },
+      "cameraSection": {
+        "text": "Parlant des appareils photos et cameras, nous proposons en premier plan, les modeles Canon.",
+        "videos": [
+          {
+            "url": "https://www.youtube.com/watch?v=_i7O5lppFPw",
+            "embedUrl": "https://www.youtube.com/embed/_i7O5lppFPw"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=CHi1fkbt9aw",
+            "embedUrl": "https://www.youtube.com/embed/CHi1fkbt9aw"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=4_5YIbseUAI",
+            "embedUrl": "https://www.youtube.com/embed/4_5YIbseUAI"
+          }
+        ]
+      }
     },
     "about": {
       "hero": {
