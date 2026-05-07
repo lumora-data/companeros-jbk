@@ -88,6 +88,20 @@
         ]
       },
       {
+        "id": "culture",
+        "title": "ESCUELA DE FLAMENCO DE ANDALUCÍA",
+        "description": "Devenez professionnel de danse Flamenco et participez aux événements internationaux de danse Flamenco grâce à la EFA. Visitez le site de la EFA : https://www.efaflamenco.com/",
+        "icon": "Music",
+        "details": [
+          "Formation professionnelle en danse Flamenco",
+          "Techniques de compás et palmas",
+          "Préparation scénique et performance",
+          "Participation aux festivals internationaux",
+          "Ateliers culturels andalous",
+          "Encadrement par la EFA"
+        ]
+      },
+      {
         "id": "concours",
         "title": "Préparation concours",
         "description": "Réussissez vos examens d'entrée avec une méthodologie éprouvée.",
@@ -155,20 +169,6 @@
           "Suivi universitaire par UE spécifique",
           "Méthodologie d'apprentissage",
           "Remise à niveau pendant les vacances"
-        ]
-      },
-      {
-        "id": "culture",
-        "title": "ESCUELA DE FLAMENCO DE ANDALUCÍA",
-        "description": "Devenez professionnel de danse Flamenco et participez aux événements internationaux de danse Flamenco grâce à la EFA. Visitez le site de la EFA : https://www.efaflamenco.com/",
-        "icon": "Music",
-        "details": [
-          "Formation professionnelle en danse Flamenco",
-          "Techniques de compás et palmas",
-          "Préparation scénique et performance",
-          "Participation aux festivals internationaux",
-          "Ateliers culturels andalous",
-          "Encadrement par la EFA"
         ]
       }
     ],
