@@ -31,7 +31,7 @@
   "navbar": {
     "links": [
       { "name": "Accueil", "path": "/" },
-      { "name": "Compańeros & Services", "path": "/companeros" },
+      { "name": "Compañeros & Services", "path": "/companeros" },
       { "name": "JBK Films & Services", "path": "/jbk" },
       { "name": "À Propos", "path": "/a-propos" },
       { "name": "Contact", "path": "/contact" }
@@ -261,7 +261,7 @@
       },
       "cards": {
         "companeros": {
-          "titleLine1": "Compańeros",
+          "titleLine1": "Compañeros",
           "titleLine2": "& Services",
           "description": "Voyages, concours, langues, traduction, cours de soutien et activités culturelles.",
           "ctaLabel": "DÉCOUVRIR LE CENTRE"
