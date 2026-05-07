@@ -23,6 +23,7 @@
       "companerosTraduction": "/companeros/traduction-interpretation",
       "companerosSoutien": "/companeros/cours-de-soutien",
       "companerosFlamenco": "/companeros/flamenco",
+      "jbkEvenements": "/jbk/evenements",
       "jbk": "/jbk",
       "about": "/a-propos",
       "contact": "/contact",
@@ -766,7 +767,10 @@
         "heading": "Expertises JBK",
         "description": "Nous accompagnons vos projets de l'idée jusqu'à la diffusion avec des outils professionnels.",
         "cardCtaLabel": "En savoir plus",
-        "cardWhatsappTemplate": "Bonjour, je souhaite en savoir plus sur l'expertise JBK : {{serviceTitle}}"
+        "cardWhatsappTemplate": "Bonjour, je souhaite en savoir plus sur l'expertise JBK : {{serviceTitle}}",
+        "redirectByServiceId": {
+          "evenement": "/jbk/evenements"
+        }
       },
       "productions": {
         "heading": "Nos Productions",
@@ -788,6 +792,23 @@
           { "label": "Rapidité", "desc": "Livraison optimisée" }
         ]
       }
+    },
+    "jbkEvenements": {
+      "title": "Choisissez JBK Films pour les doublages et sous-titrages de vos films!",
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=lRx0I5nZHiQ&t=26s",
+          "embedUrl": "https://www.youtube.com/embed/lRx0I5nZHiQ?start=26"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=kOFOAR8_vBE",
+          "embedUrl": "https://www.youtube.com/embed/kOFOAR8_vBE"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=wqFSAS23j30",
+          "embedUrl": "https://www.youtube.com/embed/wqFSAS23j30"
+        }
+      ]
     },
     "about": {
       "hero": {
