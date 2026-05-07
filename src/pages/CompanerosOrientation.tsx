@@ -59,6 +59,14 @@ export default function CompanerosOrientation() {
             ))}
           </div>
 
+          <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 md:rounded-3xl">
+            <img
+              src={content.bottomImage.src}
+              alt={content.bottomImage.alt}
+              className="h-auto w-full object-cover"
+            />
+          </div>
+
           <div className="mt-12 text-center">
             <a
               href={whatsappUrl}

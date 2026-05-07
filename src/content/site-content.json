@@ -382,6 +382,10 @@
         "À Compañeros, nous vous proposons des cours de langues en cas de nécessité. Non seulement pour réussir votre entretien de voyage, mais aussi pour avoir le niveau de langue indispensable pour assurer votre épanouissement une fois arrivé à l'étranger.",
         "Enregistrez-vous gratuitement dès maintenant, prenez les informations nécessaires et payez vos frais de suivi uniquement au moment du lancement de votre procédure de voyage."
       ],
+      "bottomImage": {
+        "src": "/organized-content/voyage-orientation.webp",
+        "alt": "Orientation voyage Compañeros"
+      },
       "cta": {
         "buttonLabel": "PRENDRE RENDEZ-VOUS",
         "whatsappMessage": "Bonjour, je souhaite un suivi de voyage Compañeros pour mon projet d'études."
