@@ -19,6 +19,7 @@
       "companerosOrientation": "/companeros/orientation",
       "companerosConcours": "/companeros/preparation-concours",
       "companerosLangues": "/companeros/cours-de-langues",
+      "companerosLanguesEnLigne": "/companeros/cours-de-langue-en-ligne",
       "companerosTraduction": "/companeros/traduction-interpretation",
       "companerosSoutien": "/companeros/cours-de-soutien",
       "companerosFlamenco": "/companeros/flamenco",
@@ -319,7 +320,7 @@
           "voyage": "/companeros/orientation",
           "concours": "/companeros/preparation-concours",
           "langues": "/companeros/cours-de-langues",
-          "langues-en-ligne": "/companeros/cours-de-langues",
+          "langues-en-ligne": "/companeros/cours-de-langue-en-ligne",
           "traduction": "/companeros/traduction-interpretation",
           "soutien": "/companeros/cours-de-soutien",
           "culture": "/companeros/flamenco"
@@ -604,6 +605,21 @@
       "cta": {
         "buttonLabel": "PRENEZ RENDEZ-VOUS",
         "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour les cours de langues."
+      }
+    },
+    "companerosLanguesEnLigne": {
+      "hero": {
+        "badge": "Cours en ligne",
+        "title": "Cours de langue en ligne",
+        "subtitle": "Regardez la vidéo de présentation et prenez rendez-vous avec notre équipe."
+      },
+      "video": {
+        "url": "https://www.youtube.com/watch?v=zxQnDeKdK00",
+        "embedUrl": "https://www.youtube.com/embed/zxQnDeKdK00"
+      },
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour les cours de langue en ligne."
       }
     },
     "companerosTraduction": {
