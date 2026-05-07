@@ -120,7 +120,7 @@ export default function Home() {
             className="group relative bg-noir-card rounded-[2rem] md:rounded-[3rem] border border-white/5 overflow-hidden p-8 md:p-16 flex flex-col justify-between min-h-[420px] md:min-h-[500px]"
           >
             <div className="relative z-10">
-              <div className="bg-white/10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-8 md:mb-10 group-hover:bg-white/20 transition-all p-2 ring-[0.5px] ring-white/12">
+              <div className="bg-white/5 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-8 md:mb-10 group-hover:bg-white/10 transition-all p-1">
                 <img
                   src={logos.companeros.src}
                   alt={logos.companeros.alt}
@@ -147,7 +147,7 @@ export default function Home() {
             className="group relative bg-noir-card rounded-[2rem] md:rounded-[3rem] border border-gold/10 overflow-hidden p-8 md:p-16 flex flex-col justify-between min-h-[420px] md:min-h-[500px]"
           >
             <div className="relative z-10">
-              <div className="bg-gold/20 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-8 md:mb-10 group-hover:bg-gold/30 transition-all p-2 ring-[0.5px] ring-gold/20">
+              <div className="bg-gold/10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-8 md:mb-10 group-hover:bg-gold/20 transition-all p-1">
                 <img
                   src={logos.jbk.src}
                   alt={logos.jbk.alt}
