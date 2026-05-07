@@ -1,5 +1,8 @@
 import { PARTNERS } from "@/src/constants";
+import { PAGE_SEO } from "@/src/content/page-seo";
 import { SITE_CONTENT } from "@/src/content/site-content";
+
+export const metadata = PAGE_SEO.partners;
 
 export default function Page() {
   const { badge, title } = SITE_CONTENT.pages.partenaires;
