@@ -17,6 +17,7 @@
       "home": "/",
       "companeros": "/companeros",
       "companerosOrientation": "/companeros/orientation",
+      "companerosConcours": "/companeros/preparation-concours",
       "jbk": "/jbk",
       "about": "/a-propos",
       "contact": "/contact",
@@ -294,6 +295,7 @@
       "services": {
         "heading": "Nos Services",
         "description": "Chaque service répond à un besoin clair : préparer un départ, réussir un concours, apprendre une langue ou renforcer son niveau.",
+        "concoursServiceId": "concours",
         "cardCtaLabel": "En savoir plus",
         "cardWhatsappTemplate": "Bonjour, je souhaite en savoir plus sur le service : {{serviceTitle}}"
       },
@@ -462,6 +464,41 @@
       "cta": {
         "buttonLabel": "PRENDRE RENDEZ-VOUS",
         "whatsappMessage": "Bonjour, je souhaite un suivi de voyage Compañeros pour mon projet d'études."
+      }
+    },
+    "companerosConcours": {
+      "hero": {
+        "badge": "Préparation continue",
+        "title": "Préparation concours",
+        "subtitle": "Réussissez vos examens d'entrée avec une méthodologie éprouvée."
+      },
+      "firstImage": {
+        "src": "/organized-content/preparation-concours.webp",
+        "alt": "Préparation concours Compañeros"
+      },
+      "introText": "Nous proposons une préparation continue aux concours (ENS, GENDARMERIE, POLICE, DOUANE, IDE) La formation s'étend sur toute l'année. Cependant, les candidats peuvent choisir de travailler sur une période déterminée selon leurs préférences.",
+      "ensSection": {
+        "title": "E.N.S",
+        "paragraphs": [
+          "Il y a quatre Écoles Normales Supérieures (ENS) au Cameroun: l'ENS de Yaoundé, l'ENS de Maroua, l'ENS de Bamenda, et l'ENS de Bertoua.",
+          "L’ENS est un établissement supérieur pour des études axées sur l’éducation. Elle comporte 14 départements d’enseignement. Elle confère des diplômes nationaux (DIPES 1, DIPES 2, DIP. CO et DIPEN). En plus des divers services administratifs, elle abrite une cité, un restaurant et des équipements de sport. Pour une recherche optimale, le campus est irrigué par le wifi libre d’accès aux étudiants et enseignants. Par son recrutement sélectif, elle est l’une des meilleures écoles de formation au Cameroun. Cet état de choses transparaît à travers l’emploi des diplômés de l’ENS dans tous les secteurs liés au développement du pays. Des étudiants étrangers ont la possibilité de poursuivre une partie ou la totalité de leur cursus universitaire à l’ENS. Elle accueille également de nombreux enseignants-chercheurs étrangers dans le cadre de colloques et autres rencontres universitaires qui y sont organisés."
+        ],
+        "campusLabel": "Visitez le Campus de Yaoundé",
+        "campusUrl": "https://www.ens-yde.cm/a-propos-de-lens/"
+      },
+      "secondImage": {
+        "src": "/organized-content/preparation-concours-02.webp",
+        "alt": "Informations complémentaires préparation concours"
+      },
+      "articleParagraphs": [
+        "Vous pouvez également modifier le titre indiqué ci-dessus et ajouter de nouveaux articles. Modifiez vos articles depuis l'onglet Pages en cliquant sur le bouton de modification. Ceci est un article générique que vous pouvez utiliser pour ajouter du contenu d'article / des sujets sur votre site web.",
+        "Vous pouvez modifier tout ce texte et le remplacer par tout ce que vous avez à dire dans votre article d'actualité/sujet. Vous pouvez également modifier le titre indiqué ci-dessus et ajouter de nouveaux articles. Modifiez vos articles depuis l'onglet Pages en cliquant sur le bouton de modification. Ceci est un article générique que vous pouvez utiliser pour ajouter du contenu d'article / des sujets sur votre site web.",
+        "Vous pouvez modifier tout ce texte et le remplacer par tout ce que vous avez à dire dans votre article d'actualité/sujet. Vous pouvez également modifier le titre indiqué ci-dessus et ajouter de nouveaux articles. Modifiez vos articles depuis l'onglet Pages en cliquant sur le bouton de modification. Ceci est un article générique que vous pouvez utiliser pour ajouter du contenu d'article / des sujets sur votre site web. Vous pouvez modifier tout ce texte et le remplacer par tout ce que vous avez à dire dans votre article d'actualité/sujet. Vous pouvez également modifier le titre indiqué ci-dessus et ajouter de nouveaux articles. Modifiez vos articles depuis l'onglet Pages en cliquant sur le bouton de modification. Ceci est un article générique que vous pouvez utiliser pour ajouter du contenu d'article / des sujets sur votre site web.",
+        "Vous pouvez modifier tout ce texte et le remplacer par tout ce que vous avez à dire dans votre article d'actualité/sujet. Vous pouvez également modifier le titre indiqué ci-dessus et ajouter de nouveaux articles. Modifiez vos articles depuis l'onglet Pages en cliquant sur le bouton de modification."
+      ],
+      "cta": {
+        "buttonLabel": "PRENDRE UN RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre un rendez-vous pour la préparation concours."
       }
     },
     "jbk": {
