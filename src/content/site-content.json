@@ -454,6 +454,11 @@
         { "country": "VENEZUELA", "flag": "🇻🇪", "url": "https://www.legrandsoir.info/des-etrangers-qui-ont-choisi-de-vivre-au-venezuela-expliquent-pourquoi-ils-y-restent-34847.html" },
         { "country": "VIETNAM", "flag": "🇻🇳", "url": "https://guidefrancophone.com/10-principales-raisons-de-sinstaller-au-vietnam/#google_vignette" }
       ],
+      "videoSection": {
+        "intro": "RETROUVEZ DANS CETTE VIDÉO, LA LISTE DE NOS PAYS DE DESTINATION, AINSI QUE LES DURÉES DES PROCÉDURES :",
+        "url": "https://youtu.be/RYApnmx-tGA?si=e_mUwMAh-_xqmAMU",
+        "embedUrl": "https://www.youtube.com/embed/RYApnmx-tGA"
+      },
       "cta": {
         "buttonLabel": "PRENDRE RENDEZ-VOUS",
         "whatsappMessage": "Bonjour, je souhaite un suivi de voyage Compañeros pour mon projet d'études."

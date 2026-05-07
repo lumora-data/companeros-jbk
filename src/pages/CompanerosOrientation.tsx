@@ -92,6 +92,31 @@ export default function CompanerosOrientation() {
             </div>
           </div>
 
+          <div className="mt-10">
+            <p className="text-sm font-black uppercase tracking-wide text-white md:text-base">
+              {content.videoSection.intro}
+            </p>
+            <a
+              href={content.videoSection.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-gold underline underline-offset-4"
+            >
+              {content.videoSection.url}
+              <ExternalLink className="h-4 w-4" />
+            </a>
+            <div className="mt-5 overflow-hidden rounded-2xl border border-white/10">
+              <iframe
+                src={content.videoSection.embedUrl}
+                title="Vidéo destinations Compañeros"
+                className="aspect-video w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
           <div className="mt-12 text-center">
             <a
               href={whatsappUrl}
