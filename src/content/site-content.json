@@ -90,7 +90,7 @@
       {
         "id": "culture",
         "title": "ESCUELA DE FLAMENCO DE ANDALUCÍA",
-        "description": "Devenez professionnel de danse Flamenco et participez aux événements internationaux de Flamenco dans tous les pays du monde grâce à la EFA. Visitez le site de la EFA : https://www.efaflamenco.com/",
+        "description": "Devenez professionnel de danse Flamenco et participez aux événements internationaux de Flamenco dans tous les pays du monde grâce à la EFA.\nVisitez le site de la EFA : https://www.efaflamenco.com/",
         "icon": "Music",
         "details": [
           "Formation professionnelle en danse Flamenco",
@@ -724,7 +724,7 @@
       "hero": {
         "badge": "Escuela de Flamenco",
         "title": "Escuela de Flamenco de Andalucía",
-        "subtitle": "Devenez professionnel de danse Flamenco et participez aux événements internationaux de Flamenco dans tous les pays du monde grâce à la EFA. Visitez le site de la EFA : https://www.efaflamenco.com/"
+        "subtitle": "Devenez professionnel de danse Flamenco et participez aux événements internationaux de Flamenco dans tous les pays du monde grâce à la EFA.\nVisitez le site de la EFA : https://www.efaflamenco.com/"
       },
       "firstImage": {
         "src": "/organized-content/flamenco-01.webp",

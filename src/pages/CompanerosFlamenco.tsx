@@ -37,7 +37,7 @@ export default function CompanerosFlamenco() {
           <h1 className="mb-6 text-4xl font-display font-black uppercase tracking-tighter text-white md:text-7xl">
             {content.hero.title}
           </h1>
-          <p className="mx-auto max-w-3xl text-lg font-medium text-text-para md:text-2xl">
+          <p className="mx-auto max-w-3xl text-lg font-medium text-text-para md:text-2xl whitespace-pre-line">
             {renderTextWithLinks(content.hero.subtitle)}
           </p>
         </div>

@@ -138,7 +138,7 @@ export default function Companeros() {
                 >
                   <Icon className="w-10 h-10 text-gold mb-6 group-hover:scale-110 transition-transform duration-500" />
                   <h3 className="text-xl font-black mb-4 uppercase tracking-tight leading-tight">{service.title}</h3>
-                  <p className="text-text-para text-sm md:text-base leading-relaxed mb-8 flex-grow">
+                  <p className="text-text-para text-sm md:text-base leading-relaxed mb-8 flex-grow whitespace-pre-line">
                     {renderTextWithLinks(service.description)}
                   </p>
                   {serviceRedirectUrl ? (
