@@ -2,12 +2,21 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { Crown, Instagram, Facebook, Youtube, Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Crown, Instagram, Facebook, Youtube, Linkedin, Send, Music2, Mail, Phone, MapPin, Clock } from "lucide-react";
 import { SITE_CONTENT } from "@/src/content/site-content";
 
 export default function Footer() {
   const { footer, navbar, common, links } = SITE_CONTENT;
   const navLinks = navbar.links.filter((link) => link.path !== links.routes.home);
+  const socialLinks = [
+    { href: links.social.linkedin, label: "LinkedIn", icon: Linkedin },
+    { href: links.social.instagram, label: "Instagram", icon: Instagram },
+    { href: links.social.facebook, label: "Facebook", icon: Facebook },
+    { href: links.social.facebookAlt, label: "Facebook 2", icon: Facebook },
+    { href: links.social.youtube, label: "YouTube", icon: Youtube },
+    { href: links.social.telegram, label: "Telegram", icon: Send },
+    { href: links.social.tiktok, label: "TikTok", icon: Music2 },
+  ] as const;
 
   return (
     <footer className="bg-noir-card border-t border-white/5 pt-24 pb-12">
@@ -30,16 +39,20 @@ export default function Footer() {
             <p className="text-text-para max-w-sm text-lg leading-relaxed mb-10 mx-auto md:mx-0 font-medium">
               {footer.description}
             </p>
-            <div className="flex justify-center md:justify-start space-x-5">
-              <a href={links.social.instagram} className="bg-noir-deep p-4 rounded-full hover:bg-gold transition-all group scale-wrap">
-                <Instagram className="w-6 h-6 text-text-soft group-hover:text-noir-deep" />
-              </a>
-              <a href={links.social.facebook} className="bg-noir-deep p-4 rounded-full hover:bg-gold transition-all group scale-wrap">
-                <Facebook className="w-6 h-6 text-text-soft group-hover:text-noir-deep" />
-              </a>
-              <a href={links.social.youtube} className="bg-noir-deep p-4 rounded-full hover:bg-gold transition-all group scale-wrap">
-                <Youtube className="w-6 h-6 text-text-soft group-hover:text-noir-deep" />
-              </a>
+            <div className="flex flex-wrap justify-center md:justify-start gap-5">
+              {socialLinks.map(({ href, label, icon: Icon }) => (
+                <a
+                  key={`${label}-${href}`}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={label}
+                  aria-label={label}
+                  className="bg-noir-deep p-4 rounded-full hover:bg-gold transition-all group scale-wrap"
+                >
+                  <Icon className="w-6 h-6 text-text-soft group-hover:text-noir-deep" />
+                </a>
+              ))}
             </div>
           </motion.div>
 

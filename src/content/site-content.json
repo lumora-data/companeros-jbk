@@ -32,9 +32,13 @@
         "partners": "/partenaires"
       },
     "social": {
-      "instagram": "#",
-      "facebook": "#",
-      "youtube": "#"
+      "linkedin": "https://www.linkedin.com/in/banderas-kouam-7b558b142?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "youtube": "https://youtube.com/@jbkfilms-banderaskouam5920?si=DaFKDTWBGRAELvpR",
+      "instagram": "https://www.instagram.com/banderaskouam?igsh=OHhiMHFrOG1ubG5i",
+      "facebook": "https://www.facebook.com/share/p/1AfCxNTJeN/",
+      "facebookAlt": "https://www.facebook.com/share/p/1BSxQp5MKD/",
+      "telegram": "https://telegram.org/dl",
+      "tiktok": "https://www.tiktok.com/@banderaskouam?_r=1&_t=ZS-96AjxQGKU9E"
     }
   },
   "navbar": {

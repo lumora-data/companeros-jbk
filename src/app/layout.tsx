@@ -48,6 +48,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const socialProfiles = Object.values(SITE_CONTENT.links.social).filter(Boolean);
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       name: SITE_NAME,
       url: SITE_URL,
       logo: toAbsoluteUrl("/main/logo.jpg"),
+      sameAs: socialProfiles,
       email: SITE_CONTENT.common.email,
       telephone: SITE_CONTENT.common.phones.split("/")[0]?.trim() || SITE_CONTENT.common.phones,
       address: {
