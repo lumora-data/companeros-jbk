@@ -13,22 +13,23 @@
   },
   "links": {
     "whatsappBaseUrl": "https://wa.me",
-    "routes": {
-      "home": "/",
-      "companeros": "/companeros",
-      "companerosOrientation": "/companeros/orientation",
-      "companerosConcours": "/companeros/preparation-concours",
-      "companerosLangues": "/companeros/cours-de-langues",
-      "companerosLanguesEnLigne": "/companeros/cours-de-langue-en-ligne",
-      "companerosTraduction": "/companeros/traduction-interpretation",
-      "companerosSoutien": "/companeros/cours-de-soutien",
-      "companerosFlamenco": "/companeros/flamenco",
-      "jbkEvenements": "/jbk/evenements",
-      "jbk": "/jbk",
-      "about": "/a-propos",
-      "contact": "/contact",
-      "partners": "/partenaires"
-    },
+      "routes": {
+        "home": "/",
+        "companeros": "/companeros",
+        "companerosOrientation": "/companeros/orientation",
+        "companerosConcours": "/companeros/preparation-concours",
+        "companerosLangues": "/companeros/cours-de-langues",
+        "companerosLanguesEnLigne": "/companeros/cours-de-langue-en-ligne",
+        "companerosTraduction": "/companeros/traduction-interpretation",
+        "companerosSoutien": "/companeros/cours-de-soutien",
+        "companerosFlamenco": "/companeros/flamenco",
+        "jbkEvenements": "/jbk/evenements",
+        "jbkDoublage": "/jbk/doublage",
+        "jbk": "/jbk",
+        "about": "/a-propos",
+        "contact": "/contact",
+        "partners": "/partenaires"
+      },
     "social": {
       "instagram": "#",
       "facebook": "#",
@@ -769,7 +770,8 @@
         "cardCtaLabel": "En savoir plus",
         "cardWhatsappTemplate": "Bonjour, je souhaite en savoir plus sur l'expertise JBK : {{serviceTitle}}",
         "redirectByServiceId": {
-          "doublage": "/jbk/evenements"
+          "evenement": "/jbk/evenements",
+          "doublage": "/jbk/doublage"
         }
       },
       "productions": {
@@ -794,6 +796,28 @@
       }
     },
     "jbkEvenements": {
+      "title": "Couverture d'événements",
+      "introImage": {
+        "src": "/organized-content/evenements.webp",
+        "alt": "Couverture d'événements par JBK Films"
+      },
+      "introText": "JBK films vous offre un service de couverture de vos événements partout au Cameroun et à l'international.\n\nSuivrez les liens pour au de de chaque affiche pour decouvrir des exemples de couverture d'événement réalisés par notre équipe.",
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=-GRA0s0vHx4",
+          "embedUrl": "https://www.youtube.com/embed/-GRA0s0vHx4"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=CtQCHIhLbbs",
+          "embedUrl": "https://www.youtube.com/embed/CtQCHIhLbbs"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=RglglBN-wRA",
+          "embedUrl": "https://www.youtube.com/embed/RglglBN-wRA"
+        }
+      ]
+    },
+    "jbkDoublage": {
       "title": "Choisissez JBK Films pour les doublages et sous-titrages de vos films!",
       "videos": [
         {
