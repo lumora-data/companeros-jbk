@@ -54,6 +54,17 @@ export default function About() {
         </div>
       </section>
 
+      {/* Présentation */}
+      <section className="py-20 md:py-24 bg-noir-deep">
+        <div className="max-w-5xl mx-auto px-6 rounded-[2rem] md:rounded-[3rem] border border-white/5 bg-noir-card p-8 md:p-14">
+          <div className="space-y-6 text-base leading-relaxed text-text-para md:text-lg">
+            {content.presentationParagraphs.map((paragraph: string) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* History Area */}
       <section className="py-20 md:py-32 bg-noir-deep">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
@@ -75,26 +86,12 @@ export default function About() {
       {/* CEO Section */}
       <section className="py-24 md:py-40 bg-noir-card border-y border-white/5 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
+           <div className="mx-auto max-w-4xl">
               <motion.div 
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="relative order-2 lg:order-1"
-              >
-                 <div className="aspect-[4/5] bg-noir-deep rounded-[3rem] md:rounded-[4rem] border border-white/5 overflow-hidden group shadow-3xl">
-                    <img
-                      src={content.ceo.image}
-                      alt={content.ceo.imageAlt}
-                      className="h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
-                    />
-                 </div>
-              </motion.div>
-              <motion.div 
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="order-1 lg:order-2 text-center lg:text-left"
+                className="text-center"
               >
                  <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter mb-6 md:mb-8 leading-[0.8] text-white">{content.ceo.nameLine1} <br /><span className="text-gold italic">{content.ceo.nameLine2}</span></h2>
                  <div className="gold-gradient text-noir-deep px-5 md:px-6 py-2 rounded-full text-[10px] md:text-xs font-black tracking-widest uppercase mb-8 md:mb-10 inline-block shadow-lg">
@@ -103,7 +100,7 @@ export default function About() {
                  <p className="text-text-para text-lg md:text-xl leading-relaxed mb-10 md:mb-12 font-medium">
                    {content.ceo.description}
                  </p>
-                 <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                     <a 
                       href={toWhatsappUrl(content.ceo.visionWhatsappMessage)}
                       className="text-white font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center justify-center gap-4 hover:text-gold transition-all"
