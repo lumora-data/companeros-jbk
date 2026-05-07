@@ -215,12 +215,29 @@ export default function Home() {
             className="flex items-center space-x-20 whitespace-nowrap px-10 md:px-20 min-w-max"
           >
             {[...PARTNERS, ...PARTNERS, ...PARTNERS].map((partner, idx) => (
-              <img 
-                key={idx} 
-                src={partner.logo} 
-                alt={partner.name} 
-                className="h-10 cursor-pointer opacity-90 transition-all hover:opacity-100 md:h-14"
-              />
+              partner.url ? (
+                <a
+                  key={`${partner.id}-${idx}`}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer"
+                  aria-label={`Visiter ${partner.name}`}
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="h-10 opacity-90 transition-all hover:opacity-100 md:h-14"
+                  />
+                </a>
+              ) : (
+                <img
+                  key={`${partner.id}-${idx}`}
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="h-10 opacity-90 transition-all hover:opacity-100 md:h-14"
+                />
+              )
             ))}
           </motion.div>
         </div>
