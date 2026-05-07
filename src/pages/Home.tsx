@@ -120,11 +120,11 @@ export default function Home() {
             className="group relative bg-noir-card rounded-[2rem] md:rounded-[3rem] border border-white/5 overflow-hidden p-8 md:p-16 flex flex-col justify-between min-h-[420px] md:min-h-[500px]"
           >
             <div className="relative z-10">
-              <div className="bg-white/10 w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl flex items-center justify-center mb-8 md:mb-10 group-hover:bg-white/20 transition-all p-2">
+              <div className="bg-white/10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-8 md:mb-10 group-hover:bg-white/20 transition-all p-2 ring-1 ring-white/20">
                 <img
                   src={logos.companeros.src}
                   alt={logos.companeros.alt}
-                  className="h-full w-full object-contain"
+                  className="h-full w-full rounded-full object-cover"
                 />
               </div>
               <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-white leading-tight">{home.cards.companeros.titleLine1} <br />{home.cards.companeros.titleLine2}</h2>
@@ -147,11 +147,11 @@ export default function Home() {
             className="group relative bg-noir-card rounded-[2rem] md:rounded-[3rem] border border-gold/10 overflow-hidden p-8 md:p-16 flex flex-col justify-between min-h-[420px] md:min-h-[500px]"
           >
             <div className="relative z-10">
-              <div className="bg-gold/20 w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl flex items-center justify-center mb-8 md:mb-10 group-hover:bg-gold/30 transition-all p-2">
+              <div className="bg-gold/20 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-8 md:mb-10 group-hover:bg-gold/30 transition-all p-2 ring-1 ring-gold/30">
                 <img
                   src={logos.jbk.src}
                   alt={logos.jbk.alt}
-                  className="h-full w-full object-contain"
+                  className="h-full w-full rounded-full object-cover"
                 />
               </div>
               <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-gold leading-tight">{home.cards.jbk.titleLine1} <br />{home.cards.jbk.titleLine2}</h2>
