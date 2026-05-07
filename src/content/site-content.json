@@ -115,6 +115,20 @@
         ]
       },
       {
+        "id": "langues-en-ligne",
+        "title": "Cours de langue en ligne",
+        "description": "Suivez vos cours à distance avec des enseignants qualifiés, selon votre rythme.",
+        "icon": "Languages",
+        "details": [
+          "Cours individuels et en groupe",
+          "Horaires flexibles",
+          "Suivi pédagogique personnalisé",
+          "Sessions interactives en visioconférence",
+          "Ressources numériques partagées",
+          "Préparation examens et entretiens"
+        ]
+      },
+      {
         "id": "traduction",
         "title": "Traduction & interprétation",
         "description": "Des services linguistiques professionnels pour vos documents et événements.",
@@ -305,6 +319,7 @@
           "voyage": "/companeros/orientation",
           "concours": "/companeros/preparation-concours",
           "langues": "/companeros/cours-de-langues",
+          "langues-en-ligne": "/companeros/cours-de-langues",
           "traduction": "/companeros/traduction-interpretation",
           "soutien": "/companeros/cours-de-soutien",
           "culture": "/companeros/flamenco"
