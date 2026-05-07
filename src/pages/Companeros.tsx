@@ -14,6 +14,24 @@ export default function Companeros() {
   const serviceRedirects = content.services.redirectByServiceId as Record<string, string>;
   const toWhatsappUrl = (message: string) =>
     `${whatsappBaseUrl}/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const renderTextWithLinks = (text: string) => {
+    const parts = text.split(/(https?:\/\/[^\s]+)/g);
+    return parts.map((part, idx) =>
+      /^https?:\/\//.test(part) ? (
+        <a
+          key={idx}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gold underline underline-offset-2 break-all"
+        >
+          {part}
+        </a>
+      ) : (
+        <span key={idx}>{part}</span>
+      ),
+    );
+  };
 
   const iconMap = {
     Plane: Plane,
@@ -121,7 +139,7 @@ export default function Companeros() {
                   <Icon className="w-10 h-10 text-gold mb-6 group-hover:scale-110 transition-transform duration-500" />
                   <h3 className="text-xl font-black mb-4 uppercase tracking-tight leading-tight">{service.title}</h3>
                   <p className="text-text-para text-sm md:text-base leading-relaxed mb-8 flex-grow">
-                    {service.description}
+                    {renderTextWithLinks(service.description)}
                   </p>
                   {serviceRedirectUrl ? (
                     <Link

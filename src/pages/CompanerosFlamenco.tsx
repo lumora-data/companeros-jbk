@@ -8,6 +8,24 @@ export default function CompanerosFlamenco() {
   const whatsappBaseUrl = SITE_CONTENT.links.whatsappBaseUrl;
   const whatsappNumber = SITE_CONTENT.common.whatsappNumber;
   const whatsappUrl = `${whatsappBaseUrl}/${whatsappNumber}?text=${encodeURIComponent(content.cta.whatsappMessage)}`;
+  const renderTextWithLinks = (text: string) => {
+    const parts = text.split(/(https?:\/\/[^\s]+)/g);
+    return parts.map((part, idx) =>
+      /^https?:\/\//.test(part) ? (
+        <a
+          key={idx}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gold underline underline-offset-2 break-all"
+        >
+          {part}
+        </a>
+      ) : (
+        <span key={idx}>{part}</span>
+      ),
+    );
+  };
 
   return (
     <div className="bg-noir-deep pb-24 pt-32 md:pt-40">
@@ -20,7 +38,7 @@ export default function CompanerosFlamenco() {
             {content.hero.title}
           </h1>
           <p className="mx-auto max-w-3xl text-lg font-medium text-text-para md:text-2xl">
-            {content.hero.subtitle}
+            {renderTextWithLinks(content.hero.subtitle)}
           </p>
         </div>
       </section>
