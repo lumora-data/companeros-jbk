@@ -7,9 +7,11 @@ import { SITE_CONTENT } from "@/src/content/site-content";
 
 export default function About() {
   const content = SITE_CONTENT.pages.about;
+  const routes = SITE_CONTENT.links.routes;
   const whatsappNumber = SITE_CONTENT.common.whatsappNumber;
+  const whatsappBaseUrl = SITE_CONTENT.links.whatsappBaseUrl;
   const toWhatsappUrl = (message: string) =>
-    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    `${whatsappBaseUrl}/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <div className="pt-32">
@@ -117,7 +119,7 @@ export default function About() {
       {/* CTA final */}
       <div className="text-center py-24 md:py-32 bg-noir-card px-6">
         <Link 
-          href="/contact" 
+          href={routes.contact} 
           className="gold-gradient text-noir-deep px-8 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl font-black text-lg md:text-xl uppercase tracking-tighter gold-glow hover:scale-105 transition-all shadow-2xl inline-block"
         >
           {content.finalCta.buttonLabel}

@@ -8,9 +8,11 @@ import { SITE_CONTENT } from "@/src/content/site-content";
 
 export default function Companeros() {
   const content = SITE_CONTENT.pages.companeros;
+  const routes = SITE_CONTENT.links.routes;
   const whatsappNumber = SITE_CONTENT.common.whatsappNumber;
+  const whatsappBaseUrl = SITE_CONTENT.links.whatsappBaseUrl;
   const toWhatsappUrl = (message: string) =>
-    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    `${whatsappBaseUrl}/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   const iconMap = {
     Plane: Plane,
@@ -77,7 +79,7 @@ export default function Companeros() {
               {content.hero.primaryButtonLabel}
             </a>
             <Link
-              href="/contact"
+              href={routes.contact}
               className="bg-noir-card border border-white/10 text-text-main px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black text-base md:text-lg hover:bg-gris-sep transition-all w-full sm:w-auto text-center"
             >
               {content.hero.secondaryButtonLabel}

@@ -6,8 +6,8 @@ import { Crown, Instagram, Facebook, Youtube, Mail, Phone, MapPin, Clock } from 
 import { SITE_CONTENT } from "@/src/content/site-content";
 
 export default function Footer() {
-  const { footer, navbar, common } = SITE_CONTENT;
-  const navLinks = navbar.links.filter((link) => link.path !== "/");
+  const { footer, navbar, common, links } = SITE_CONTENT;
+  const navLinks = navbar.links.filter((link) => link.path !== links.routes.home);
 
   return (
     <footer className="bg-noir-card border-t border-white/5 pt-24 pb-12">
@@ -19,7 +19,7 @@ export default function Footer() {
             viewport={{ once: true }}
             className="col-span-1 md:col-span-2"
           >
-            <Link href="/" className="flex items-center justify-center md:justify-start space-x-2 mb-8 group">
+            <Link href={links.routes.home} className="flex items-center justify-center md:justify-start space-x-2 mb-8 group">
               <div className="bg-gold p-1 md:p-1.5 rounded-lg shadow-lg shadow-gold/20 group-hover:rotate-12 transition-transform shrink-0">
                 <Crown className="text-noir-deep w-6 h-6 md:w-8 md:h-8" />
               </div>
@@ -31,13 +31,13 @@ export default function Footer() {
               {footer.description}
             </p>
             <div className="flex justify-center md:justify-start space-x-5">
-              <a href="#" className="bg-noir-deep p-4 rounded-full hover:bg-gold transition-all group scale-wrap">
+              <a href={links.social.instagram} className="bg-noir-deep p-4 rounded-full hover:bg-gold transition-all group scale-wrap">
                 <Instagram className="w-6 h-6 text-text-soft group-hover:text-noir-deep" />
               </a>
-              <a href="#" className="bg-noir-deep p-4 rounded-full hover:bg-gold transition-all group scale-wrap">
+              <a href={links.social.facebook} className="bg-noir-deep p-4 rounded-full hover:bg-gold transition-all group scale-wrap">
                 <Facebook className="w-6 h-6 text-text-soft group-hover:text-noir-deep" />
               </a>
-              <a href="#" className="bg-noir-deep p-4 rounded-full hover:bg-gold transition-all group scale-wrap">
+              <a href={links.social.youtube} className="bg-noir-deep p-4 rounded-full hover:bg-gold transition-all group scale-wrap">
                 <Youtube className="w-6 h-6 text-text-soft group-hover:text-noir-deep" />
               </a>
             </div>
@@ -92,7 +92,7 @@ export default function Footer() {
         <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center text-text-soft text-[10px] font-black tracking-[0.2em] uppercase mb-12">
           <p>{footer.copyright}</p>
           <div className="mt-4 md:mt-0">
-             <Link href="/partenaires" className="hover:text-gold transition-all">{footer.partnerLinkLabel}</Link>
+             <Link href={links.routes.partners} className="hover:text-gold transition-all">{footer.partnerLinkLabel}</Link>
           </div>
         </div>
       </div>

@@ -8,9 +8,11 @@ import { SITE_CONTENT } from "@/src/content/site-content";
 
 export default function Jbk() {
   const content = SITE_CONTENT.pages.jbk;
+  const routes = SITE_CONTENT.links.routes;
   const whatsappNumber = SITE_CONTENT.common.whatsappNumber;
+  const whatsappBaseUrl = SITE_CONTENT.links.whatsappBaseUrl;
   const toWhatsappUrl = (message: string) =>
-    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    `${whatsappBaseUrl}/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   const iconMap = {
     Palette: Palette,
@@ -230,7 +232,7 @@ export default function Jbk() {
                     {content.conversion.primaryButtonLabel}
                   </a>
                   <Link
-                    href="/contact"
+                    href={routes.contact}
                     className="bg-white/5 border border-white/10 text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-white hover:text-noir-deep transition-all text-center"
                   >
                     {content.conversion.secondaryButtonLabel}

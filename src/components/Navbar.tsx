@@ -13,7 +13,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const { links, desktopWhatsappLabel, mobileWhatsappLabel, logos } =
     SITE_CONTENT.navbar;
-  const whatsappUrl = `https://wa.me/${SITE_CONTENT.common.whatsappNumber}`;
+  const routes = SITE_CONTENT.links.routes;
+  const whatsappUrl = `${SITE_CONTENT.links.whatsappBaseUrl}/${SITE_CONTENT.common.whatsappNumber}`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +25,7 @@ export default function Navbar() {
   }, []);
 
   const getLogo = () => {
-    if (pathname === "/companeros") {
+    if (pathname === routes.companeros) {
       return (
         <div className="flex items-center group">
           <img
@@ -35,7 +36,7 @@ export default function Navbar() {
         </div>
       );
     }
-    if (pathname === "/jbk") {
+    if (pathname === routes.jbk) {
       return (
         <div className="flex items-center group">
           <img
@@ -64,7 +65,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <Link href="/" className="flex items-center">
+        <Link href={routes.home} className="flex items-center">
            {getLogo()}
         </Link>
 

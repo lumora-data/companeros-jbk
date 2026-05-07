@@ -6,7 +6,7 @@ import { SITE_CONTENT } from "@/src/content/site-content";
 export default function FloatingWhatsApp() {
   const phoneNumber = SITE_CONTENT.common.whatsappNumber;
   const message = SITE_CONTENT.floatingWhatsapp.message;
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `${SITE_CONTENT.links.whatsappBaseUrl}/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <motion.a

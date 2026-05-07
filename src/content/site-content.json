@@ -11,6 +11,22 @@
     "address": "Carrefour Cradat - Rue pavés 3744, en face de l'auto école Kassap",
     "hours": "Lundi au Vendredi - de 8h00 à 19h00"
   },
+  "links": {
+    "whatsappBaseUrl": "https://wa.me",
+    "routes": {
+      "home": "/",
+      "companeros": "/companeros",
+      "jbk": "/jbk",
+      "about": "/a-propos",
+      "contact": "/contact",
+      "partners": "/partenaires"
+    },
+    "social": {
+      "instagram": "#",
+      "facebook": "#",
+      "youtube": "#"
+    }
+  },
   "navbar": {
     "links": [
       { "name": "Accueil", "path": "/" },

@@ -41,6 +41,7 @@ function Counter({ value, label, suffix = "", prefix = "" }: any) {
 
 export default function Home() {
   const { home } = SITE_CONTENT.pages;
+  const routes = SITE_CONTENT.links.routes;
 
   return (
     <div className="flex flex-col">
@@ -123,7 +124,7 @@ export default function Home() {
               </div>
               <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-white leading-tight">{home.cards.companeros.titleLine1} <br />{home.cards.companeros.titleLine2}</h2>
               <p className="text-text-para text-base md:text-lg mb-8 md:mb-12 max-w-sm">{home.cards.companeros.description}</p>
-              <Link href="/companeros" className="bg-white text-noir-deep px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black inline-flex items-center gap-4 hover:bg-white/90 transition-all uppercase text-xs md:text-sm tracking-tighter w-fit">
+              <Link href={routes.companeros} className="bg-white text-noir-deep px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black inline-flex items-center gap-4 hover:bg-white/90 transition-all uppercase text-xs md:text-sm tracking-tighter w-fit">
                 {home.cards.companeros.ctaLabel} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -146,7 +147,7 @@ export default function Home() {
               </div>
               <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-gold leading-tight">{home.cards.jbk.titleLine1} <br />{home.cards.jbk.titleLine2}</h2>
               <p className="text-text-para text-base md:text-lg mb-8 md:mb-12 max-w-sm">{home.cards.jbk.description}</p>
-              <Link href="/jbk" className="gold-gradient text-noir-deep px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black inline-flex items-center gap-4 hover:brightness-110 transition-all gold-glow shadow-2xl uppercase text-xs md:text-sm tracking-tighter w-fit text-center">
+              <Link href={routes.jbk} className="gold-gradient text-noir-deep px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black inline-flex items-center gap-4 hover:brightness-110 transition-all gold-glow shadow-2xl uppercase text-xs md:text-sm tracking-tighter w-fit text-center">
                 {home.cards.jbk.ctaLabel} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -241,7 +242,7 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-6"
             >
-               <Link href="/contact" className="bg-noir-deep text-text-main px-12 py-6 rounded-2xl font-black text-xl hover:scale-105 hover:bg-noir-deep/90 transition-all shadow-2xl">
+               <Link href={routes.contact} className="bg-noir-deep text-text-main px-12 py-6 rounded-2xl font-black text-xl hover:scale-105 hover:bg-noir-deep/90 transition-all shadow-2xl">
                   {home.cta.buttonLabel}
                </Link>
             </motion.div>
