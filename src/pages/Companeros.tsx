@@ -79,7 +79,7 @@ export default function Companeros() {
               {content.hero.primaryButtonLabel}
             </a>
             <Link
-              href={routes.contact}
+              href={routes.companerosOrientation}
               className="bg-noir-card border border-white/10 text-text-main px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black text-base md:text-lg hover:bg-gris-sep transition-all w-full sm:w-auto text-center"
             >
               {content.hero.secondaryButtonLabel}

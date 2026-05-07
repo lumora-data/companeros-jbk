@@ -16,6 +16,7 @@
     "routes": {
       "home": "/",
       "companeros": "/companeros",
+      "companerosOrientation": "/companeros/orientation",
       "jbk": "/jbk",
       "about": "/a-propos",
       "contact": "/contact",
@@ -344,6 +345,46 @@
         "description": "L'équipe Compañeros peut vous orienter vers le bon service et vous indiquer les prochaines étapes pour votre projet.",
         "buttonLabel": "ÉCRIRE SUR WHATSAPP",
         "buttonWhatsappMessage": "Bonjour, j'ai un projet à préparer et je souhaite être orienté par l'équipe Compañeros."
+      }
+    },
+    "companerosOrientation": {
+      "hero": {
+        "badge": "Orientation Voyage",
+        "title": "Suivis de voyages",
+        "subtitle": "Un voyage réussi c'est avant tout, une meilleure préparation !"
+      },
+      "travelTypesTitle": "TYPES DE VOYAGES",
+      "travelTypesLine1": "ETUDES  -  TRAVAIL  -  TOURISME  -  IMMIGRATION  -  SPORT",
+      "travelTypesLine2": "VOLONTARIAT  -  ASSISTANCE VISA  -  ASSISTANCE BOURSE",
+      "paragraphs": [
+        "Rien de plus confortable qu'un suivi de voyage au moment où on se prépare à voyager à l'étranger. C'est tellement agréable de pouvoir retirer son visa, sans parcourir des distances pour regrouper les documents nécessaires à la demande de visa. Confiez votre dossier à Compañeros.",
+        "Par exemple pour les voyages d'études, il s'agit d'assurer pour nos voyageurs, toutes les étapes qui précèdent la demande de visa. Entre autres:"
+      ],
+      "studySteps": [
+        "La proposition des meilleures universités du pays de destination en termes de qualité-prix",
+        "Les informations sur les périodes d'inscription",
+        "La demande d'admission",
+        "La préinscription",
+        "L'inscription",
+        "L'homologation ou l'équivalence",
+        "La légalisation des documents",
+        "La Traduction Simple ou Traduction Assermentée des documents",
+        "L'Accréditation",
+        "La Réservation de Billet d'avion",
+        "La Réservation de logement",
+        "L'Assurance maladie et assurance vol",
+        "Les Conseils de voyage",
+        "Le Contrôle du niveau de langue (selon les pays)",
+        "La Préparation à l'entretien avec le service consulaire, etc..."
+      ],
+      "closingParagraphs": [
+        "Chaque motif de voyage inclut une serie de documents et un travail professionnel qui aide le voyageur à avoir un dossier de demande de visa limpide. Vous avez un projet de voyage d'études, n'attendez pas la dernière minute ! Confiez votre dossier dès maintenant au centre Compañeros, pour un voyage réussi.",
+        "À Compañeros, nous vous proposons des cours de langues en cas de nécessité. Non seulement pour réussir votre entretien de voyage, mais aussi pour avoir le niveau de langue indispensable pour assurer votre épanouissement une fois arrivé à l'étranger.",
+        "Enregistrez-vous gratuitement dès maintenant, prenez les informations nécessaires et payez vos frais de suivi uniquement au moment du lancement de votre procédure de voyage."
+      ],
+      "cta": {
+        "buttonLabel": "PRENDRE RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite un suivi de voyage Compañeros pour mon projet d'études."
       }
     },
     "jbk": {
