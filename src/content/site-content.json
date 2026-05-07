@@ -19,6 +19,9 @@
       "companerosOrientation": "/companeros/orientation",
       "companerosConcours": "/companeros/preparation-concours",
       "companerosLangues": "/companeros/cours-de-langues",
+      "companerosTraduction": "/companeros/traduction-interpretation",
+      "companerosSoutien": "/companeros/cours-de-soutien",
+      "companerosFlamenco": "/companeros/flamenco",
       "jbk": "/jbk",
       "about": "/a-propos",
       "contact": "/contact",
@@ -301,7 +304,10 @@
         "redirectByServiceId": {
           "voyage": "/companeros/orientation",
           "concours": "/companeros/preparation-concours",
-          "langues": "/companeros/cours-de-langues"
+          "langues": "/companeros/cours-de-langues",
+          "traduction": "/companeros/traduction-interpretation",
+          "soutien": "/companeros/cours-de-soutien",
+          "culture": "/companeros/flamenco"
         }
       },
       "voyageDetail": {
@@ -583,6 +589,133 @@
       "cta": {
         "buttonLabel": "PRENEZ RENDEZ-VOUS",
         "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour les cours de langues."
+      }
+    },
+    "companerosTraduction": {
+      "hero": {
+        "badge": "Service linguistique",
+        "title": "Traduction & Interprétation",
+        "subtitle": "Des services linguistiques professionnels pour vos documents et événements."
+      },
+      "firstImage": {
+        "src": "/organized-content/traduction-01.webp",
+        "alt": "Service de traduction Compañeros"
+      },
+      "introText": "La traduction simple chez nous se fait dans les délais de livraison de 3 jours ouvrables pour les documents de moins de 5 pages. Pour ce qui est de la traduction assermentée, le délai de livraison est de 7 jours ouvrables pour les documents de moins de 5 pages. NB : Le délai de livraison pour les documents de plus de 5 pages se fait sous arrangement. Il est également possible pour le client, de demander une traduction express qui se fait également après arrangement, selon le délai de livraison souhaité.",
+      "secondImage": {
+        "src": "/organized-content/traduction-02.webp",
+        "alt": "Traduction et interprétation Compañeros"
+      },
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour un service de traduction et interprétation."
+      }
+    },
+    "companerosSoutien": {
+      "hero": {
+        "badge": "Cours de soutien",
+        "title": "Cours de Soutien",
+        "subtitle": "Renforcez les acquis des élèves et étudiants avec un encadrement ciblé."
+      },
+      "firstImage": {
+        "src": "/organized-content/cours-de-soutien-01.webp",
+        "alt": "Cours de soutien Compañeros"
+      },
+      "examSection": {
+        "title": "CLASSES D'EXAMEN",
+        "intro": "Compañeros propose des cours de renforcement des capacités pour les élèves des classes d'examen. Les matières que nous proposons sont celles des épreuves obligatoires à hauts coefficients. Il s'agit également des épreuves où les élèves doivent beaucoup travailler pour éviter la note de 0/20 (zéro sur vingt). Les cours pour élèves, proposés par notre centre sont les suivants :",
+        "subjects": [
+          {
+            "title": "MATHS",
+            "description": "Les mathématiques sont fondamentales pour les élèves en classes d'examen car elles développent des compétences essentielles, telles que la résolution de problèmes, l'esprit critique et participe à une meilleure compréhension des autres matières, sur le plan cognitif."
+          },
+          {
+            "title": "PHYSIQUE-CHIMIE",
+            "description": "L'étude de la physique-chimie en classes d'examen est cruciale car elle fournit une base solide pour comprendre les lois fondamentales de la nature et les phénomènes qui nous entourent."
+          },
+          {
+            "title": "ANGLAIS",
+            "description": "L'apprentissage de l'anglais est crucial pour les élèves des classes d'examen, car il ouvre des portes vers de nombreuses opportunités, tant sur le plan académique que professionnel."
+          },
+          {
+            "title": "FRANCAIS",
+            "description": "Les élèves des classes d'examen étudier le français pour plusieurs raisons essentielles. En plus d'être une langue de communication principale pour l'élève, elle aide à mieux comprendre toutes les autres matières, du point de vue sémantique."
+          },
+          {
+            "title": "ALLEMAND",
+            "description": "L’allemand est souvent appelé la bête noire pour la plupart des élèves de classes d’examen. D’où la nécessité de lui accorder beaucoup d’importance afin d’éviter la note éliminatoire à l’examen officiel."
+          },
+          {
+            "title": "ESPAGNOL",
+            "description": "Bien qu’étant la matière de base pour plusieurs élèves, l’espagnol est une matière que ceux des classes d’examens doivent prendre très au sérieux. Car il arrive souvent à plusieurs d’entre eux, de se retrouver avec des notes peu sérieuses, à cause de quelques incompréhensions dues aux interférences linguistiques et autres phénomènes tels que les faux amis, les mauvaises interprétations du travail demandé etc."
+          },
+          {
+            "title": "SVT",
+            "description": "Les élèves en classes d'examen doivent se renforcer en SVT (Sciences de la Vie et de la Terre) pour acquérir des connaissances fondamentales sur le monde. C'est en plus une matière à haut coefficient pour les séries scientifiques. Elle est comptée parmi les principales cause des échecs aux examens officiels."
+          }
+        ],
+        "pricingTitle": "TARIFS DES COURS DE SOUTIEN",
+        "pricingLines": [
+          "Classes : 3e / 1re / Tle",
+          "10.000 F.Cfa par mois pour chaque matière.",
+          "Nombre minimal de matières à choisir : 01",
+          "Forfait 3 matières : 25.000 Fcfa par mois",
+          "Nombre de séances par semaine : 02 (09 séances par mois) pour chaque matière."
+        ]
+      },
+      "secondImage": {
+        "src": "/organized-content/cours-de-soutien-02.webp",
+        "alt": "Cours de soutien classes d'examen"
+      },
+      "highlightText": "Optimisez la chance pour votre enfant !",
+      "studentsSection": {
+        "title": "ETUDIANTS D'ESPAGNOL & D'ANGLAIS",
+        "description": "Le secret pour ne pas avoir de rattrapage à faire pendant l’année universitaire est de suivre les différents cours de soutien, encore appelés Cafés. Ces cours sont destinés à soutenir l’étudiant sur le plan académique, et lui permettent de mieux comprendre les cours magistraux enregistrés à l’amphithéâtre. L’étudiant a la possibilité de choisir avec nous, uniquement l’Unité d’Enseignement qui lui pose des problèmes de compréhension. Il n’est pas obligé de suivre chez nous, les cours de soutien pour toutes les Unités proposées pendant les 2 semestres.",
+        "pricingTitle": "TARIFS DES COURS DE SOUTIEN",
+        "pricingLines": [
+          "NIVEAU I / NIVEAU 2 / NIVEAU 3",
+          "3.000 F.Cfa par mois pour chaque UE",
+          "Nombre minimal d'UE à choisir: 01",
+          "Forfait 3 UE : 10.000 Fcfa par mois",
+          "Nombre de séances par semaine : 02 (09 séances par mois) pour chaque UE."
+        ]
+      },
+      "thirdImage": {
+        "src": "/organized-content/cours-de-soutien-03.webp",
+        "alt": "Cours de soutien universitaires"
+      },
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour les cours de soutien."
+      }
+    },
+    "companerosFlamenco": {
+      "hero": {
+        "badge": "Escuela de Flamenco",
+        "title": "Escuela de Flamenco de Andalucía",
+        "subtitle": "Devenez professionnel de danse Flamenco et participez aux événements internationaux de danse Flamenco grâce à la EFA."
+      },
+      "firstImage": {
+        "src": "/organized-content/flamenco-01.webp",
+        "alt": "Flamenco Compañeros"
+      },
+      "introText": "Apprenez le Flamenco au Cameroun avec Compañeros Escuela de Flamenco de Andalucía, qui est la représentation de LA EFA en Afrique Centrale. Vous pouvez visiter le site officiel de LA EFA à partir duquel vous pouvez également effectuer votre inscription et suivre les cours de danse Flamenco à Compañeros :",
+      "efaWebsite": {
+        "label": "Site officiel de la EFA",
+        "url": "https://www.efaflamenco.com/"
+      },
+      "extraCoursesText": "Nous vous offrons aussi des cours de guitare, piano, flute etc.",
+      "secondImage": {
+        "src": "/organized-content/flamenco-02.webp",
+        "alt": "Cours de flamenco en groupe"
+      },
+      "thirdImage": {
+        "src": "/organized-content/flamenco-03.webp",
+        "alt": "Performance flamenco Compañeros"
+      },
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour la formation en Flamenco."
       }
     },
     "jbk": {
