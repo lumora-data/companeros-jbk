@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useTransform, animate, useInView } from "motion/react";
-import { ArrowRight, Globe, Camera, MessageCircle, Mail, Crown, BookOpen, Plane } from "lucide-react";
+import { ArrowRight, Crown, Plane } from "lucide-react";
 import Link from "next/link";
 import { STATS, PARTNERS } from "../constants";
 import { useEffect, useRef } from "react";
@@ -42,6 +42,7 @@ function Counter({ value, label, suffix = "", prefix = "" }: any) {
 export default function Home() {
   const { home } = SITE_CONTENT.pages;
   const routes = SITE_CONTENT.links.routes;
+  const logos = SITE_CONTENT.navbar.logos;
 
   return (
     <div className="flex flex-col">
@@ -119,8 +120,12 @@ export default function Home() {
             className="group relative bg-noir-card rounded-[2rem] md:rounded-[3rem] border border-white/5 overflow-hidden p-8 md:p-16 flex flex-col justify-between min-h-[420px] md:min-h-[500px]"
           >
             <div className="relative z-10">
-              <div className="bg-white/10 w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl flex items-center justify-center mb-8 md:mb-10 group-hover:bg-white/20 transition-all text-white">
-                <Globe className="w-6 h-6 md:w-8 md:h-8" />
+              <div className="bg-white/10 w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl flex items-center justify-center mb-8 md:mb-10 group-hover:bg-white/20 transition-all p-2">
+                <img
+                  src={logos.companeros.src}
+                  alt={logos.companeros.alt}
+                  className="h-full w-full object-contain"
+                />
               </div>
               <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-white leading-tight">{home.cards.companeros.titleLine1} <br />{home.cards.companeros.titleLine2}</h2>
               <p className="text-text-para text-base md:text-lg mb-8 md:mb-12 max-w-sm">{home.cards.companeros.description}</p>
@@ -142,8 +147,12 @@ export default function Home() {
             className="group relative bg-noir-card rounded-[2rem] md:rounded-[3rem] border border-gold/10 overflow-hidden p-8 md:p-16 flex flex-col justify-between min-h-[420px] md:min-h-[500px]"
           >
             <div className="relative z-10">
-              <div className="bg-gold/20 w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl flex items-center justify-center mb-8 md:mb-10 group-hover:bg-gold/30 transition-all text-gold">
-                <Camera className="w-6 h-6 md:w-8 md:h-8" />
+              <div className="bg-gold/20 w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl flex items-center justify-center mb-8 md:mb-10 group-hover:bg-gold/30 transition-all p-2">
+                <img
+                  src={logos.jbk.src}
+                  alt={logos.jbk.alt}
+                  className="h-full w-full object-contain"
+                />
               </div>
               <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-gold leading-tight">{home.cards.jbk.titleLine1} <br />{home.cards.jbk.titleLine2}</h2>
               <p className="text-text-para text-base md:text-lg mb-8 md:mb-12 max-w-sm">{home.cards.jbk.description}</p>
