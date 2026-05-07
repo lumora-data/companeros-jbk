@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { CheckCircle2, MessageCircle } from "lucide-react";
+import { CheckCircle2, ExternalLink, MessageCircle } from "lucide-react";
 import { SITE_CONTENT } from "@/src/content/site-content";
 
 export default function CompanerosOrientation() {
@@ -65,6 +65,31 @@ export default function CompanerosOrientation() {
               alt={content.bottomImage.alt}
               className="h-auto w-full object-cover"
             />
+          </div>
+
+          <div className="mt-10 rounded-2xl border border-white/10 bg-noir-deep/40 p-6 md:rounded-3xl md:p-8">
+            <p className="text-base font-semibold leading-relaxed text-text-main md:text-lg">
+              {content.destinationsIntro}
+            </p>
+            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {content.destinations.map((destination: { country: string; flag: string; url: string }) => (
+                <a
+                  key={destination.country}
+                  href={destination.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-4 rounded-xl border border-white/10 bg-noir-card px-4 py-3 transition-all hover:border-gold/60"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl" aria-hidden="true">{destination.flag}</span>
+                    <span className="text-sm font-bold uppercase tracking-wide text-white md:text-base">
+                      {destination.country}
+                    </span>
+                  </div>
+                  <ExternalLink className="h-4 w-4 shrink-0 text-gold" />
+                </a>
+              ))}
+            </div>
           </div>
 
           <div className="mt-12 text-center">
