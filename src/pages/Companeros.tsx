@@ -11,7 +11,7 @@ export default function Companeros() {
   const routes = SITE_CONTENT.links.routes;
   const whatsappNumber = SITE_CONTENT.common.whatsappNumber;
   const whatsappBaseUrl = SITE_CONTENT.links.whatsappBaseUrl;
-  const concoursServiceId = content.services.concoursServiceId;
+  const serviceRedirects = content.services.redirectByServiceId as Record<string, string>;
   const toWhatsappUrl = (message: string) =>
     `${whatsappBaseUrl}/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
@@ -107,7 +107,7 @@ export default function Companeros() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
             {COMPANEROS_SERVICES.map((service, idx) => {
               const Icon = iconMap[service.icon as keyof typeof iconMap];
-              const isConcoursService = service.id === concoursServiceId;
+              const serviceRedirectUrl = serviceRedirects?.[service.id];
               return (
                 <motion.div
                   key={service.id}
@@ -123,9 +123,9 @@ export default function Companeros() {
                   <p className="text-text-para text-sm md:text-base leading-relaxed mb-8 flex-grow">
                     {service.description}
                   </p>
-                  {isConcoursService ? (
+                  {serviceRedirectUrl ? (
                     <Link
-                      href={routes.companerosConcours}
+                      href={serviceRedirectUrl}
                       className="flex items-center gap-2 text-gold font-black text-xs group-hover:gap-4 transition-all uppercase tracking-widest mt-auto border-t border-white/5 pt-6"
                     >
                       {content.services.cardCtaLabel} <ArrowRight className="w-4 h-4" />

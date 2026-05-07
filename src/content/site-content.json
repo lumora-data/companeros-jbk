@@ -18,6 +18,7 @@
       "companeros": "/companeros",
       "companerosOrientation": "/companeros/orientation",
       "companerosConcours": "/companeros/preparation-concours",
+      "companerosLangues": "/companeros/cours-de-langues",
       "jbk": "/jbk",
       "about": "/a-propos",
       "contact": "/contact",
@@ -295,9 +296,13 @@
       "services": {
         "heading": "Nos Services",
         "description": "Chaque service répond à un besoin clair : préparer un départ, réussir un concours, apprendre une langue ou renforcer son niveau.",
-        "concoursServiceId": "concours",
         "cardCtaLabel": "En savoir plus",
-        "cardWhatsappTemplate": "Bonjour, je souhaite en savoir plus sur le service : {{serviceTitle}}"
+        "cardWhatsappTemplate": "Bonjour, je souhaite en savoir plus sur le service : {{serviceTitle}}",
+        "redirectByServiceId": {
+          "voyage": "/companeros/orientation",
+          "concours": "/companeros/preparation-concours",
+          "langues": "/companeros/cours-de-langues"
+        }
       },
       "voyageDetail": {
         "headingLine1": "Un dossier préparé",
@@ -499,6 +504,85 @@
       "cta": {
         "buttonLabel": "PRENDRE UN RENDEZ-VOUS",
         "whatsappMessage": "Bonjour, je souhaite prendre un rendez-vous pour la préparation concours."
+      }
+    },
+    "companerosLangues": {
+      "hero": {
+        "badge": "Cours de langues",
+        "title": "Langues Nationales & Internationales",
+        "subtitle": "Maîtrisez une nouvelle langue pour vos études ou votre culture."
+      },
+      "firstImage": {
+        "src": "/organized-content/cours-de-langue-01.webp",
+        "alt": "Cours de langues nationales Compañeros"
+      },
+      "nationalLanguages": {
+        "title": "LANGUES NATIONALES",
+        "paragraphs": [
+          "En tenant compte de la grande diversité culturelle au camerounaise, du pluralisme linguistique et du vivre ensemble, plusieurs foyers se retrouvent généralement dans une situation où les deux parents sont de différentes ethnies au Cameroun et n’ont que le français ou l’anglais comme langue de communication en famille. Ce qui rend difficile, voire casi impossible la transmission de l’héritage culturel linguistique aux enfants.",
+          "C’est pourquoi Compañeros propose des cours de langues nationales permettant aux enfants de parler couramment n’importe quelle langue parmi plus de 250 parlées au Cameroun.",
+          "NB : Nos cours de langues nationales sont à la fois oraux et écrits. Cependant, nos objectifs pédagogiques priorisent beaucoup plus le langage oral. Car il est primordial pour d'emmener l’élève à parler couramment sa langue maternelle en 3 ou 6 mois au plus.",
+          "Nous disposons de plus de 500 enseignants qualifiés à travers le pays et nos cours sont dispensés sous trois formes :"
+        ],
+        "formats": [
+          {
+            "title": "COURS DE LANGUES NATIONALES À DOMICILE",
+            "description": "Indépendamment de votre ville de résidence, nos enseignants se déplaceront pour travailler avec vous chez vous, pendant les horaires qui vous conviennent."
+          },
+          {
+            "title": "COURS DE LANGUES NATIONALES EN PRÉSENTIEL",
+            "description": "L’apprenant devra se rapprocher de notre centre pour recevoir des cours."
+          },
+          {
+            "title": "COURS DE LANGUES NATIONALES EN LIGNE",
+            "description": "Avec nous, vous pouvez également solliciter des cours de langues nationales en ligne, selon votre préférence."
+          }
+        ]
+      },
+      "secondImage": {
+        "src": "/organized-content/cours-de-langue-02.webp",
+        "alt": "Cours de langues nationales en présentiel"
+      },
+      "thirdImage": {
+        "src": "/organized-content/cours-de-langue-03.webp",
+        "alt": "Cours de langues nationales à domicile"
+      },
+      "internationalLanguages": {
+        "title": "LANGUES INTERNATIONALES",
+        "description": "Nous proposons des cours de langues en présentiel dans notre centre et des cours en ligne. Nos langues dispensées sont de préférence les plus parlées et les plus importantes en matière de business international. Il s’agit précisément des langues suivantes :",
+        "items": [
+          { "name": "Anglais", "flag": "🇬🇧" },
+          { "name": "Espagnol", "flag": "🇪🇸" },
+          { "name": "Chinois", "flag": "🇨🇳" },
+          { "name": "Français", "flag": "🇫🇷" },
+          { "name": "Russe", "flag": "🇷🇺" },
+          { "name": "Portugais", "flag": "🇵🇹" },
+          { "name": "Italien", "flag": "🇮🇹" }
+        ]
+      },
+      "fourthImage": {
+        "src": "/organized-content/cours-de-langue-04.webp",
+        "alt": "Cours de langues internationales"
+      },
+      "translationSection": {
+        "title": "COURS DE RENFORCEMENT EN TRADUCTION & INTERPRETATION",
+        "description": "Pour les étudiants de traduction, nous proposons des cours de renforcement basés sur les travaux pratiques de traductions et des simulations pratiques d’interprétations avec des mises en scènes des situations de la vie professionnelle d’un traducteur-interprète."
+      },
+      "fifthImage": {
+        "src": "/organized-content/cours-de-langue-05.webp",
+        "alt": "Renforcement en traduction et interprétation"
+      },
+      "holidayCampSection": {
+        "title": "CAMPS DE VACANCES",
+        "description": "Dans notre centre, nous organisons également des camps de vacances pour permettre aux enfants de s'amuser en parlant leurs langues maternelles entre eux. C'est à la fois une période d'immersion linguistique et d'apprentissage d'un outil musical (Piano, guitare, flute...)."
+      },
+      "sixthImage": {
+        "src": "/organized-content/cours-de-langue-06.webp",
+        "alt": "Camps de vacances linguistiques Compañeros"
+      },
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour les cours de langues."
       }
     },
     "jbk": {
