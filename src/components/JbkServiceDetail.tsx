@@ -149,10 +149,10 @@ export default function JbkServiceDetail({ contentKey }: JbkServiceDetailProps) 
 
               if (section.type === "imageGrid") {
                 return (
-                  <div key={`image-grid-${index}`} className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  <div key={`image-grid-${index}`} className="space-y-6">
                     {section.images.map((image) => (
                       <div key={image.src} className="overflow-hidden rounded-2xl border border-white/10 bg-black/20 md:rounded-3xl">
-                        <img src={image.src} alt={image.alt} className="h-full w-full object-cover" />
+                        <img src={image.src} alt={image.alt} className="h-auto w-full object-cover" />
                       </div>
                     ))}
                   </div>
