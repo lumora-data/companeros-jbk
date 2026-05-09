@@ -2,6 +2,7 @@
 
 import { ExternalLink } from "lucide-react";
 import { SITE_CONTENT } from "@/src/content/site-content";
+import ResponsiveVideoFrame from "@/src/components/ResponsiveVideoFrame";
 
 type JbkVideoPageContent = {
   title: string;
@@ -54,13 +55,9 @@ export default function JbkEvenements({ contentKey = "jbkEvenements" }: JbkEvene
             {content.videos.map((video, idx) => (
               <div key={video.url} className="space-y-4">
                 <div className="overflow-hidden rounded-2xl border border-white/10 md:rounded-3xl">
-                  <iframe
+                  <ResponsiveVideoFrame
                     src={video.embedUrl}
                     title={`Video JBK ${idx + 1}`}
-                    className="aspect-video w-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
                   />
                 </div>
                 <a

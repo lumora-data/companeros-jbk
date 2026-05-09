@@ -2,6 +2,7 @@
 
 import { ExternalLink, MessageCircle } from "lucide-react";
 import { SITE_CONTENT } from "@/src/content/site-content";
+import ResponsiveVideoFrame from "@/src/components/ResponsiveVideoFrame";
 
 export default function CompanerosLanguesEnLigne() {
   const content = SITE_CONTENT.pages.companerosLanguesEnLigne;
@@ -28,13 +29,9 @@ export default function CompanerosLanguesEnLigne() {
       <section className="px-6 pt-14 md:pt-20">
         <div className="mx-auto max-w-5xl rounded-[2rem] border border-white/5 bg-noir-card p-8 md:rounded-[3rem] md:p-14">
           <div className="overflow-hidden rounded-2xl border border-white/10 md:rounded-3xl">
-            <iframe
+            <ResponsiveVideoFrame
               src={content.video.embedUrl}
               title="Cours de langue en ligne"
-              className="aspect-video w-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
             />
           </div>
 

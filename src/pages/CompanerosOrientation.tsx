@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { CheckCircle2, ExternalLink, MessageCircle } from "lucide-react";
 import { SITE_CONTENT } from "@/src/content/site-content";
+import ResponsiveVideoFrame from "@/src/components/ResponsiveVideoFrame";
 
 export default function CompanerosOrientation() {
   const content = SITE_CONTENT.pages.companerosOrientation;
@@ -106,13 +107,9 @@ export default function CompanerosOrientation() {
               <ExternalLink className="h-4 w-4" />
             </a>
             <div className="mt-5 overflow-hidden rounded-2xl border border-white/10">
-              <iframe
+              <ResponsiveVideoFrame
                 src={content.videoSection.embedUrl}
                 title="Vidéo destinations Compañeros"
-                className="aspect-video w-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
               />
             </div>
           </div>
