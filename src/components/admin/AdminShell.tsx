@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Building2, Film, Info, LogOut, Loader2 } from "lucide-react";
+import { Building2, Film, LogOut, Loader2 } from "lucide-react";
 import { useState } from "react";
 
 type AdminShellProps = {
@@ -12,10 +12,8 @@ type AdminShellProps = {
 };
 
 const NAV_ITEMS = [
-  { href: "/admin/home", label: "Accueil", icon: Home },
   { href: "/admin/companeros", label: "Compañeros", icon: Building2 },
   { href: "/admin/jbk", label: "JBK", icon: Film },
-  { href: "/admin/about", label: "À propos", icon: Info },
 ] as const;
 
 export default function AdminShell({ username, children }: AdminShellProps) {

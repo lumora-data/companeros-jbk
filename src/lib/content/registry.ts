@@ -5,15 +5,6 @@ import type { AdminContentType, EditableContentEntry } from "@/src/lib/content/t
 export const SITE_CONTENT_GITHUB_PATH = "src/content/site-content.json";
 
 export const EDITABLE_CONTENT_REGISTRY: Record<AdminContentType, EditableContentEntry> = {
-  home: {
-    title: "Accueil",
-    sections: [
-      { key: "pages.home", label: "Page accueil" },
-      { key: "navbar.logos", label: "Logos navbar / cartes" },
-      { key: "constants.stats", label: "Statistiques accueil" },
-      { key: "constants.partners", label: "Partenaires accueil" },
-    ],
-  },
   companeros: {
     title: "Compañeros",
     sections: [
@@ -22,17 +13,18 @@ export const EDITABLE_CONTENT_REGISTRY: Record<AdminContentType, EditableContent
     ],
   },
   jbk: {
-    title: "JBK",
+    title: "JBK - Direction & Acteurs",
     sections: [
-      { key: "pages.jbk", label: "Page JBK" },
-      { key: "constants.jbkServices", label: "Cartes services JBK" },
-      { key: "constants.productions", label: "Productions JBK" },
-    ],
-  },
-  about: {
-    title: "À propos",
-    sections: [
-      { key: "pages.about", label: "Page À propos" },
+      {
+        key: "pages.jbk.directionSection",
+        label: "Direction JBK",
+        description: "Direction JBK Films (titre + membres).",
+      },
+      {
+        key: "pages.jbk.technicalTeamSection",
+        label: "Équipe Technique & Agence d'Acteurs",
+        description: "Acteurs et équipe technique JBK.",
+      },
     ],
   },
 };

@@ -1,4 +1,4 @@
-export type AdminContentType = "home" | "companeros" | "jbk" | "about";
+export type AdminContentType = "companeros" | "jbk";
 
 export type EditableSection = {
   key: string;

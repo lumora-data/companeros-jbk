@@ -23,7 +23,7 @@ type ContentApiResponse = {
 };
 
 type AdminContentEditorProps = {
-  type: "home" | "companeros" | "jbk" | "about";
+  type: "companeros" | "jbk";
 };
 
 export default function AdminContentEditor({ type }: AdminContentEditorProps) {

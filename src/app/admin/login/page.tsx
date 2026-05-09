@@ -17,7 +17,7 @@ export const dynamic = "force-dynamic";
 export default async function AdminLoginPage() {
   const session = await getAdminPageSession();
   if (session) {
-    redirect("/admin/home");
+    redirect("/admin/companeros");
   }
 
   return (
