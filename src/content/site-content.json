@@ -835,7 +835,11 @@
           "url": "https://www.youtube.com/watch?v=RglglBN-wRA",
           "embedUrl": "https://www.youtube.com/embed/RglglBN-wRA"
         }
-      ]
+      ],
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour le service Événementiel."
+      }
     },
     "jbkDoublage": {
       "title": "Choisissez JBK Films pour les doublages et sous-titrages de vos films!",
@@ -852,7 +856,11 @@
           "url": "https://www.youtube.com/watch?v=wqFSAS23j30",
           "embedUrl": "https://www.youtube.com/embed/wqFSAS23j30"
         }
-      ]
+      ],
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour le service Doublage & Sous-titrage."
+      }
     },
     "jbkVenteMateriel": {
       "title": "Vente de matériel audio-visuel",
@@ -907,6 +915,10 @@
             "embedUrl": "https://www.youtube.com/embed/4_5YIbseUAI"
           }
         ]
+      },
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour le service Vente de Matériel."
       }
     },
     "jbkSiteWeb": {

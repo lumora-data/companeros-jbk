@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, MessageCircle } from "lucide-react";
 import { SITE_CONTENT } from "@/src/content/site-content";
 import ResponsiveVideoFrame from "@/src/components/ResponsiveVideoFrame";
 
@@ -15,6 +15,10 @@ type JbkVideoPageContent = {
     url: string;
     embedUrl: string;
   }[];
+  cta?: {
+    buttonLabel: string;
+    whatsappMessage: string;
+  };
 };
 
 interface JbkEvenementsProps {
@@ -23,7 +27,12 @@ interface JbkEvenementsProps {
 
 export default function JbkEvenements({ contentKey = "jbkEvenements" }: JbkEvenementsProps) {
   const content = SITE_CONTENT.pages[contentKey] as JbkVideoPageContent;
+  const whatsappBaseUrl = SITE_CONTENT.links.whatsappBaseUrl;
+  const whatsappNumber = SITE_CONTENT.common.whatsappNumber;
   const introParagraphs = content.introText?.split("\n\n").filter(Boolean) ?? [];
+  const whatsappUrl = content.cta
+    ? `${whatsappBaseUrl}/${whatsappNumber}?text=${encodeURIComponent(content.cta.whatsappMessage)}`
+    : null;
 
   return (
     <div className="bg-noir-deep pb-24 pt-32 md:pt-40">
@@ -72,6 +81,18 @@ export default function JbkEvenements({ contentKey = "jbkEvenements" }: JbkEvene
               </div>
             ))}
           </div>
+
+          {content.cta && whatsappUrl ? (
+            <div className="mt-12 text-center">
+              <a
+                href={whatsappUrl}
+                className="inline-flex items-center justify-center gap-3 rounded-2xl bg-gold px-8 py-4 text-sm font-black uppercase tracking-wider text-noir-deep transition-all hover:brightness-110 md:px-10 md:py-5 md:text-base"
+              >
+                {content.cta.buttonLabel}
+                <MessageCircle className="h-5 w-5" />
+              </a>
+            </div>
+          ) : null}
         </div>
       </section>
     </div>
