@@ -32,7 +32,9 @@ export async function verifyAdminCredentials(username: string, password: string)
     const rawHash = normalizeSha256Hash(env.passwordHash);
     const computed = sha256Hex(password);
     if (rawHash.length === 64) {
-      return safeEqual(computed, rawHash);
+      if (safeEqual(computed, rawHash)) {
+        return true;
+      }
     }
   }
 
