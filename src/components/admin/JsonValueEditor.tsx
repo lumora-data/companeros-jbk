@@ -111,8 +111,8 @@ function StringField({
       )}
 
       {showPreview ? (
-        <div className="mt-3 overflow-hidden rounded-lg border border-white/10 bg-black/20">
-          <img src={value} alt={label} className="max-h-52 w-full object-cover" />
+        <div className="mt-3 overflow-hidden rounded-lg border border-white/10 bg-black/30 p-2">
+          <img src={value} alt={label} className="max-h-72 w-full rounded-md object-contain object-center" />
         </div>
       ) : null}
 

@@ -207,8 +207,8 @@ export default function Jbk() {
                 transition={{ delay: idx * 0.04 }}
                 className="bg-noir-deep border border-white/10 rounded-[1.4rem] overflow-hidden flex flex-col"
               >
-                <div className="aspect-[4/5] bg-black/20">
-                  <img src={member.image} alt={member.imageAlt} className="h-full w-full object-cover" />
+                <div className="aspect-[3/4] bg-black/30 p-2">
+                  <img src={member.image} alt={member.imageAlt} className="h-full w-full rounded-xl object-contain object-center" />
                 </div>
                 <div className="p-6 md:p-7">
                   <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-white">{member.name}</h3>
@@ -249,8 +249,8 @@ export default function Jbk() {
                 transition={{ delay: idx * 0.03 }}
                 className="bg-noir-card border border-white/10 rounded-[1.4rem] overflow-hidden flex flex-col"
               >
-                <div className="aspect-[4/5] bg-black/20">
-                  <img src={member.image} alt={member.imageAlt} className="h-full w-full object-cover" />
+                <div className="aspect-[3/4] bg-black/30 p-2">
+                  <img src={member.image} alt={member.imageAlt} className="h-full w-full rounded-xl object-contain object-center" />
                 </div>
                 <div className="p-6 md:p-7">
                   <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-white">{member.name}</h3>
