@@ -9,7 +9,7 @@ import ScrollToTop from "./ScrollToTop";
 
 export default function SiteShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const isAdminPath = pathname.startsWith("/admin");
+  const isAdminPath = pathname?.startsWith("/admin") ?? false;
 
   if (isAdminPath) {
     return (
