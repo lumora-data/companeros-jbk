@@ -24,6 +24,12 @@ const ROUTES: SitemapItemConfig[] = [
   { path: "/jbk/evenements", changeFrequency: "weekly", priority: 0.86 },
   { path: "/jbk/doublage", changeFrequency: "weekly", priority: 0.83 },
   { path: "/jbk/vente-materiel", changeFrequency: "weekly", priority: 0.84 },
+  { path: "/jbk/graphisme-impression", changeFrequency: "weekly", priority: 0.83 },
+  { path: "/jbk/voix-off", changeFrequency: "weekly", priority: 0.82 },
+  { path: "/jbk/drone", changeFrequency: "weekly", priority: 0.82 },
+  { path: "/jbk/publicite-tv-web", changeFrequency: "weekly", priority: 0.83 },
+  { path: "/jbk/communication-digitale", changeFrequency: "weekly", priority: 0.82 },
+  { path: "/jbk/formation-pro", changeFrequency: "weekly", priority: 0.82 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

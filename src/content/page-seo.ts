@@ -93,6 +93,48 @@ export const PAGE_SEO: Record<string, Metadata> = {
     path: "/jbk/vente-materiel",
     keywords: ["vente materiel audiovisuel", "drone mavic", "camera canon"],
   }),
+  jbkGraphisme: createPageMetadata({
+    title: "Graphisme & Impression | JBK Films",
+    description:
+      "Design graphique, impressions sur tous supports et agrandissements photo professionnels avec JBK Films.",
+    path: "/jbk/graphisme-impression",
+    keywords: ["graphisme", "impression", "agrandissement photo"],
+  }),
+  jbkVoixOff: createPageMetadata({
+    title: "Voix Off | JBK Films",
+    description:
+      "Exemples et services de voix off professionnelle pour publicites, documentaires et contenus audiovisuels.",
+    path: "/jbk/voix-off",
+    keywords: ["voix off", "enregistrement voix", "narration publicitaire"],
+  }),
+  jbkDrone: createPageMetadata({
+    title: "Prises de Vue Drone | JBK Films",
+    description:
+      "Plans drones professionnels et formation au pilotage (Mavic, Phantom) pour cinema, evenementiel et tourisme.",
+    path: "/jbk/drone",
+    keywords: ["drone 4k", "prises de vue aeriennes", "formation pilotage drone"],
+  }),
+  jbkPublicite: createPageMetadata({
+    title: "Publicite TV & Web | JBK Films",
+    description:
+      "Conception et realisation de spots publicitaires avec scenario professionnel, acteurs et materiel de pointe.",
+    path: "/jbk/publicite-tv-web",
+    keywords: ["publicite tv", "spot publicitaire", "video marketing"],
+  }),
+  jbkCommunication: createPageMetadata({
+    title: "Communication Digitale | JBK Films",
+    description:
+      "Strategie de communication digitale et gestion de presence sur les reseaux sociaux en francais et en anglais.",
+    path: "/jbk/communication-digitale",
+    keywords: ["communication digitale", "reseaux sociaux", "strategie digitale"],
+  }),
+  jbkFormation: createPageMetadata({
+    title: "Formation Pro Audiovisuelle | JBK Films",
+    description:
+      "Formations professionnelles en photographie, drone, montage, production, make up, actorat et metiers creatives.",
+    path: "/jbk/formation-pro",
+    keywords: ["formation audiovisuelle", "formation montage video", "formation actorat"],
+  }),
   about: createPageMetadata({
     title: "A Propos | Compañeros-JBK Empire",
     description:

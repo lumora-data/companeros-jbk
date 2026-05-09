@@ -26,6 +26,12 @@
         "jbkEvenements": "/jbk/evenements",
         "jbkDoublage": "/jbk/doublage",
         "jbkVenteMateriel": "/jbk/vente-materiel",
+        "jbkGraphisme": "/jbk/graphisme-impression",
+        "jbkVoixOff": "/jbk/voix-off",
+        "jbkDrone": "/jbk/drone",
+        "jbkPublicite": "/jbk/publicite-tv-web",
+        "jbkCommunication": "/jbk/communication-digitale",
+        "jbkFormation": "/jbk/formation-pro",
         "jbk": "/jbk",
         "about": "/a-propos",
         "contact": "/contact",
@@ -775,9 +781,15 @@
         "cardCtaLabel": "En savoir plus",
         "cardWhatsappTemplate": "Bonjour, je souhaite en savoir plus sur l'expertise JBK : {{serviceTitle}}",
         "redirectByServiceId": {
+          "graphisme": "/jbk/graphisme-impression",
           "evenement": "/jbk/evenements",
           "doublage": "/jbk/doublage",
-          "vente": "/jbk/vente-materiel"
+          "voix": "/jbk/voix-off",
+          "drone": "/jbk/drone",
+          "vente": "/jbk/vente-materiel",
+          "pub": "/jbk/publicite-tv-web",
+          "com": "/jbk/communication-digitale",
+          "formation": "/jbk/formation-pro"
         }
       },
       "productions": {
@@ -893,6 +905,186 @@
             "embedUrl": "https://www.youtube.com/embed/4_5YIbseUAI"
           }
         ]
+      }
+    },
+    "jbkGraphisme": {
+      "title": "Graphisme & Impression",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Créez vos designs avec JBK et impimez sur tous les supports chez nous!"
+        },
+        {
+          "type": "image",
+          "src": "/organized-content/graphisme-01.webp",
+          "alt": "Graphisme et impression JBK"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=xwV1kb4ZuTc",
+          "embedUrl": "https://www.youtube.com/embed/xwV1kb4ZuTc",
+          "title": "Exemple graphisme JBK"
+        },
+        {
+          "type": "text",
+          "text": "Agrandissez vos photos à JBK en choisissant vos supports et tailles d'agrandissements:\n\nCADRAGE STANDARD\n\nCADRAGE VITRÉ\n\nLACKAGE\n\nDIBOND\n\nPLEXIGLASS\n\nEtc.\n\n\nUNE NOUVELLE COLORATION POUR VOTRE SALON"
+        },
+        {
+          "type": "imageGrid",
+          "images": [
+            {
+              "src": "/organized-content/graphisme-04.webp",
+              "alt": "Agrandissement photo JBK 1"
+            },
+            {
+              "src": "/organized-content/graphisme-02.webp",
+              "alt": "Agrandissement photo JBK 2"
+            },
+            {
+              "src": "/organized-content/graphisme-03.webp",
+              "alt": "Agrandissement photo JBK 3"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour le service Graphisme & Impression."
+      }
+    },
+    "jbkVoixOff": {
+      "title": "Voix Off",
+      "sections": [
+        {
+          "type": "image",
+          "src": "/organized-content/voix-off-01.webp",
+          "alt": "Voix Off JBK Films"
+        },
+        {
+          "type": "text",
+          "text": "Quelques exemples de Voix Off JBK Films:"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=xwV1kb4ZuTc",
+          "embedUrl": "https://www.youtube.com/embed/xwV1kb4ZuTc",
+          "title": "Exemple voix off JBK"
+        }
+      ],
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour le service Voix Off."
+      }
+    },
+    "jbkDrone": {
+      "title": "Prises de vue Drone",
+      "sections": [
+        {
+          "type": "text",
+          "text": "JBK FILMS vous offre des plans de drones exceptionnels pour vos projets audiovisuels (cinéma, événements, tourisme...)\n\nNous vous proposons également des cours de formation en Pilotage de drone (Mavic, Phantom...)"
+        },
+        {
+          "type": "text",
+          "text": "Quelques vidéos de présentation de nos services de drone, ainsi que les modèles Mavic disponibles de manière permanente à JBK FILMS :"
+        },
+        {
+          "type": "video",
+          "url": "https://youtu.be/J5baSFg1cLk",
+          "embedUrl": "https://www.youtube.com/embed/J5baSFg1cLk",
+          "title": "Présentation drone JBK 1"
+        },
+        {
+          "type": "video",
+          "url": "https://youtu.be/RglglBN-wRA",
+          "embedUrl": "https://www.youtube.com/embed/RglglBN-wRA",
+          "title": "Présentation drone JBK 2"
+        }
+      ],
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour le service Prises de vue Drone."
+      }
+    },
+    "jbkPublicite": {
+      "title": "Publicité TV & Web",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Quel que soit les services de votre entreprise, nous mettons sur pieds un scénario et une réalisation audio-visuelle de qualité pour toucher un maximum de personnes qui se transformeront en potentiels clients ! La réalisation se fera à partir d'une conception professionnelle, avec des acteurs (JBK Films) doués et un matériel audio-visuel de pointe."
+        },
+        {
+          "type": "imageGrid",
+          "images": [
+            {
+              "src": "/organized-content/conception-05.webp",
+              "alt": "Conception publicitaire JBK 1"
+            },
+            {
+              "src": "/organized-content/conception-01.webp",
+              "alt": "Conception publicitaire JBK 2"
+            },
+            {
+              "src": "/organized-content/conception-02.webp",
+              "alt": "Conception publicitaire JBK 3"
+            },
+            {
+              "src": "/organized-content/conception-03.webp",
+              "alt": "Conception publicitaire JBK 4"
+            },
+            {
+              "src": "/organized-content/conception-04.webp",
+              "alt": "Conception publicitaire JBK 5"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour le service Publicité TV & Web."
+      }
+    },
+    "jbkCommunication": {
+      "title": "Communication Digitale",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Touchez un grand nombre de clients à travers les réseaux sociaux. Consultez notre grille en français et en anglais pour plus de détails."
+        },
+        {
+          "type": "imageGrid",
+          "images": [
+            {
+              "src": "/organized-content/communication-01.webp",
+              "alt": "Communication digitale JBK 1"
+            },
+            {
+              "src": "/organized-content/communication-02.webp",
+              "alt": "Communication digitale JBK 2"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour le service Communication Digitale."
+      }
+    },
+    "jbkFormation": {
+      "title": "Formation Pro",
+      "sections": [
+        {
+          "type": "text",
+          "text": "JBK films offre une vaste liste de formation audio-visuelle selon vos besoins:\n\nPhotographie\n\nPilotage de Drones\n\nMontage Photos/Vidéos\n\nRéalisation/Production\n\nMake up\n\nActorat\n\nEtc."
+        },
+        {
+          "type": "image",
+          "src": "/organized-content/formation-01.webp",
+          "alt": "Formation professionnelle JBK Films"
+        }
+      ],
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour le service Formation Pro."
       }
     },
     "about": {
