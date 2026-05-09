@@ -1,5 +1,5 @@
 import PageTransition from "@/src/components/PageTransition";
-import JbkServiceDetail from "@/src/pages/JbkServiceDetail";
+import JbkServiceDetail from "@/src/components/JbkServiceDetail";
 import { PAGE_SEO } from "@/src/content/page-seo";
 
 export const metadata = PAGE_SEO.jbkDrone;
