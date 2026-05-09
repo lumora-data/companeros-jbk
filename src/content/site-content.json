@@ -794,6 +794,220 @@
           "formation": "/jbk/formation-pro"
         }
       },
+      "directionSection": {
+        "heading": "DIRECTION JBK FILMS",
+        "members": [
+          {
+            "name": "BANDERAS KOUAM",
+            "role": "Président Directeur Général",
+            "bio": "Banderas Kouam, Fondateur de JBK occupe le poste de Président Directeur Général, apportant son leadership visionnaire à l'entreprise et supervisant les opérations stratégiques afin d'assurer le succès et la croissance à court, moyen et long terme. Son objectif spécifique est de toujours rapprocher JBK le plus possible de la perfection.",
+            "image": "/organized-content/jbk/images/direction/Banderas-Kouam-CEO.jpg",
+            "imageAlt": "Banderas Kouam"
+          },
+          {
+            "name": "FADDEL EMVOUTOU",
+            "role": "Directeur Administratif",
+            "bio": "FADDEL EMVOUTOU est Directeur Administratif, jouant un rôle clé dans la supervision des opérations administratives de l'entreprise en collaboration avec le PDG. Son expertise et son dévouement renforcent l'engagement de JBK envers l'excellence et l'efficacité professionnelle.",
+            "image": "/organized-content/jbk/images/direction/acteur-02-Faddel-Emvoutou.jpg",
+            "imageAlt": "Faddel Emvoutou"
+          },
+          {
+            "name": "FRANK VERDUGO",
+            "role": "Responsable Administratif",
+            "bio": "Frank Verdugo occupe le poste de Responsable Administratif, où il veille au bon fonctionnement et à l'efficacité des tâches administratives, il participe également à la gestion des processus organisationnels.",
+            "image": "/organized-content/jbk/images/direction/acteur-03-Franck-Verdugo.png",
+            "imageAlt": "Frank Verdugo"
+          },
+          {
+            "name": "N-KY",
+            "role": "Assistant de Direction",
+            "bio": "N-KY occupe le poste d'Assistant de Direction et contribue activement à la coordination des activités administratives et organisationnelles, soutenant ainsi l'efficacité de notre équipe.",
+            "image": "/organized-content/jbk/images/direction/acteur-04-N-KY.jpg",
+            "imageAlt": "N-KY"
+          },
+          {
+            "name": "M.D",
+            "role": "Assistante de Direction",
+            "bio": "M.D occupe le poste d'Assistante de Direction au sein de JBK, où elle met en œuvre ses compétences pour soutenir efficacement les opérations quotidiennes de l'équipe dirigeante.",
+            "image": "/organized-content/jbk/images/direction/MD.jpg",
+            "imageAlt": "M.D"
+          },
+          {
+            "name": "GLORIANA BINTU",
+            "role": "Assitante de Direction",
+            "bio": "GLORIANA BINTU occupe le poste d'Assistante de Direction, où elle joue un rôle clé en soutenant efficacement les opérations administratives et stratégiques de l'entreprise. Son dévouement assure une coordination optimale au sein de l'équipe.",
+            "image": "/organized-content/jbk/images/direction/GLORIANA-BINTU.jpg",
+            "imageAlt": "Gloriana Bintu"
+          },
+          {
+            "name": "SETCHUIS",
+            "role": "Assistante de Direction",
+            "bio": "SETCHUIS est Assistante de Direction, fournissant une expertise inestimable et un soutien administratif crucial au bon fonctionnement de l'équipe JBK.",
+            "image": "/organized-content/jbk/images/direction/SETCHUIS.jpg",
+            "imageAlt": "Setchuis"
+          }
+        ]
+      },
+      "technicalTeamSection": {
+        "heading": "EQUIPE TECHNIQUE & AGENCE D'ACTEURS",
+        "members": [
+          {
+            "name": "BANDERAS KOUAM",
+            "role": "Réalisateur / Producteur / Acteur",
+            "bio": "Banderas Kouam est un Réalisateur, Producteur et Acteur accompli, apportant une expertise et une passion exceptionnelles à chaque projet cinématographique auquel il participe. Taille: 1.78 m Poids: 79 Kg Tein: Noir.",
+            "image": "/organized-content/jbk/images/acteurs/acteur-01-Banderas-Kouam.jpg",
+            "imageAlt": "Banderas Kouam acteur"
+          },
+          {
+            "name": "FADDEL EMVOUTOU",
+            "role": "Assistant Réalistateur / Directeur Photo / Chorégraphe / Acteur",
+            "bio": "Faddel Emvoutou occupe un rôle central au sein de notre équipe en tant qu'Assistant Réalisateur, Directeur de la Photographie, Chorégraphe et Acteur. Il apporte son expertise artistique et technique pour enrichir nos productions, garantissant une qualité exceptionnelle et une vision créative cohérente.",
+            "image": "/organized-content/jbk/images/acteurs/acteur-02-Faddel-Emvoutou.jpg",
+            "imageAlt": "Faddel Emvoutou acteur"
+          },
+          {
+            "name": "FRANK VERDUGO",
+            "role": "Assistant de Direction de Production / Directeur photo / Acteur",
+            "bio": "FRANK VERDUGO est un Assistant de Direction de Production compétent, Directeur photo innovant et Acteur passionné. Sa contribution est essentielle au succès de nos productions, où il combine expertise en gestion avec un sens artistique unique.",
+            "image": "/organized-content/jbk/images/acteurs/acteur-03-Franck-Verdugo.png",
+            "imageAlt": "Frank Verdugo acteur"
+          },
+          {
+            "name": "N-KY",
+            "role": "Chef Monteur / Acteur",
+            "bio": "N-KY est un membre précieux de notre équipe, assumant le rôle de Chef Monteur et Acteur. Avec son expertise en montage et sa capacité à donner vie à des personnages en tant qu'acteur, il contribue de manière significative à la réussite de nos productions.",
+            "image": "/organized-content/jbk/images/acteurs/acteur-04-N-KY.jpg",
+            "imageAlt": "N-KY acteur"
+          },
+          {
+            "name": "M.D",
+            "role": "Maquilleuse / Actrice",
+            "bio": "M.D occupe un rôle polyvalent au sein de notre équipe, combinant ses compétences en maquillage professionnel avec son talent pour l'interprétation artistique, incarnant parfaitement les qualités nécessaires pour le poste de Maquilleuse et Actrice.",
+            "image": "/organized-content/jbk/images/acteurs/acteur-06-MD.jpg",
+            "imageAlt": "M.D actrice"
+          },
+          {
+            "name": "GLORIANA BINTU",
+            "role": "Script / Actrice",
+            "image": "/organized-content/jbk/images/acteurs/acteur-05-Gloriana-Bintu.jpg",
+            "imageAlt": "Gloriana Bintu actrice"
+          },
+          {
+            "name": "SETCHUIS",
+            "role": "Assistante de Direction de Production / Actrice",
+            "image": "/organized-content/jbk/images/acteurs/acteur-07-SETCHUIS.jpg",
+            "imageAlt": "Setchuis actrice"
+          },
+          {
+            "name": "JAMAL WAME",
+            "role": "Acteur",
+            "image": "/organized-content/jbk/images/acteurs/acteur-08-Jamal-WAME.jpg",
+            "imageAlt": "Jamal Wame acteur"
+          },
+          {
+            "name": "DAVE",
+            "role": "Acteur",
+            "image": "/organized-content/jbk/images/acteurs/acteur-09-DAVE.jpg",
+            "imageAlt": "Dave acteur"
+          },
+          {
+            "name": "KIRA",
+            "role": "Actrice",
+            "image": "/organized-content/jbk/images/acteurs/acteur-10-KIRA.jpg",
+            "imageAlt": "Kira actrice"
+          },
+          {
+            "name": "VIVIANE",
+            "role": "Actrice",
+            "image": "/organized-content/jbk/images/acteurs/acteur-11-VIVIANE.jpg",
+            "imageAlt": "Viviane actrice"
+          },
+          {
+            "name": "DONALD NDADEM",
+            "role": "Acteur",
+            "image": "/organized-content/jbk/images/acteurs/acteur-12-DONALD-NDADEM.jpg",
+            "imageAlt": "Donald Ndadem acteur"
+          },
+          {
+            "name": "MERVYBEL",
+            "role": "Actrice",
+            "image": "/organized-content/jbk/images/acteurs/acteur-13-MERVYBEL.jpg",
+            "imageAlt": "Mervybel actrice"
+          },
+          {
+            "name": "MC GARRETT",
+            "role": "Acteur",
+            "image": "/organized-content/jbk/images/acteurs/MC-GARRETT.jpg",
+            "imageAlt": "MC Garrett acteur"
+          },
+          {
+            "name": "ENXA LORES",
+            "role": "Actrice",
+            "image": "/organized-content/jbk/images/acteurs/ENXA-LORES.jpg",
+            "imageAlt": "Enxa Lores actrice"
+          },
+          {
+            "name": "ERIC OKAH",
+            "role": "Acteur",
+            "image": "/organized-content/jbk/images/acteurs/ERIC-OKAH.jpg",
+            "imageAlt": "Eric Okah acteur"
+          },
+          {
+            "name": "STEVE AYINA",
+            "role": "Acteur",
+            "image": "/organized-content/jbk/images/acteurs/STEVE-AYINA.jpg",
+            "imageAlt": "Steve Ayina acteur"
+          },
+          {
+            "name": "PATRICK",
+            "role": "Acteur",
+            "image": "/organized-content/jbk/images/acteurs/PATRICK.jpg",
+            "imageAlt": "Patrick acteur"
+          },
+          {
+            "name": "ANGE KESSENG",
+            "role": "Actrice",
+            "image": "/organized-content/jbk/images/acteurs/ANGE-KESSSENG.jpg",
+            "imageAlt": "Ange Kesseng actrice"
+          },
+          {
+            "name": "PETIT MALIN",
+            "role": "Acteur",
+            "image": "/organized-content/jbk/images/acteurs/PETIT-MALIN.jpg",
+            "imageAlt": "Petit Malin acteur"
+          },
+          {
+            "name": "MOPAO",
+            "role": "Acteur",
+            "image": "/organized-content/jbk/images/acteurs/MOPAO.jpg",
+            "imageAlt": "Mopao acteur"
+          },
+          {
+            "name": "FFF",
+            "role": "Actrice",
+            "image": "/organized-content/jbk/images/acteurs/FFF.jpg",
+            "imageAlt": "FFF actrice"
+          },
+          {
+            "name": "AURELIEN OBAMA",
+            "role": "Acteur",
+            "image": "/organized-content/jbk/images/acteurs/AURELIEN-OBAMA.jpg",
+            "imageAlt": "Aurelien Obama acteur"
+          },
+          {
+            "name": "DDD",
+            "role": "Acteur",
+            "image": "/organized-content/jbk/images/acteurs/DDD.jpg",
+            "imageAlt": "DDD acteur"
+          },
+          {
+            "name": "GRACE LUMIERE",
+            "role": "Maquilleuse/Actrice",
+            "image": "/organized-content/jbk/images/acteurs/GRACE-LUMIERE.jpg",
+            "imageAlt": "Grace Lumiere actrice"
+          }
+        ]
+      },
       "productions": {
         "heading": "Nos Productions",
         "subtitle": "Courts & Longs Métrages",

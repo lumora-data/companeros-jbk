@@ -6,14 +6,47 @@ import Link from "next/link";
 import { JBK_SERVICES, PRODUCTIONS } from "../constants";
 import { SITE_CONTENT } from "@/src/content/site-content";
 
+type TeamMember = {
+  name: string;
+  role: string;
+  bio?: string;
+  image: string;
+  imageAlt: string;
+};
+
+type TeamSection = {
+  heading: string;
+  members: TeamMember[];
+};
+
 export default function Jbk() {
   const content = SITE_CONTENT.pages.jbk;
   const routes = SITE_CONTENT.links.routes;
   const whatsappNumber = SITE_CONTENT.common.whatsappNumber;
   const whatsappBaseUrl = SITE_CONTENT.links.whatsappBaseUrl;
+  const directionSection = content.directionSection as TeamSection;
+  const technicalTeamSection = content.technicalTeamSection as TeamSection;
   const serviceRedirects = content.services.redirectByServiceId as Record<string, string>;
   const toWhatsappUrl = (message: string) =>
     `${whatsappBaseUrl}/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const renderTextWithLinks = (text: string) => {
+    const parts = text.split(/(https?:\/\/[^\s]+)/g);
+    return parts.map((part, idx) =>
+      /^https?:\/\//.test(part) ? (
+        <a
+          key={`${part}-${idx}`}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="break-all text-gold underline underline-offset-2"
+        >
+          {part}
+        </a>
+      ) : (
+        <span key={`${part}-${idx}`}>{part}</span>
+      ),
+    );
+  };
 
   const iconMap = {
     Palette: Palette,
@@ -125,8 +158,8 @@ export default function Jbk() {
                 >
                   <Icon className="w-10 h-10 text-gold mb-6 group-hover:rotate-6 transition-transform duration-500" />
                   <h3 className="text-xl font-black mb-4 uppercase tracking-tight text-white leading-tight">{service.title}</h3>
-                  <p className="text-text-para text-sm md:text-base leading-relaxed mb-8 flex-grow">
-                    {service.description}
+                  <p className="text-text-para text-sm md:text-base leading-relaxed mb-8 flex-grow whitespace-pre-line">
+                    {renderTextWithLinks(service.description)}
                   </p>
                   {serviceRedirectUrl ? (
                     <Link
@@ -146,6 +179,90 @@ export default function Jbk() {
                 </motion.div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Direction JBK */}
+      <section className="py-20 md:py-32 bg-noir-card">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16 md:mb-24"
+          >
+            <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter">
+              {directionSection.heading}
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
+            {directionSection.members.map((member, idx) => (
+              <motion.article
+                key={member.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.04 }}
+                className="bg-noir-deep border border-white/10 rounded-[1.4rem] overflow-hidden flex flex-col"
+              >
+                <div className="aspect-[4/5] bg-black/20">
+                  <img src={member.image} alt={member.imageAlt} className="h-full w-full object-cover" />
+                </div>
+                <div className="p-6 md:p-7">
+                  <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-white">{member.name}</h3>
+                  <p className="mt-2 text-sm md:text-base font-bold text-gold">{member.role}</p>
+                  {member.bio ? (
+                    <p className="mt-4 text-sm md:text-base leading-relaxed text-text-para whitespace-pre-line">
+                      {member.bio}
+                    </p>
+                  ) : null}
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Equipe technique & agence d'acteurs */}
+      <section className="py-20 md:py-32 bg-noir-deep">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16 md:mb-24"
+          >
+            <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter">
+              {technicalTeamSection.heading}
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
+            {technicalTeamSection.members.map((member, idx) => (
+              <motion.article
+                key={member.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.03 }}
+                className="bg-noir-card border border-white/10 rounded-[1.4rem] overflow-hidden flex flex-col"
+              >
+                <div className="aspect-[4/5] bg-black/20">
+                  <img src={member.image} alt={member.imageAlt} className="h-full w-full object-cover" />
+                </div>
+                <div className="p-6 md:p-7">
+                  <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-white">{member.name}</h3>
+                  <p className="mt-2 text-sm md:text-base font-bold text-gold">{member.role}</p>
+                  {member.bio ? (
+                    <p className="mt-4 text-sm md:text-base leading-relaxed text-text-para whitespace-pre-line">
+                      {member.bio}
+                    </p>
+                  ) : null}
+                </div>
+              </motion.article>
+            ))}
           </div>
         </div>
       </section>

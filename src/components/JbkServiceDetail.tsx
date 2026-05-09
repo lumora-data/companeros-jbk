@@ -37,7 +37,7 @@ type ServiceSection = TextSection | ImageSection | ImageGridSection | VideoSecti
 type JbkServiceContent = {
   title: string;
   sections: ServiceSection[];
-  cta: {
+  cta?: {
     buttonLabel: string;
     whatsappMessage: string;
   };
@@ -59,6 +59,9 @@ interface JbkServiceDetailProps {
 function toParagraphs(text: string): string[] {
   return text
     .replace(/\r/g, "")
+    .replace(/[^\S\r\n]+/g, " ")
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/\n[ \t]+/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .split("\n\n")
     .map((paragraph) => paragraph.trim())
@@ -94,15 +97,53 @@ function splitHeadingAndBody(value: string): { heading: string; body: string | n
 function paragraphLines(paragraph: string): string[] {
   return paragraph
     .split("\n")
-    .map((line) => line.trim())
+    .map((line) => line.replace(/[^\S\r\n]+/g, " ").trim())
     .filter(Boolean);
+}
+
+function renderTextWithLinks(text: string) {
+  const parts = text.split(/(https?:\/\/[^\s]+)/g);
+  return parts.map((part, idx) =>
+    /^https?:\/\//.test(part) ? (
+      <a
+        key={`${part}-${idx}`}
+        href={part}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="break-all text-gold underline underline-offset-2"
+      >
+        {part}
+      </a>
+    ) : (
+      <span key={`${part}-${idx}`}>{part}</span>
+    ),
+  );
+}
+
+function stripListMarker(value: string): string {
+  return value.replace(/^[-*]\s+/, "").trim();
+}
+
+function isCompactListLine(value: string): boolean {
+  const normalized = stripListMarker(value);
+  if (normalized.length === 0 || normalized.includes(":") || normalized.length > 44) {
+    return false;
+  }
+
+  if (/https?:\/\//i.test(normalized)) {
+    return false;
+  }
+
+  return /^[\p{L}\p{N}\s'’&()\-./]+$/u.test(normalized);
 }
 
 export default function JbkServiceDetail({ contentKey }: JbkServiceDetailProps) {
   const content = SITE_CONTENT.pages[contentKey] as JbkServiceContent;
   const whatsappBaseUrl = SITE_CONTENT.links.whatsappBaseUrl;
   const whatsappNumber = SITE_CONTENT.common.whatsappNumber;
-  const whatsappUrl = `${whatsappBaseUrl}/${whatsappNumber}?text=${encodeURIComponent(content.cta.whatsappMessage)}`;
+  const whatsappUrl = content.cta
+    ? `${whatsappBaseUrl}/${whatsappNumber}?text=${encodeURIComponent(content.cta.whatsappMessage)}`
+    : null;
 
   return (
     <div className="bg-noir-deep pb-24 pt-32 md:pt-40">
@@ -122,60 +163,86 @@ export default function JbkServiceDetail({ contentKey }: JbkServiceDetailProps) 
                     key={`text-${index}`}
                     className="rounded-2xl border border-white/10 bg-noir-deep/40 p-5 text-base leading-relaxed text-text-para md:rounded-3xl md:p-8 md:text-lg"
                   >
-                    <div className="space-y-4">
-                      {paragraphs.map((paragraph, paragraphIndex) => {
-                        const lines = paragraphLines(paragraph);
-                        if (lines.length === 0) {
-                          return null;
-                        }
+                    <div className="space-y-3">
+                      {(() => {
+                        const blocks: JSX.Element[] = [];
 
-                        if (lines.length >= 2 && lines.every(isCompactUppercaseItem)) {
-                          return (
-                            <ul
-                              key={`paragraph-${paragraphIndex}`}
-                              className="list-disc space-y-2 pl-5 text-text-main"
-                            >
-                              {lines.map((item) => (
-                                <li key={item}>{item}</li>
+                        for (let paragraphIndex = 0; paragraphIndex < paragraphs.length; paragraphIndex += 1) {
+                          const lines = paragraphLines(paragraphs[paragraphIndex]);
+                          if (lines.length === 0) {
+                            continue;
+                          }
+
+                          if (lines.length === 1 && isCompactListLine(lines[0])) {
+                            const items = [stripListMarker(lines[0])];
+                            let cursor = paragraphIndex + 1;
+
+                            while (cursor < paragraphs.length) {
+                              const nextLines = paragraphLines(paragraphs[cursor]);
+                              if (nextLines.length !== 1 || !isCompactListLine(nextLines[0])) {
+                                break;
+                              }
+                              items.push(stripListMarker(nextLines[0]));
+                              cursor += 1;
+                            }
+
+                            if (items.length >= 3) {
+                              blocks.push(
+                                <ul
+                                  key={`paragraph-list-${paragraphIndex}`}
+                                  className="list-disc space-y-2 pl-5 text-text-main"
+                                >
+                                  {items.map((item, itemIndex) => (
+                                    <li key={`${item}-${itemIndex}`}>{renderTextWithLinks(item)}</li>
+                                  ))}
+                                </ul>,
+                              );
+                              paragraphIndex = cursor - 1;
+                              continue;
+                            }
+                          }
+
+                          if (lines.length >= 2 && lines.every((line) => isCompactUppercaseItem(stripListMarker(line)))) {
+                            blocks.push(
+                              <ul
+                                key={`paragraph-${paragraphIndex}`}
+                                className="list-disc space-y-2 pl-5 text-text-main"
+                              >
+                                {lines.map((item, itemIndex) => (
+                                  <li key={`${item}-${itemIndex}`}>{renderTextWithLinks(stripListMarker(item))}</li>
+                                ))}
+                              </ul>,
+                            );
+                            continue;
+                          }
+
+                          const singleLine = lines.length === 1 ? lines[0] : null;
+                          if (singleLine) {
+                            const headingAndBody = splitHeadingAndBody(singleLine);
+                            if (headingAndBody) {
+                              blocks.push(
+                                <div key={`paragraph-${paragraphIndex}`} className="space-y-2">
+                                  <h3 className="text-lg font-black uppercase tracking-wide text-gold md:text-xl">
+                                    {headingAndBody.heading}
+                                  </h3>
+                                  {headingAndBody.body ? <p>{renderTextWithLinks(headingAndBody.body)}</p> : null}
+                                </div>,
+                              );
+                              continue;
+                            }
+                          }
+
+                          blocks.push(
+                            <div key={`paragraph-${paragraphIndex}`} className="space-y-2.5">
+                              {lines.map((line, lineIndex) => (
+                                <p key={`${line}-${lineIndex}`}>{renderTextWithLinks(line)}</p>
                               ))}
-                            </ul>
+                            </div>,
                           );
                         }
 
-                        const singleLine = lines.length === 1 ? lines[0] : null;
-                        if (singleLine) {
-                          const headingAndBody = splitHeadingAndBody(singleLine);
-                          if (headingAndBody) {
-                            return (
-                              <div key={`paragraph-${paragraphIndex}`} className="space-y-2">
-                                <h3 className="text-lg font-black uppercase tracking-wide text-gold md:text-xl">
-                                  {headingAndBody.heading}
-                                </h3>
-                                {headingAndBody.body ? <p>{headingAndBody.body}</p> : null}
-                              </div>
-                            );
-                          }
-
-                          if (looksUppercaseLabel(singleLine) && singleLine.length <= 68) {
-                            return (
-                              <h3
-                                key={`paragraph-${paragraphIndex}`}
-                                className="text-lg font-black uppercase tracking-wide text-gold md:text-xl"
-                              >
-                                {singleLine}
-                              </h3>
-                            );
-                          }
-                        }
-
-                        return (
-                          <div key={`paragraph-${paragraphIndex}`} className="space-y-3">
-                            {lines.map((line) => (
-                              <p key={line}>{line}</p>
-                            ))}
-                          </div>
-                        );
-                      })}
+                        return blocks;
+                      })()}
                     </div>
                   </div>
                 );
@@ -223,15 +290,17 @@ export default function JbkServiceDetail({ contentKey }: JbkServiceDetailProps) 
             })}
           </div>
 
-          <div className="mt-12 text-center">
-            <a
-              href={whatsappUrl}
-              className="inline-flex items-center justify-center gap-3 rounded-2xl bg-gold px-8 py-4 text-sm font-black uppercase tracking-wider text-noir-deep transition-all hover:brightness-110 md:px-10 md:py-5 md:text-base"
-            >
-              {content.cta.buttonLabel}
-              <MessageCircle className="h-5 w-5" />
-            </a>
-          </div>
+          {content.cta && whatsappUrl ? (
+            <div className="mt-12 text-center">
+              <a
+                href={whatsappUrl}
+                className="inline-flex items-center justify-center gap-3 rounded-2xl bg-gold px-8 py-4 text-sm font-black uppercase tracking-wider text-noir-deep transition-all hover:brightness-110 md:px-10 md:py-5 md:text-base"
+              >
+                {content.cta.buttonLabel}
+                <MessageCircle className="h-5 w-5" />
+              </a>
+            </div>
+          ) : null}
         </div>
       </section>
     </div>

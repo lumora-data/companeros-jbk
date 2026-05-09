@@ -30,6 +30,29 @@ type JbkVenteMaterielContent = {
   };
 };
 
+function normalizeLine(value: string): string {
+  return value.replace(/\r/g, "").replace(/[^\S\r\n]+/g, " ").trim();
+}
+
+function renderTextWithLinks(text: string) {
+  const parts = text.split(/(https?:\/\/[^\s]+)/g);
+  return parts.map((part, idx) =>
+    /^https?:\/\//.test(part) ? (
+      <a
+        key={`${part}-${idx}`}
+        href={part}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="break-all text-gold underline underline-offset-2"
+      >
+        {part}
+      </a>
+    ) : (
+      <span key={`${part}-${idx}`}>{part}</span>
+    ),
+  );
+}
+
 function VideoGallery({ videos }: { videos: VideoItem[] }) {
   return (
     <div className="mt-6 space-y-8">
@@ -74,7 +97,7 @@ export default function JbkVenteMateriel() {
 
           <div className="mt-8 space-y-5 text-base leading-relaxed text-text-para md:text-lg">
             {content.introParagraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={paragraph}>{renderTextWithLinks(normalizeLine(paragraph))}</p>
             ))}
           </div>
 
@@ -88,13 +111,17 @@ export default function JbkVenteMateriel() {
 
           <div className="mt-12">
             <h2 className="text-2xl font-black uppercase tracking-wide text-gold md:text-4xl">Drones</h2>
-            <p className="mt-5 text-base leading-relaxed text-text-para md:text-lg">{content.droneSection.text}</p>
+            <p className="mt-5 text-base leading-relaxed text-text-para md:text-lg">
+              {renderTextWithLinks(normalizeLine(content.droneSection.text))}
+            </p>
             <VideoGallery videos={content.droneSection.videos} />
           </div>
 
           <div className="mt-12">
             <h2 className="text-2xl font-black uppercase tracking-wide text-gold md:text-4xl">Appareils Photos & Caméras</h2>
-            <p className="mt-5 text-base leading-relaxed text-text-para md:text-lg">{content.cameraSection.text}</p>
+            <p className="mt-5 text-base leading-relaxed text-text-para md:text-lg">
+              {renderTextWithLinks(normalizeLine(content.cameraSection.text))}
+            </p>
             <VideoGallery videos={content.cameraSection.videos} />
           </div>
 

@@ -25,11 +25,43 @@ interface JbkEvenementsProps {
   contentKey?: "jbkEvenements" | "jbkDoublage";
 }
 
+function normalizeText(value: string): string {
+  return value
+    .replace(/\r/g, "")
+    .replace(/[^\S\r\n]+/g, " ")
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/\n[ \t]+/g, "\n")
+    .trim();
+}
+
+function renderTextWithLinks(text: string) {
+  const parts = text.split(/(https?:\/\/[^\s]+)/g);
+  return parts.map((part, idx) =>
+    /^https?:\/\//.test(part) ? (
+      <a
+        key={`${part}-${idx}`}
+        href={part}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="break-all text-gold underline underline-offset-2"
+      >
+        {part}
+      </a>
+    ) : (
+      <span key={`${part}-${idx}`}>{part}</span>
+    ),
+  );
+}
+
 export default function JbkEvenements({ contentKey = "jbkEvenements" }: JbkEvenementsProps) {
   const content = SITE_CONTENT.pages[contentKey] as JbkVideoPageContent;
   const whatsappBaseUrl = SITE_CONTENT.links.whatsappBaseUrl;
   const whatsappNumber = SITE_CONTENT.common.whatsappNumber;
-  const introParagraphs = content.introText?.split("\n\n").filter(Boolean) ?? [];
+  const introParagraphs = content.introText
+    ?.replace(/\n{3,}/g, "\n\n")
+    .split("\n\n")
+    .map((paragraph) => normalizeText(paragraph))
+    .filter(Boolean) ?? [];
   const whatsappUrl = content.cta
     ? `${whatsappBaseUrl}/${whatsappNumber}?text=${encodeURIComponent(content.cta.whatsappMessage)}`
     : null;
@@ -55,7 +87,7 @@ export default function JbkEvenements({ contentKey = "jbkEvenements" }: JbkEvene
           {introParagraphs.length > 0 ? (
             <div className="mt-8 space-y-5 text-base leading-relaxed text-text-para md:text-lg">
               {introParagraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+                <p key={paragraph}>{renderTextWithLinks(paragraph)}</p>
               ))}
             </div>
           ) : null}
