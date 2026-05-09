@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { ExternalLink, MessageCircle } from "lucide-react";
 import { SITE_CONTENT } from "@/src/content/site-content";
 import ResponsiveVideoFrame from "@/src/components/ResponsiveVideoFrame";
@@ -165,7 +166,7 @@ export default function JbkServiceDetail({ contentKey }: JbkServiceDetailProps) 
                   >
                     <div className="space-y-3">
                       {(() => {
-                        const blocks: JSX.Element[] = [];
+                        const blocks: ReactNode[] = [];
 
                         for (let paragraphIndex = 0; paragraphIndex < paragraphs.length; paragraphIndex += 1) {
                           const lines = paragraphLines(paragraphs[paragraphIndex]);
