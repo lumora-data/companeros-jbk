@@ -21,33 +21,16 @@ export default function Page() {
 
         <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
           {PARTNERS.map((partner) => (
-            partner.url ? (
-              <a
-                key={partner.id}
-                href={partner.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-white/5 bg-noir-card p-6 transition-all hover:border-gold/40"
-                aria-label={`Visiter ${partner.name}`}
-              >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="max-h-24 w-full object-contain transition-all duration-300"
-                />
-              </a>
-            ) : (
-              <div
-                key={partner.id}
-                className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-white/5 bg-noir-card p-6"
-              >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="max-h-24 w-full object-contain transition-all duration-300"
-                />
-              </div>
-            )
+            <div
+              key={partner.id}
+              className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-white/5 bg-noir-card p-6"
+            >
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                className="max-h-24 w-full object-contain transition-all duration-300"
+              />
+            </div>
           ))}
         </div>
       </div>
