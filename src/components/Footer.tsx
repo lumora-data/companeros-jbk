@@ -104,8 +104,15 @@ export default function Footer() {
 
         <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center text-text-soft text-[10px] font-black tracking-[0.2em] uppercase mb-12">
           <p>{footer.copyright}</p>
-          <div className="mt-4 md:mt-0">
+          <div className="mt-4 flex items-center gap-4 md:mt-0">
              <Link href={links.routes.partners} className="hover:text-gold transition-all">{footer.partnerLinkLabel}</Link>
+             <Link
+               href="/admin/login"
+               className="text-[9px] tracking-[0.25em] opacity-35 transition hover:opacity-80 hover:text-gold"
+               aria-label="Espace admin"
+             >
+               Espace admin
+             </Link>
           </div>
         </div>
       </div>

@@ -1,12 +1,25 @@
 "use client";
 
 import type { ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import Footer from "./Footer";
 import FloatingWhatsApp from "./FloatingWhatsApp";
 import Navbar from "./Navbar";
 import ScrollToTop from "./ScrollToTop";
 
 export default function SiteShell({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+  const isAdminPath = pathname.startsWith("/admin");
+
+  if (isAdminPath) {
+    return (
+      <>
+        <ScrollToTop />
+        {children}
+      </>
+    );
+  }
+
   return (
     <>
       <ScrollToTop />
