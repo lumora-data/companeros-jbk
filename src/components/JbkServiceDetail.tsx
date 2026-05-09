@@ -56,27 +56,46 @@ interface JbkServiceDetailProps {
   contentKey: JbkServiceContentKey;
 }
 
-function formatLines(text: string): string[] {
+function toParagraphs(text: string): string[] {
   return text
     .replace(/\r/g, "")
-    .replace(/\n{2,}/g, "\n")
-    .split("\n")
-    .map((line) => line.trim())
+    .replace(/\n{3,}/g, "\n\n")
+    .split("\n\n")
+    .map((paragraph) => paragraph.trim())
     .filter(Boolean);
 }
 
-function isShortLine(line: string): boolean {
-  return line.length <= 56;
+function looksUppercaseLabel(value: string): boolean {
+  return /^[A-ZÀ-ÖØ-Þ0-9\s'’&()\-!]+$/u.test(value);
 }
 
-function renderLineList(lines: string[]) {
-  return (
-    <ul className="mt-4 space-y-2 pl-5 text-base text-text-main md:text-lg list-disc">
-      {lines.map((line) => (
-        <li key={line} className="leading-relaxed">{line}</li>
-      ))}
-    </ul>
-  );
+function isCompactUppercaseItem(value: string): boolean {
+  return looksUppercaseLabel(value) && !value.includes(":") && value.length <= 44;
+}
+
+function splitHeadingAndBody(value: string): { heading: string; body: string | null } | null {
+  const separatorIndex = value.indexOf(":");
+  if (separatorIndex <= 0) {
+    return null;
+  }
+
+  const heading = value.slice(0, separatorIndex + 1).trim();
+  const body = value.slice(separatorIndex + 1).trim();
+  if (!looksUppercaseLabel(heading.replace(":", "").trim())) {
+    return null;
+  }
+
+  return {
+    heading,
+    body: body.length > 0 ? body : null,
+  };
+}
+
+function paragraphLines(paragraph: string): string[] {
+  return paragraph
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
 }
 
 export default function JbkServiceDetail({ contentKey }: JbkServiceDetailProps) {
@@ -96,46 +115,68 @@ export default function JbkServiceDetail({ contentKey }: JbkServiceDetailProps) 
           <div className="mt-10 space-y-10">
             {content.sections.map((section, index) => {
               if (section.type === "text") {
-                const lines = formatLines(section.text);
-                const firstLine = lines[0];
-                const remainingLines = lines.slice(1);
-                const allLinesShort = lines.length >= 2 && lines.every(isShortLine);
-                const remainingLooksLikeList =
-                  remainingLines.length >= 2 && remainingLines.every(isShortLine);
-
-                if (!firstLine) {
-                  return null;
-                }
+                const paragraphs = toParagraphs(section.text);
 
                 return (
-                  <div key={`text-${index}`} className="text-base leading-relaxed text-text-para md:text-lg">
-                    {firstLine.endsWith(":") && remainingLines.length > 0 ? (
-                      <>
-                        <p>{firstLine}</p>
-                        {remainingLooksLikeList ? (
-                          renderLineList(remainingLines)
-                        ) : (
-                          <div className="mt-4 space-y-3">
-                            {remainingLines.map((line) => (
+                  <div
+                    key={`text-${index}`}
+                    className="rounded-2xl border border-white/10 bg-noir-deep/40 p-5 text-base leading-relaxed text-text-para md:rounded-3xl md:p-8 md:text-lg"
+                  >
+                    <div className="space-y-4">
+                      {paragraphs.map((paragraph, paragraphIndex) => {
+                        const lines = paragraphLines(paragraph);
+                        if (lines.length === 0) {
+                          return null;
+                        }
+
+                        if (lines.length >= 2 && lines.every(isCompactUppercaseItem)) {
+                          return (
+                            <ul
+                              key={`paragraph-${paragraphIndex}`}
+                              className="list-disc space-y-2 pl-5 text-text-main"
+                            >
+                              {lines.map((item) => (
+                                <li key={item}>{item}</li>
+                              ))}
+                            </ul>
+                          );
+                        }
+
+                        const singleLine = lines.length === 1 ? lines[0] : null;
+                        if (singleLine) {
+                          const headingAndBody = splitHeadingAndBody(singleLine);
+                          if (headingAndBody) {
+                            return (
+                              <div key={`paragraph-${paragraphIndex}`} className="space-y-2">
+                                <h3 className="text-lg font-black uppercase tracking-wide text-gold md:text-xl">
+                                  {headingAndBody.heading}
+                                </h3>
+                                {headingAndBody.body ? <p>{headingAndBody.body}</p> : null}
+                              </div>
+                            );
+                          }
+
+                          if (looksUppercaseLabel(singleLine) && singleLine.length <= 68) {
+                            return (
+                              <h3
+                                key={`paragraph-${paragraphIndex}`}
+                                className="text-lg font-black uppercase tracking-wide text-gold md:text-xl"
+                              >
+                                {singleLine}
+                              </h3>
+                            );
+                          }
+                        }
+
+                        return (
+                          <div key={`paragraph-${paragraphIndex}`} className="space-y-3">
+                            {lines.map((line) => (
                               <p key={line}>{line}</p>
                             ))}
                           </div>
-                        )}
-                      </>
-                    ) : remainingLooksLikeList ? (
-                      <>
-                        <p>{firstLine}</p>
-                        {renderLineList(remainingLines)}
-                      </>
-                    ) : allLinesShort ? (
-                      renderLineList(lines)
-                    ) : (
-                      <div className="space-y-3">
-                        {lines.map((line) => (
-                          <p key={line}>{line}</p>
-                        ))}
-                      </div>
-                    )}
+                        );
+                      })}
+                    </div>
                   </div>
                 );
               }
