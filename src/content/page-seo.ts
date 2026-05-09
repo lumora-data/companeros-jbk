@@ -93,6 +93,13 @@ export const PAGE_SEO: Record<string, Metadata> = {
     path: "/jbk/vente-materiel",
     keywords: ["vente materiel audiovisuel", "drone mavic", "camera canon"],
   }),
+  jbkSiteWeb: createPageMetadata({
+    title: "Creation Web | JBK Films",
+    description:
+      "Creation de sites vitrine, e-commerce, e-learning et portfolios avec nom de domaine, hebergement et accompagnement pro.",
+    path: "/jbk/site-web",
+    keywords: ["creation site web", "site vitrine", "site e-commerce", "site e-learning", "portfolio web"],
+  }),
   jbkGraphisme: createPageMetadata({
     title: "Graphisme & Impression | JBK Films",
     description:

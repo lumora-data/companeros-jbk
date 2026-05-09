@@ -26,6 +26,7 @@
         "jbkEvenements": "/jbk/evenements",
         "jbkDoublage": "/jbk/doublage",
         "jbkVenteMateriel": "/jbk/vente-materiel",
+        "jbkSiteWeb": "/jbk/site-web",
         "jbkGraphisme": "/jbk/graphisme-impression",
         "jbkVoixOff": "/jbk/voix-off",
         "jbkDrone": "/jbk/drone",
@@ -783,6 +784,7 @@
         "redirectByServiceId": {
           "graphisme": "/jbk/graphisme-impression",
           "evenement": "/jbk/evenements",
+          "web": "/jbk/site-web",
           "doublage": "/jbk/doublage",
           "voix": "/jbk/voix-off",
           "drone": "/jbk/drone",
@@ -905,6 +907,51 @@
             "embedUrl": "https://www.youtube.com/embed/4_5YIbseUAI"
           }
         ]
+      }
+    },
+    "jbkSiteWeb": {
+      "title": "Création Web",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Avec nous, créez votre site internet adapté à vos besoins et bénéficiez de prix exceptionnels qui incluent la conception du site, le nom du domaine, l'hébergement sur un (1) an et plusieurs autres avantages ! Nous vous proposons une infinité de modèles pour faire exploser votre business. Parmi les sites les plus sollicités chez nous, on peut citer :\n\nLES SITES VITRINE : ce type de site vous permettra de présenter votre entreprise, vos services, vos produits etc. Il est aussi recommandé pour une grande visibilité de votre business à petite, moyenne ou grande échelle tel que les restaurants, salon de coiffure...\n\nIl fonctionne comme une carte de visite en ligne et peut prendre différentes formes, comme un portfolio pour un artiste."
+        },
+        {
+          "type": "image",
+          "src": "/organized-content/site-web-01.webp",
+          "alt": "Site vitrine JBK"
+        },
+        {
+          "type": "text",
+          "text": "LES SITES E-COMMERCE : votre site de ventes en ligne\n\nAvec ce modele de site, vous avez la possibilité de vendre directement vos produits en ligne."
+        },
+        {
+          "type": "image",
+          "src": "/organized-content/site-web-02.webp",
+          "alt": "Site e-commerce JBK"
+        },
+        {
+          "type": "text",
+          "text": "LES SITES E-LEARNING : pour dispenser des cours à distance\n\nTravaillez à distance avec vos apprenants et recevez directement les payements de vos services, quel que soit leur pays de résidence."
+        },
+        {
+          "type": "image",
+          "src": "/organized-content/site-web-03.webp",
+          "alt": "Site e-learning JBK"
+        },
+        {
+          "type": "text",
+          "text": "LES PORTFOLIOS : Ce modèle d'outil de présentation vous permettra de compiler et mettre en valeur vos compétences, réalisations et expériences en tant qu'artiste, personne publique, scientifique, professionnel de santé, entrepreneur..."
+        },
+        {
+          "type": "image",
+          "src": "/organized-content/site-web-04.webp",
+          "alt": "Site portfolio JBK"
+        }
+      ],
+      "cta": {
+        "buttonLabel": "PRENEZ RENDEZ-VOUS",
+        "whatsappMessage": "Bonjour, je souhaite prendre rendez-vous pour le service Création Web."
       }
     },
     "jbkGraphisme": {

@@ -44,6 +44,7 @@ type JbkServiceContent = {
 };
 
 export type JbkServiceContentKey =
+  | "jbkSiteWeb"
   | "jbkGraphisme"
   | "jbkVoixOff"
   | "jbkDrone"
