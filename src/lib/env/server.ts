@@ -5,6 +5,7 @@ type AdminAuthEnv = {
   passwordHash?: string;
   password?: string;
   sessionSecret: string;
+  strictUsername: boolean;
 };
 
 type GitHubEnv = {
@@ -72,10 +73,11 @@ function parseBoolean(value: string | undefined, fallback = false): boolean {
 }
 
 export function getAdminAuthEnv(): AdminAuthEnv {
-  const username = readRequired("ADMIN_USERNAME");
+  const username = (readOptional("ADMIN_USERNAME") || "admin").replace(/^['"`]+|['"`]+$/g, "").trim() || "admin";
   const passwordHash = readOptional("ADMIN_PASSWORD_HASH");
   const password = readOptional("ADMIN_PASSWORD");
   const sessionSecret = readRequired("ADMIN_SESSION_SECRET");
+  const strictUsername = parseBoolean(readOptional("ADMIN_STRICT_USERNAME"), false);
 
   if (!passwordHash && !password) {
     throw new Error("Provide ADMIN_PASSWORD_HASH or ADMIN_PASSWORD.");
@@ -86,6 +88,7 @@ export function getAdminAuthEnv(): AdminAuthEnv {
     passwordHash,
     password,
     sessionSecret,
+    strictUsername,
   };
 }
 

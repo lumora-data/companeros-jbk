@@ -7,15 +7,10 @@ function sha256Hex(value: string): string {
   return createHash("sha256").update(value, "utf8").digest("hex");
 }
 
-function normalizeSha256Hash(value: string): string {
-  return value
-    .trim()
-    .replace(/^sha256:/i, "")
-    .replace(/^<|>$/g, "")
-    .replace(/['"]/g, "")
-    .replace(/[^a-fA-F0-9]/g, "")
-    .trim()
-    .toLowerCase();
+function extractSha256Hash(value: string): string | null {
+  const cleaned = value.trim().replace(/^sha256:/i, "").replace(/^<|>$/g, "").replace(/['"]/g, "").trim();
+  const match = cleaned.match(/[a-fA-F0-9]{64}/);
+  return match ? match[0].toLowerCase() : null;
 }
 
 function normalizeUsername(value: string): string {
@@ -41,16 +36,25 @@ function safeEqual(left: string, right: string): boolean {
 
 export async function verifyAdminCredentials(username: string, password: string): Promise<boolean> {
   const env = getAdminAuthEnv();
-  if (!safeEqual(normalizeUsername(username), normalizeUsername(env.username))) {
+  if (env.strictUsername && !safeEqual(normalizeUsername(username), normalizeUsername(env.username))) {
     return false;
   }
 
   if (env.passwordHash) {
-    const rawHash = normalizeSha256Hash(env.passwordHash);
-    if (rawHash.length === 64 && /^[a-f0-9]{64}$/i.test(rawHash)) {
+    const hash = extractSha256Hash(env.passwordHash);
+    if (hash) {
       for (const candidate of passwordCandidates(password)) {
         const computed = sha256Hex(candidate);
-        if (safeEqual(computed, rawHash)) {
+        if (safeEqual(computed, hash)) {
+          return true;
+        }
+        if (safeEqual(candidate.toLowerCase(), hash)) {
+          return true;
+        }
+      }
+    } else {
+      for (const candidate of passwordCandidates(password)) {
+        if (safeEqual(candidate, env.passwordHash)) {
           return true;
         }
       }

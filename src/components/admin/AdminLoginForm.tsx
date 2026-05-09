@@ -5,7 +5,7 @@ import type { FormEvent } from "react";
 import { Loader2, LogIn } from "lucide-react";
 
 export default function AdminLoginForm() {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState("admin");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -52,8 +52,11 @@ export default function AdminLoginForm() {
             required
             value={username}
             onChange={(event) => setUsername(event.target.value)}
+            autoCapitalize="none"
+            autoCorrect="off"
+            spellCheck={false}
             className="w-full rounded-xl border border-white/10 bg-noir-deep px-4 py-3 text-text-main outline-none transition focus:border-gold/70"
-            placeholder="Nom admin"
+            placeholder="admin"
           />
         </label>
 

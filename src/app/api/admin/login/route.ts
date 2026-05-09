@@ -17,8 +17,8 @@ export async function POST(request: Request) {
     const username = body.username?.trim() || "";
     const password = body.password || "";
 
-    if (!username || !password) {
-      return NextResponse.json({ ok: false, error: "Nom d'utilisateur et mot de passe requis." }, { status: 400 });
+    if (!password) {
+      return NextResponse.json({ ok: false, error: "Mot de passe requis." }, { status: 400 });
     }
 
     const isValid = await verifyAdminCredentials(username, password);
@@ -26,10 +26,11 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: false, error: "Identifiants invalides." }, { status: 401 });
     }
 
-    const { sessionSecret } = getAdminAuthEnv();
-    const token = createAdminSessionToken(username, sessionSecret);
+    const { sessionSecret, username: configuredUsername } = getAdminAuthEnv();
+    const sessionUsername = username || configuredUsername || "admin";
+    const token = createAdminSessionToken(sessionUsername, sessionSecret);
 
-    const response = NextResponse.json({ ok: true, username });
+    const response = NextResponse.json({ ok: true, username: sessionUsername });
     response.cookies.set({
       name: ADMIN_SESSION_COOKIE_NAME,
       value: token,
