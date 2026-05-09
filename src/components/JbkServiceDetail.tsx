@@ -55,6 +55,29 @@ interface JbkServiceDetailProps {
   contentKey: JbkServiceContentKey;
 }
 
+function formatLines(text: string): string[] {
+  return text
+    .replace(/\r/g, "")
+    .replace(/\n{2,}/g, "\n")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+}
+
+function isShortLine(line: string): boolean {
+  return line.length <= 56;
+}
+
+function renderLineList(lines: string[]) {
+  return (
+    <ul className="mt-4 space-y-2 pl-5 text-base text-text-main md:text-lg list-disc">
+      {lines.map((line) => (
+        <li key={line} className="leading-relaxed">{line}</li>
+      ))}
+    </ul>
+  );
+}
+
 export default function JbkServiceDetail({ contentKey }: JbkServiceDetailProps) {
   const content = SITE_CONTENT.pages[contentKey] as JbkServiceContent;
   const whatsappBaseUrl = SITE_CONTENT.links.whatsappBaseUrl;
@@ -72,13 +95,47 @@ export default function JbkServiceDetail({ contentKey }: JbkServiceDetailProps) 
           <div className="mt-10 space-y-10">
             {content.sections.map((section, index) => {
               if (section.type === "text") {
+                const lines = formatLines(section.text);
+                const firstLine = lines[0];
+                const remainingLines = lines.slice(1);
+                const allLinesShort = lines.length >= 2 && lines.every(isShortLine);
+                const remainingLooksLikeList =
+                  remainingLines.length >= 2 && remainingLines.every(isShortLine);
+
+                if (!firstLine) {
+                  return null;
+                }
+
                 return (
-                  <p
-                    key={`text-${index}`}
-                    className="whitespace-pre-line text-base leading-relaxed text-text-para md:text-lg"
-                  >
-                    {section.text}
-                  </p>
+                  <div key={`text-${index}`} className="text-base leading-relaxed text-text-para md:text-lg">
+                    {firstLine.endsWith(":") && remainingLines.length > 0 ? (
+                      <>
+                        <p>{firstLine}</p>
+                        {remainingLooksLikeList ? (
+                          renderLineList(remainingLines)
+                        ) : (
+                          <div className="mt-4 space-y-3">
+                            {remainingLines.map((line) => (
+                              <p key={line}>{line}</p>
+                            ))}
+                          </div>
+                        )}
+                      </>
+                    ) : remainingLooksLikeList ? (
+                      <>
+                        <p>{firstLine}</p>
+                        {renderLineList(remainingLines)}
+                      </>
+                    ) : allLinesShort ? (
+                      renderLineList(lines)
+                    ) : (
+                      <div className="space-y-3">
+                        {lines.map((line) => (
+                          <p key={line}>{line}</p>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 );
               }
 
