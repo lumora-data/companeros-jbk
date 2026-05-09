@@ -36,11 +36,15 @@ export function requireAdminApiAuth(request: Request): { username: string } {
 }
 
 export async function getAdminPageSession(): Promise<{ username: string } | null> {
-  const { sessionSecret } = getAdminAuthEnv();
-  const cookieStore = await cookies();
-  const token = cookieStore.get(ADMIN_SESSION_COOKIE_NAME)?.value;
-  const payload = verifyAdminSessionToken(token, sessionSecret);
-  return payload ? { username: payload.u } : null;
+  try {
+    const { sessionSecret } = getAdminAuthEnv();
+    const cookieStore = await cookies();
+    const token = cookieStore.get(ADMIN_SESSION_COOKIE_NAME)?.value;
+    const payload = verifyAdminSessionToken(token, sessionSecret);
+    return payload ? { username: payload.u } : null;
+  } catch {
+    return null;
+  }
 }
 
 export async function requireAdminPageSession(): Promise<{ username: string }> {
