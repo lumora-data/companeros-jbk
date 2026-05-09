@@ -7,6 +7,15 @@ function sha256Hex(value: string): string {
   return createHash("sha256").update(value, "utf8").digest("hex");
 }
 
+function normalizeSha256Hash(value: string): string {
+  return value
+    .trim()
+    .replace(/^sha256:/i, "")
+    .replace(/^<|>$/g, "")
+    .trim()
+    .toLowerCase();
+}
+
 function safeEqual(left: string, right: string): boolean {
   const a = Buffer.from(left);
   const b = Buffer.from(right);
@@ -20,9 +29,11 @@ export async function verifyAdminCredentials(username: string, password: string)
   }
 
   if (env.passwordHash) {
-    const rawHash = env.passwordHash.includes(":") ? env.passwordHash.split(":").pop() || "" : env.passwordHash;
+    const rawHash = normalizeSha256Hash(env.passwordHash);
     const computed = sha256Hex(password);
-    return safeEqual(computed, rawHash.toLowerCase());
+    if (rawHash.length === 64) {
+      return safeEqual(computed, rawHash);
+    }
   }
 
   if (env.password) {
