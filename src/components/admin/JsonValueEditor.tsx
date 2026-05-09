@@ -153,12 +153,12 @@ export default function JsonValueEditor({
       return "";
     }
     if (depth === 1) {
-      return "ml-2";
+      return "md:ml-2";
     }
     if (depth === 2) {
-      return "ml-4";
+      return "md:ml-4";
     }
-    return "ml-6";
+    return "md:ml-6";
   }, [depth]);
 
   if (typeof value === "string") {

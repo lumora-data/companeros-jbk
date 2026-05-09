@@ -251,8 +251,8 @@ export default function JbkServiceDetail({ contentKey }: JbkServiceDetailProps) 
 
               if (section.type === "image") {
                 return (
-                  <div key={`image-${index}`} className="overflow-hidden rounded-2xl border border-white/10 md:rounded-3xl">
-                    <img src={section.src} alt={section.alt} className="h-auto w-full object-cover" />
+                  <div key={`image-${index}`} className="overflow-hidden rounded-2xl border border-white/10 bg-black/25 p-2 md:rounded-3xl md:p-3">
+                    <img src={section.src} alt={section.alt} className="max-h-[75svh] w-full rounded-xl object-contain object-center md:max-h-none" />
                   </div>
                 );
               }
@@ -261,8 +261,8 @@ export default function JbkServiceDetail({ contentKey }: JbkServiceDetailProps) 
                 return (
                   <div key={`image-grid-${index}`} className="space-y-6">
                     {section.images.map((image) => (
-                      <div key={image.src} className="overflow-hidden rounded-2xl border border-white/10 bg-black/20 md:rounded-3xl">
-                        <img src={image.src} alt={image.alt} className="h-auto w-full object-cover" />
+                      <div key={image.src} className="overflow-hidden rounded-2xl border border-white/10 bg-black/25 p-2 md:rounded-3xl md:p-3">
+                        <img src={image.src} alt={image.alt} className="max-h-[75svh] w-full rounded-xl object-contain object-center md:max-h-none" />
                       </div>
                     ))}
                   </div>

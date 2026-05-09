@@ -65,7 +65,7 @@ export default function Jbk() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative flex min-h-[82svh] items-center justify-center overflow-hidden py-20 md:h-[80vh] md:py-0">
         <motion.div 
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -92,7 +92,7 @@ export default function Jbk() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-8xl font-display font-black tracking-tighter mb-6 md:mb-8 uppercase leading-[0.9]"
+            className="text-3xl sm:text-5xl md:text-8xl font-display font-black tracking-tighter mb-6 md:mb-8 uppercase leading-[0.9]"
           >
             {content.hero.titleLine1} <br />
             <span className="text-gold italic">{content.hero.titleHighlight}</span>
@@ -101,7 +101,7 @@ export default function Jbk() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-text-para text-lg md:text-2xl max-w-4xl mx-auto mb-10 md:mb-12 font-medium leading-relaxed px-4"
+            className="text-text-para text-base sm:text-lg md:text-2xl max-w-4xl mx-auto mb-10 md:mb-12 font-medium leading-relaxed px-2 sm:px-4"
           >
             {content.hero.description}
           </motion.p>
@@ -154,7 +154,7 @@ export default function Jbk() {
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
                   whileHover={{ y: -10 }}
-                  className="bg-noir-card border border-white/5 p-8 rounded-[2rem] hover:border-gold/50 transition-all group flex flex-col h-full"
+                  className="bg-noir-card border border-white/5 p-6 md:p-8 rounded-[1.6rem] md:rounded-[2rem] hover:border-gold/50 transition-all group flex flex-col h-full"
                 >
                   <Icon className="w-10 h-10 text-gold mb-6 group-hover:rotate-6 transition-transform duration-500" />
                   <h3 className="text-xl font-black mb-4 uppercase tracking-tight text-white leading-tight">{service.title}</h3>
@@ -210,11 +210,11 @@ export default function Jbk() {
                 <div className="aspect-[3/4] bg-black/30 p-2">
                   <img src={member.image} alt={member.imageAlt} className="h-full w-full rounded-xl object-contain object-center" />
                 </div>
-                <div className="p-6 md:p-7">
-                  <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-white">{member.name}</h3>
+                <div className="p-5 md:p-7">
+                  <h3 className="text-lg md:text-2xl font-black uppercase tracking-tight text-white break-words">{member.name}</h3>
                   <p className="mt-2 text-sm md:text-base font-bold text-gold">{member.role}</p>
                   {member.bio ? (
-                    <p className="mt-4 text-sm md:text-base leading-relaxed text-text-para whitespace-pre-line">
+                    <p className="mt-4 text-sm leading-6 md:text-base md:leading-relaxed text-text-para whitespace-pre-line">
                       {member.bio}
                     </p>
                   ) : null}
@@ -252,11 +252,11 @@ export default function Jbk() {
                 <div className="aspect-[3/4] bg-black/30 p-2">
                   <img src={member.image} alt={member.imageAlt} className="h-full w-full rounded-xl object-contain object-center" />
                 </div>
-                <div className="p-6 md:p-7">
-                  <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-white">{member.name}</h3>
+                <div className="p-5 md:p-7">
+                  <h3 className="text-lg md:text-2xl font-black uppercase tracking-tight text-white break-words">{member.name}</h3>
                   <p className="mt-2 text-sm md:text-base font-bold text-gold">{member.role}</p>
                   {member.bio ? (
-                    <p className="mt-4 text-sm md:text-base leading-relaxed text-text-para whitespace-pre-line">
+                    <p className="mt-4 text-sm leading-6 md:text-base md:leading-relaxed text-text-para whitespace-pre-line">
                       {member.bio}
                     </p>
                   ) : null}
@@ -355,13 +355,13 @@ export default function Jbk() {
                 >
                   <a
                     href={content.conversion.primaryWhatsappLink}
-                    className="gold-gradient text-noir-deep px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-2xl gold-glow text-center"
+                    className="gold-gradient text-noir-deep px-8 py-4 md:px-10 md:py-5 rounded-2xl font-black text-base md:text-lg hover:scale-105 transition-all shadow-2xl gold-glow text-center"
                   >
                     {content.conversion.primaryButtonLabel}
                   </a>
                   <Link
                     href={routes.contact}
-                    className="bg-white/5 border border-white/10 text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-white hover:text-noir-deep transition-all text-center"
+                    className="bg-white/5 border border-white/10 text-white px-8 py-4 md:px-10 md:py-5 rounded-2xl font-black text-base md:text-lg hover:bg-white hover:text-noir-deep transition-all text-center"
                   >
                     {content.conversion.secondaryButtonLabel}
                   </Link>
