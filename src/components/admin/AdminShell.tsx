@@ -33,26 +33,27 @@ export default function AdminShell({ username, children }: AdminShellProps) {
 
   return (
     <div className="min-h-screen bg-noir-deep text-text-main">
-      <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-6 px-4 pb-10 pt-5 md:px-6 lg:flex-row lg:gap-8 lg:pt-8">
+      <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-5 px-4 pb-10 pt-5 md:px-6 lg:flex-row lg:gap-8 lg:pt-8">
         <aside className="w-full rounded-2xl border border-white/10 bg-noir-card p-4 lg:sticky lg:top-6 lg:h-fit lg:w-72 lg:rounded-3xl lg:p-6">
-          <div className="mb-5 border-b border-white/10 pb-5">
+          <div className="mb-4 border-b border-white/10 pb-4">
             <h1 className="text-xl font-black uppercase tracking-tight text-gold">CMS Interne</h1>
             <p className="mt-2 text-xs font-bold uppercase tracking-wider text-text-soft">{username}</p>
           </div>
 
-          <nav className="space-y-2">
+          <nav className="grid grid-cols-2 gap-2 lg:grid-cols-1">
             {NAV_ITEMS.map((item) => {
               const Icon = item.icon;
-              const active = pathname === item.href;
+              const active = pathname === item.href || pathname?.startsWith(`${item.href}/`);
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-bold transition ${
+                  className={`flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm font-semibold transition ${
                     active
                       ? "bg-gold text-noir-deep"
                       : "bg-noir-deep text-text-para hover:border-gold/40 hover:text-text-main"
                   }`}
+                  aria-current={active ? "page" : undefined}
                 >
                   <Icon className="h-4 w-4" />
                   {item.label}
@@ -65,7 +66,7 @@ export default function AdminShell({ username, children }: AdminShellProps) {
             type="button"
             onClick={handleLogout}
             disabled={logoutBusy}
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 bg-noir-deep px-3 py-3 text-sm font-bold text-text-main transition hover:border-gold/50 disabled:opacity-70"
+            className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 bg-noir-deep px-3 py-3 text-sm font-bold text-text-main transition hover:border-gold/50 disabled:opacity-70"
           >
             {logoutBusy ? <Loader2 className="h-4 w-4 animate-spin" /> : <LogOut className="h-4 w-4" />}
             Déconnexion

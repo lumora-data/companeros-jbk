@@ -16,13 +16,22 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
-function isMediaField(path: string, value: string): boolean {
+function looksLikeMediaField(path: string): boolean {
+  return /(image|images|logo|photo|thumbnail|cover|avatar|background|banner|src|url)/i.test(path);
+}
+
+function looksLikeImageValue(value: string): boolean {
   if (!value) {
     return false;
   }
-  const looksLikeMediaPath = /(image|images|logo|photo|thumbnail|cover|avatar|background|banner|src|url)/i.test(path);
-  const looksLikeUrl = /^https?:\/\//i.test(value) || value.startsWith("/") || /\.(png|jpe?g|webp|gif|avif|svg)$/i.test(value);
-  return looksLikeMediaPath || looksLikeUrl;
+  return /^https?:\/\//i.test(value) || value.startsWith("/") || /\.(png|jpe?g|webp|gif|avif|svg)$/i.test(value);
+}
+
+function shouldUseTextarea(path: string, label: string, value: string): boolean {
+  if (value.includes("\n") || value.length > 120) {
+    return true;
+  }
+  return /(description|content|texte|text|paragraph|subtitle|body|message)/i.test(`${path} ${label}`);
 }
 
 function guessNewArrayItem(from: unknown[]): unknown {
@@ -61,8 +70,9 @@ function StringField({
   const inputId = useId();
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState<string | null>(null);
-  const isLongText = value.length > 120 || value.includes("\n");
-  const showPreview = isMediaField(path, value);
+  const isLongText = shouldUseTextarea(path, label, value);
+  const mediaField = looksLikeMediaField(path) || looksLikeImageValue(value);
+  const showPreview = looksLikeImageValue(value);
 
   async function handleFileChange(file: File | null) {
     if (!file) {
@@ -106,22 +116,24 @@ function StringField({
         </div>
       ) : null}
 
-      <div className="mt-3 flex flex-wrap items-center gap-2">
-        <label
-          htmlFor={inputId}
-          className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-white/10 bg-noir-deep px-3 py-2 text-xs font-bold uppercase tracking-wide text-text-main transition hover:border-gold/50"
-        >
-          <ImagePlus className="h-3.5 w-3.5" />
-          {uploading ? "Upload..." : "Changer image"}
-        </label>
-        <input
-          id={inputId}
-          type="file"
-          accept="image/*"
-          className="hidden"
-          onChange={(event) => void handleFileChange(event.target.files?.[0] ?? null)}
-        />
-      </div>
+      {mediaField ? (
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          <label
+            htmlFor={inputId}
+            className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-white/10 bg-noir-deep px-3 py-2 text-xs font-bold uppercase tracking-wide text-text-main transition hover:border-gold/50"
+          >
+            <ImagePlus className="h-3.5 w-3.5" />
+            {uploading ? "Upload..." : "Changer image"}
+          </label>
+          <input
+            id={inputId}
+            type="file"
+            accept="image/*"
+            className="hidden"
+            onChange={(event) => void handleFileChange(event.target.files?.[0] ?? null)}
+          />
+        </div>
+      ) : null}
 
       {uploadError ? <p className="mt-2 text-xs text-red-300">{uploadError}</p> : null}
     </div>
@@ -189,7 +201,7 @@ export default function JsonValueEditor({
     return (
       <div className={`space-y-3 rounded-xl border border-white/10 bg-noir-card/40 p-3 md:p-4 ${indentationClass}`}>
         <div className="flex items-center justify-between">
-          <p className="text-[11px] font-black uppercase tracking-wider text-text-soft">{label}</p>
+          <p className="text-xs font-semibold text-text-soft">{label}</p>
           <button
             type="button"
             onClick={() => onChange([...value, guessNewArrayItem(value)])}
@@ -204,7 +216,7 @@ export default function JsonValueEditor({
           {value.map((item, index) => (
             <div key={`${path}.${index}`} className="rounded-lg border border-white/10 bg-noir-deep/60 p-3">
               <div className="mb-2 flex items-center justify-between gap-2">
-                <span className="text-[11px] font-bold uppercase tracking-wide text-text-soft">Item {index + 1}</span>
+                <span className="text-[11px] font-semibold text-text-soft">Élément {index + 1}</span>
                 <div className="flex items-center gap-1">
                   <button
                     type="button"
@@ -269,7 +281,7 @@ export default function JsonValueEditor({
   if (isRecord(value)) {
     return (
       <div className={`space-y-3 rounded-xl border border-white/10 bg-noir-card/30 p-3 md:p-4 ${indentationClass}`}>
-        <p className="text-[11px] font-black uppercase tracking-wider text-text-soft">{label}</p>
+        <p className="text-xs font-semibold text-text-soft">{label}</p>
         {Object.entries(value).map(([key, nestedValue]) => (
           <JsonValueEditor
             key={`${path}.${key}`}
