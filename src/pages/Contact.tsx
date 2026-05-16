@@ -43,7 +43,7 @@ export default function Contact() {
                <h2 className="text-2xl md:text-3xl font-display font-black mb-8 md:mb-12 uppercase tracking-tighter text-center md:text-left">{content.coordinates.title}</h2>
                <div className="space-y-8 md:space-y-10">
                   {content.coordinates.items.map((c) => {
-                    const Icon = iconMap[c.icon as keyof typeof iconMap];
+                    const Icon = iconMap[c.icon as keyof typeof iconMap] ?? Phone;
                     return (
                     <div key={c.label} className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4 md:gap-6 group">
                        <div className="bg-gold/10 p-3 md:p-4 rounded-xl md:rounded-2xl group-hover:bg-gold transition-all duration-500">

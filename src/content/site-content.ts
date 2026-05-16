@@ -23,6 +23,7 @@ function normalizeNWithTilde(value: unknown): unknown {
 
 function enforceStableServiceSchema(content: typeof siteContentFr): typeof siteContentFr {
   const canonical = siteContentFr.constants;
+  const canonicalContactItems = siteContentFr.pages.contact.coordinates.items;
 
   if (!content?.constants) {
     return content;
@@ -54,6 +55,14 @@ function enforceStableServiceSchema(content: typeof siteContentFr): typeof siteC
     };
   });
 
+  const contactItems = (content.pages?.contact?.coordinates?.items || []).map((item, index) => {
+    const source = canonicalContactItems[index];
+    return {
+      ...item,
+      icon: source?.icon ?? item.icon,
+    };
+  });
+
   return {
     ...content,
     constants: {
@@ -61,6 +70,16 @@ function enforceStableServiceSchema(content: typeof siteContentFr): typeof siteC
       companerosServices,
       jbkServices,
       productions,
+    },
+    pages: {
+      ...content.pages,
+      contact: {
+        ...content.pages.contact,
+        coordinates: {
+          ...content.pages.contact.coordinates,
+          items: contactItems,
+        },
+      },
     },
   };
 }
