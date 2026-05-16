@@ -4,8 +4,11 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { Crown, Instagram, Facebook, Youtube, Linkedin, Send, Music2, Mail, Phone, MapPin, Clock } from "lucide-react";
 import { SITE_CONTENT } from "@/src/content/site-content";
+import { translateRouteName, translateUiLabel } from "@/src/lib/i18n";
+import { useSiteLanguage } from "@/src/components/i18n/LanguageProvider";
 
 export default function Footer() {
+  const { language } = useSiteLanguage();
   const { footer, navbar, common, links } = SITE_CONTENT;
   const navLinks = navbar.links.filter((link) => link.path !== links.routes.home);
   const socialLinks = [
@@ -37,7 +40,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-text-para max-w-sm text-lg leading-relaxed mb-10 mx-auto md:mx-0 font-medium">
-              {footer.description}
+              {translateUiLabel("footerDescription", language) || footer.description}
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-5">
               {socialLinks.map(({ href, label, icon: Icon }) => (
@@ -62,12 +65,14 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <h4 className="text-text-main font-black mb-8 uppercase tracking-widest text-xs">{footer.navigationTitle}</h4>
+            <h4 className="text-text-main font-black mb-8 uppercase tracking-widest text-xs">
+              {translateUiLabel("footerNavigation", language) || footer.navigationTitle}
+            </h4>
             <ul className="space-y-4 text-text-soft font-bold text-sm tracking-tight">
               {navLinks.map((link) => (
                 <li key={link.path}>
                   <Link href={link.path} className="hover:text-gold transition-colors inline-block hover:translate-x-1 transition-transform">
-                    {link.name}
+                    {translateRouteName(link.path, link.name, language)}
                   </Link>
                 </li>
               ))}
@@ -80,7 +85,9 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <h4 className="text-text-main font-black mb-8 uppercase tracking-widest text-xs">{footer.contactTitle}</h4>
+            <h4 className="text-text-main font-black mb-8 uppercase tracking-widest text-xs">
+              {translateUiLabel("footerContact", language) || footer.contactTitle}
+            </h4>
             <ul className="space-y-6 text-text-soft text-sm font-bold">
               <li className="flex items-start md:items-center space-x-4 justify-center md:justify-start">
                 <Phone className="w-5 h-5 text-gold shrink-0" />
@@ -103,9 +110,11 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center text-text-soft text-[10px] font-black tracking-[0.2em] uppercase mb-12">
-          <p>{footer.copyright}</p>
+          <p>{translateUiLabel("footerCopyright", language) || footer.copyright}</p>
           <div className="mt-4 flex items-center gap-4 md:mt-0">
-             <Link href={links.routes.partners} className="hover:text-gold transition-all">{footer.partnerLinkLabel}</Link>
+             <Link href={links.routes.partners} className="hover:text-gold transition-all">
+              {translateUiLabel("footerPartners", language) || footer.partnerLinkLabel}
+             </Link>
              <Link
                href="/admin/login"
                className="text-[9px] tracking-[0.25em] opacity-35 transition hover:opacity-80 hover:text-gold"

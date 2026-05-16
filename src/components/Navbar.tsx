@@ -6,15 +6,21 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { SITE_CONTENT } from "@/src/content/site-content";
+import { translateRouteName, translateUiLabel } from "@/src/lib/i18n";
+import { useSiteLanguage } from "@/src/components/i18n/LanguageProvider";
+import LanguageSwitcher from "@/src/components/i18n/LanguageSwitcher";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const { language } = useSiteLanguage();
   const { links, desktopWhatsappLabel, mobileWhatsappLabel, logos } =
     SITE_CONTENT.navbar;
   const routes = SITE_CONTENT.links.routes;
   const whatsappUrl = `${SITE_CONTENT.links.whatsappBaseUrl}/${SITE_CONTENT.common.whatsappNumber}`;
+  const desktopWhatsappText = translateUiLabel("desktopWhatsapp", language) || desktopWhatsappLabel;
+  const mobileWhatsappText = translateUiLabel("mobileWhatsapp", language) || mobileWhatsappLabel;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,11 +90,12 @@ export default function Navbar() {
                   pathname === link.path ? "text-gold" : "text-text-para"
                 }`}
               >
-                {link.name}
+                {translateRouteName(link.path, link.name, language)}
                 <span className={`absolute -bottom-1 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full ${pathname === link.path ? 'w-full' : ''}`}></span>
               </Link>
             </motion.div>
           ))}
+          <LanguageSwitcher />
           <motion.a
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -96,7 +103,7 @@ export default function Navbar() {
             href={whatsappUrl}
             className="gold-gradient text-noir-deep px-6 py-2 rounded-full text-xs font-black transition-all transform hover:scale-105 active:scale-95 gold-glow uppercase tracking-tighter"
           >
-            {desktopWhatsappLabel}
+            {desktopWhatsappText}
           </motion.a>
         </div>
 
@@ -126,6 +133,9 @@ export default function Navbar() {
               <X className="w-10 h-10" />
             </button>
             <div className="flex flex-col space-y-8">
+              <div className="flex justify-start">
+                <LanguageSwitcher />
+              </div>
               {links.map((link) => (
                 <Link
                   key={link.path}
@@ -135,7 +145,7 @@ export default function Navbar() {
                     pathname === link.path ? "text-gold" : "text-text-main"
                   }`}
                 >
-                  {link.name}
+                  {translateRouteName(link.path, link.name, language)}
                 </Link>
               ))}
               <a
@@ -143,7 +153,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="gold-gradient text-noir-deep text-center py-5 rounded-2xl font-black text-xl gold-glow shadow-2xl"
               >
-                {mobileWhatsappLabel}
+                {mobileWhatsappText}
               </a>
             </div>
           </motion.div>
