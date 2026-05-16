@@ -39,6 +39,11 @@ export default function Jbk() {
   const serviceRedirects = content.services.redirectByServiceId as Record<string, string>;
   const toWhatsappUrl = (message: string) =>
     `${whatsappBaseUrl}/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const withServiceTitle = (template: string, serviceTitle: string) =>
+    template
+      .replaceAll("{{serviceTitle}}", serviceTitle)
+      .replaceAll("{serviceTitle}", serviceTitle)
+      .replaceAll("{{serviceTitle}", serviceTitle);
   const renderTextWithLinks = (text: string) => {
     const parts = text.split(/(https?:\/\/[^\s]+)/g);
     return parts.map((part, idx) =>
@@ -154,7 +159,7 @@ export default function Jbk() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
             {jbkServices.map((service, idx) => {
-              const Icon = iconMap[service.icon as keyof typeof iconMap];
+              const Icon = iconMap[service.icon as keyof typeof iconMap] ?? Video;
               const serviceRedirectUrl = serviceRedirects?.[service.id];
               return (
                 <motion.div
@@ -180,7 +185,7 @@ export default function Jbk() {
                     </Link>
                   ) : (
                     <a
-                      href={toWhatsappUrl(content.services.cardWhatsappTemplate.replace("{{serviceTitle}}", service.title))}
+                      href={toWhatsappUrl(withServiceTitle(content.services.cardWhatsappTemplate, service.title))}
                       className="flex items-center gap-2 text-gold font-black text-xs group-hover:gap-4 transition-all uppercase tracking-widest mt-auto border-t border-white/5 pt-6"
                     >
                       {content.services.cardCtaLabel} <ArrowRight className="w-4 h-4" />

@@ -21,10 +21,54 @@ function normalizeNWithTilde(value: unknown): unknown {
   return value;
 }
 
+function enforceStableServiceSchema(content: typeof siteContentFr): typeof siteContentFr {
+  const canonical = siteContentFr.constants;
+
+  if (!content?.constants) {
+    return content;
+  }
+
+  const companerosServices = (content.constants.companerosServices || []).map((service, index) => {
+    const source = canonical.companerosServices[index];
+    return {
+      ...service,
+      id: source?.id ?? service.id,
+      icon: source?.icon ?? service.icon,
+    };
+  });
+
+  const jbkServices = (content.constants.jbkServices || []).map((service, index) => {
+    const source = canonical.jbkServices[index];
+    return {
+      ...service,
+      id: source?.id ?? service.id,
+      icon: source?.icon ?? service.icon,
+    };
+  });
+
+  const productions = (content.constants.productions || []).map((production, index) => {
+    const source = canonical.productions[index];
+    return {
+      ...production,
+      id: source?.id ?? production.id,
+    };
+  });
+
+  return {
+    ...content,
+    constants: {
+      ...content.constants,
+      companerosServices,
+      jbkServices,
+      productions,
+    },
+  };
+}
+
 const CONTENT_BY_LANGUAGE = {
-  fr: normalizeNWithTilde(siteContentFr) as typeof siteContentFr,
-  en: normalizeNWithTilde(siteContentEn) as typeof siteContentFr,
-  es: normalizeNWithTilde(siteContentEs) as typeof siteContentFr,
+  fr: enforceStableServiceSchema(normalizeNWithTilde(siteContentFr) as typeof siteContentFr),
+  en: enforceStableServiceSchema(normalizeNWithTilde(siteContentEn) as typeof siteContentFr),
+  es: enforceStableServiceSchema(normalizeNWithTilde(siteContentEs) as typeof siteContentFr),
 };
 
 export function getSiteContentForLanguage(language: SiteLanguage): typeof siteContentFr {
