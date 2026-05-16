@@ -46,7 +46,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 export function useSiteLanguage(): LanguageContextValue {
   const context = useContext(LanguageContext);
   if (!context) {
-    throw new Error("useSiteLanguage must be used within LanguageProvider.");
+    return {
+      language: DEFAULT_SITE_LANGUAGE,
+      setLanguage: () => {
+        // noop fallback to keep rendering resilient if provider is missing.
+      },
+    };
   }
   return context;
 }
