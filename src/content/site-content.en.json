@@ -1,0 +1,1925 @@
+{
+  "metadata": {
+    "title": "Compañeros-JBK Empire",
+    "description": "Two complementary clusters accompany your projects: On the one hand, Compañeros for travel abroad, translation and interpretation service, language courses and professional training in Flamenco dance. On the other hand, JBK Films for audiovisual, event and creative arts services."
+  },
+  "common": {
+    "brandName": "Compañeros-JBK Empire",
+    "whatsappNumber": "237678032746",
+    "email": "jbkfilms2014@gmail.com",
+    "phones": "+237 678 032 746 / 698 058 931 / 698 329 535",
+    "address": "Carrefour Cradat - Street paved 3744, opposite the car school Kassap",
+    "hours": "Monday to Friday - 8:00 a.m. to 7:00 p.m"
+  },
+  "links": {
+    "whatsappBaseUrl": "https://wa.me",
+    "routes": {
+      "home": "/",
+      "companeros": "/companeros",
+      "companerosOrientation": "/companeros/orientation",
+      "companerosConcours": "/companeros/preparation-concours",
+      "companerosLangues": "/companeros/cours-de-langues",
+      "companerosLanguesEnLigne": "/companeros/cours-de-langue-en-ligne",
+      "companerosTraduction": "/companeros/traduction-interpretation",
+      "companerosSoutien": "/companeros/cours-de-soutien",
+      "companerosFlamenco": "/companeros/flamenco",
+      "jbkEvenements": "/jbk/evenements",
+      "jbkDoublage": "/jbk/doublage",
+      "jbkVenteMateriel": "/jbk/vente-materiel",
+      "jbkSiteWeb": "/jbk/site-web",
+      "jbkGraphisme": "/jbk/graphisme-impression",
+      "jbkVoixOff": "/jbk/voix-off",
+      "jbkDrone": "/jbk/drone",
+      "jbkPublicite": "/jbk/publicite-tv-web",
+      "jbkCommunication": "/jbk/communication-digitale",
+      "jbkFormation": "/jbk/formation-pro",
+      "jbk": "/jbk",
+      "about": "/a-propos",
+      "contact": "/contact",
+      "partners": "/partenaires"
+    },
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/banderas-kouam-7b558b142?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "youtube": "https://youtube.com/@jbkfilms-banderaskouam5920?si=DaFKDTWBGRAELvpR",
+      "instagram": "https://www.instagram.com/banderaskouam?igsh=OHhiMHFrOG1ubG5i",
+      "facebook": "https://www.facebook.com/share/p/1AfCxNTJeN/",
+      "facebookAlt": "https://www.facebook.com/share/p/1BSxQp5MKD/",
+      "telegram": "https://telegram.org/dl",
+      "tiktok": "https://www.tiktok.com/@banderaskouam?_r=1&_t=ZS-96AjxQGKU9E"
+    }
+  },
+  "navbar": {
+    "links": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Compañeros & Services",
+        "path": "/companeros"
+      },
+      {
+        "name": "JBK Films & Services",
+        "path": "/jbk"
+      },
+      {
+        "name": "About",
+        "path": "/a-propos"
+      },
+      {
+        "name": "Contact",
+        "path": "/contact"
+      }
+    ],
+    "desktopWhatsappLabel": "WhatsApp",
+    "mobileWhatsappLabel": "DISCUSS ON WHATSAPP",
+    "logos": {
+      "default": {
+        "src": "/main/logo.jpg",
+        "alt": "Logo Compañeros-JBK Empire"
+      },
+      "companeros": {
+        "src": "/main/logo-companeros.JPG",
+        "alt": "Logo Compañeros"
+      },
+      "jbk": {
+        "src": "/main/logo-jbk.JPG",
+        "alt": "Logo JBK Films"
+      }
+    }
+  },
+  "footer": {
+    "brandMain": "COMPAÑEROS-JBK",
+    "brandHighlight": "EMPIRE",
+    "description": "Two complementary hubs to support your projects: training, travel, languages, translation, audiovisual production, events and creative services.",
+    "navigationTitle": "Navigation",
+    "contactTitle": "Contact details",
+    "partnerLinkLabel": "Partners",
+    "copyright": "© 2026 Compañeros-JBK Empire. All rights reserved."
+  },
+  "floatingWhatsapp": {
+    "message": "Hello JBK FILMS, I want more information."
+  },
+  "constants": {
+    "companerosServices": [
+      {
+        "id": "travel",
+        "title": "Travel tracking",
+        "description": "Complete support for your international mobility projects.",
+        "icon": "Plane",
+        "details": [
+          "Education (Admission & Visa Assistance)",
+          "Work & Professional Immigration",
+          "Tourism & Family visits",
+          "Sport & Volunteering International",
+          "Scholarships & Support",
+          "Preparation for consular interviews"
+        ]
+      },
+      {
+        "id": "culture",
+        "title": "ANDALUCÍA FLAMENCO",
+        "description": "Become a Flamenco dance professional and participate in international Flamenco events in all countries of the world thanks to the EFA.\nVisit the EFA website: https://www.efaflamenco.com/",
+        "icon": "Music",
+        "details": [
+          "Vocational training in Flamenco dance",
+          "Compás and palmas techniques",
+          "Stage preparation and performance",
+          "Participation in international festivals",
+          "Andalusian cultural workshops",
+          "Guidance by the EFA"
+        ]
+      },
+      {
+        "id": "competition",
+        "title": "Preparation",
+        "description": "Pass your entrance exams with a proven methodology.",
+        "icon": "FileText",
+        "details": [
+          "Police & Gendarmerie Competition",
+          "Customs & Prison Service",
+          "ENS & ENSET (Education)",
+          "Nurses State Graduates (IDE)",
+          "Simulations of oral tests",
+          "Course Support & White Exams"
+        ]
+      },
+      {
+        "id": "languages",
+        "title": "Language courses",
+        "description": "Master a new language for your studies or culture.",
+        "icon": "Globe",
+        "details": [
+          "International languages (A1 to C2)",
+          "Preparation for testing (TOEFL, IELTS, DELE)",
+          "National languages (Cultural heritage)",
+          "Intensive courses for travellers",
+          "Chat clubs",
+          "French as a foreign language"
+        ]
+      },
+      {
+        "id": "online languages",
+        "title": "Online language courses",
+        "description": "Take your courses remotely with qualified teachers, according to your pace.",
+        "icon": "Languages",
+        "details": [
+          "Individual and group courses",
+          "Flexible schedules",
+          "Individual pedagogical follow-up",
+          "Interactive video conferencing sessions",
+          "Shared digital resources",
+          "Preparation of reviews and interviews"
+        ]
+      },
+      {
+        "id": "translation",
+        "title": "Translation & Interpretation",
+        "description": "Professional language services for your documents and events.",
+        "icon": "Languages",
+        "details": [
+          "Certified translation of official documents",
+          "Technical & Commercial Translation",
+          "Conference interpreter",
+          "Text revision & correction",
+          "Express requests for translation",
+          "Video Content Subtitles"
+        ]
+      },
+      {
+        "id": "support",
+        "title": "School support",
+        "description": "Avoid school failure with personalized coaching.",
+        "icon": "BookOpen",
+        "details": [
+          "Scientific material (Maths, PC, SVT)",
+          "Literature & Languages",
+          "Preparation for BEPC, Probation & LAC",
+          "Academic monitoring by specific EU",
+          "Learning methodology",
+          "Upgrading during holidays"
+        ]
+      }
+    ],
+    "jbkServices": [
+      {
+        "id": "graphic design",
+        "title": "Graphics & Printing",
+        "description": "Design of logos, flyers, posters and printings.",
+        "icon": "Palette"
+      },
+      {
+        "id": "event",
+        "title": "Event",
+        "description": "Full video and photo coverage of your events (marriages, concerts).",
+        "icon": "Camera"
+      },
+      {
+        "id": "web",
+        "title": "Web Creation",
+        "description": "Development of modern showcase sites and e-commerce platforms.",
+        "icon": "Layout"
+      },
+      {
+        "id": "dubbing",
+        "title": "Dubbing & Subtitling",
+        "description": "Linguistic adaptation of your films and audiovisual content.",
+        "icon": "Type"
+      },
+      {
+        "id": "voix",
+        "title": "Vote Off",
+        "description": "Recording of professional voices for advertisements and documentaries.",
+        "icon": "Mic"
+      },
+      {
+        "id": "drone",
+        "title": "Drone shots",
+        "description": "Spectacular high-definition aerial images (4K).",
+        "icon": "Wind"
+      },
+      {
+        "id": "sale",
+        "title": "Sale of equipment",
+        "description": "New and used professional audiovisual equipment.",
+        "icon": "Smartphone"
+      },
+      {
+        "id": "pub",
+        "title": "TV & Web advertising",
+        "description": "Design and production of impacting advertising spots.",
+        "icon": "Tv"
+      },
+      {
+        "id": "com",
+        "title": "Digital Communication",
+        "description": "Online presence strategy and social media management.",
+        "icon": "Globe"
+      },
+      {
+        "id": "training",
+        "title": "Training",
+        "description": "Learning audiovisual and graphic skills.",
+        "icon": "GraduationCap"
+      }
+    ],
+    "productions": [
+      {
+        "title": "Chicken case",
+        "id": "1",
+        "image": "/organized-content/jbk/images/long-metrage-01.jpg"
+      },
+      {
+        "title": "Extruded metamorphosis",
+        "id": "2",
+        "image": "/organized-content/jbk/images/long-metrage-02.jpg"
+      },
+      {
+        "title": "Sharing",
+        "id": "3",
+        "image": "/organized-content/jbk/images/long-metrage-03.jpg"
+      },
+      {
+        "title": "Artificial supremacy",
+        "id": "4",
+        "image": "/organized-content/jbk/images/long-metrage-04.jpg"
+      },
+      {
+        "title": "Poisoning",
+        "id": "5",
+        "image": "/organized-content/jbk/images/long-metrage-05.jpg"
+      },
+      {
+        "title": "The photographer",
+        "id": "6",
+        "image": "/organized-content/jbk/images/long-metrage-06.jpg"
+      },
+      {
+        "title": "Brenda",
+        "id": "7",
+        "image": "/organized-content/jbk/images/long-metrage-07.jpg"
+      },
+      {
+        "title": "Stop!",
+        "id": "8",
+        "image": "/organized-content/jbk/images/long-metrage-09.jpg"
+      },
+      {
+        "title": "Mirando Pa' Cuenca",
+        "id": "9",
+        "image": "/organized-content/jbk/images/long-metrage-10.jpg"
+      },
+      {
+        "title": "By them for them",
+        "id": "10",
+        "image": "/organized-content/jbk/images/long-metrage-11.jpg"
+      },
+      {
+        "title": "20,000 Cedis",
+        "id": "11",
+        "image": "/organized-content/jbk/images/long-metrage-12.jpg"
+      },
+      {
+        "title": "Potion of seduction",
+        "id": "12",
+        "image": "/organized-content/jbk/images/long-metrage-15.jpg"
+      },
+      {
+        "title": "Pfff",
+        "id": "13",
+        "image": "/organized-content/jbk/images/long-metrage-16.jpg"
+      },
+      {
+        "title": "New Stock",
+        "id": "14",
+        "image": "/organized-content/jbk/images/long-metrage-17.jpg"
+      }
+    ],
+    "partners": [
+      {
+        "id": "1",
+        "name": "Kamerun Discovery",
+        "logo": "/organized-content/partenaires/images/05-800-6871fa35c21f7-9a847c35.jpg"
+      },
+      {
+        "id": "2",
+        "name": "Partner 2",
+        "logo": "/organized-content/partenaires/images/06-800-6871fc6566bb1-3bcf15e0.png"
+      },
+      {
+        "id": "3",
+        "name": "Joseph Ndi Samba Foundation",
+        "logo": "/organized-content/partenaires/images/07-800-6874cd31445df-d22893f4.jpg",
+        "url": "https://share.google/Tng0R9RkhueiLssp7"
+      },
+      {
+        "id": "4",
+        "name": "PEA",
+        "logo": "/organized-content/partenaires/images/08-800-6874cd6354a02-bec0579b.png",
+        "url": "https://pea2camerun.org"
+      },
+      {
+        "id": "6",
+        "name": "PADUK",
+        "logo": "/organized-content/partenaires/images/10-800-normal.jpg",
+        "url": "https://share.google/DYOE5W92pmoQLNg5U"
+      },
+      {
+        "id": "7",
+        "name": "Flamenco Escuela de Andalucía",
+        "logo": "/organized-content/partenaires/images/11-800-normal.jpg",
+        "url": "https://share.google/cxAQzj2UNegsZfipR"
+      },
+      {
+        "id": "8",
+        "name": "My Russian Lessons",
+        "logo": "/organized-content/partenaires/images/12-800-normal.jpg",
+        "url": "https://www.facebook.com/share/1DJPuniaaS/"
+      },
+      {
+        "id": "9",
+        "name": "Fundación de la Lengua Española",
+        "logo": "/organized-content/partenaires/images/13-800-6874ce44adb07-6e0dee31.jpg",
+        "url": "https://share.google/EozB7aRebi53249lx"
+      },
+      {
+        "id": "10",
+        "name": "COMPARTE",
+        "logo": "/organized-content/partenaires/images/14-800-normal.jpg",
+        "url": "https://www.facebook.com/share/1GaheuZqpq/"
+      },
+      {
+        "id": "11",
+        "name": "Anabel Veloso",
+        "logo": "/organized-content/partenaires/images/PHOTO-2026-05-07-23-18-12.jpg",
+        "url": "https://www.anabelveloso.com"
+      }
+    ],
+    "stats": [
+      {
+        "label": "Expertise",
+        "value": "2013"
+      },
+      {
+        "label": "Impact projects",
+        "value": "500"
+      },
+      {
+        "label": "Followers",
+        "value": "12000"
+      },
+      {
+        "label": "Commitment",
+        "value": "100"
+      }
+    ]
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "backgroundImage": "/main/hero-acceuil.jpg",
+        "backgroundAlt": "Compañeros-JBK Empire",
+        "badge": "Compañeros-JBK Empire",
+        "titleLine1": "Excellence",
+        "titleLine2": "360 degrees",
+        "description": "Two complementary clusters accompany your projects: On the one hand, Compañeros for travel abroad, translation and interpretation service, language courses and professional training in Flamenco dance. On the other hand, JBK Films for audiovisual, event and creative arts services.",
+        "mobileTravelCta": "Travel with us"
+      },
+      "cards": {
+        "companeros": {
+          "titleLine1": "Compañeros",
+          "titleLine2": "& Services",
+          "description": "Travel, competitions, languages, translation, support courses and cultural activities.",
+          "ctaLabel": "DISCOVER THE CENTRE"
+        },
+        "jbk": {
+          "titleLine1": "JBK Films",
+          "titleLine2": "& Services",
+          "description": "Audiovisual production, communication, events, talents and creative services.",
+          "ctaLabel": "DISCOVER JBK"
+        }
+      },
+      "partnersMarqueeTitle": "Our Trust Partners",
+      "cta": {
+        "heading": "Need an accompaniment?",
+        "buttonLabel": "CONTACT US"
+      }
+    },
+    "companeros": {
+      "hero": {
+        "image": "/main/hero.jpg",
+        "imageAlt": "Hero Compañeros",
+        "badge": "Travel • Languages • Contests",
+        "titleLine1": "Travel, languages,",
+        "titleHighlight": "competition & studies",
+        "description": "Since 2013, Compañeros has been supporting mobility, training and school success projects with concrete services and invaluable follow-up.",
+        "primaryButtonLabel": "TAKE OUT",
+        "secondaryButtonLabel": "REQUEST FOR GUIDELINE",
+        "primaryWhatsappMessage": "Hello, I wish to make an appointment with the Compañeros team."
+      },
+      "services": {
+        "heading": "Our Services",
+        "description": "Each service responds to a clear need: prepare a start, pass a competition, learn a language or strengthen its level.",
+        "cardCtaLabel": "Further information",
+        "cardWhatsappTemplate": "Hello, I want to know more about the service: {serviceTitle}}",
+        "redirectByServiceId": {
+          "voyage": "/companeros/orientation",
+          "concours": "/companeros/preparation-concours",
+          "langues": "/companeros/cours-de-langues",
+          "langues-en-ligne": "/companeros/cours-de-langue-en-ligne",
+          "traduction": "/companeros/traduction-interpretation",
+          "soutien": "/companeros/cours-de-soutien",
+          "culture": "/companeros/flamenco"
+        }
+      },
+      "voyageDetail": {
+        "headingLine1": "A file prepared",
+        "headingHighlight": "step by step",
+        "items": [
+          "Education, work, tourism, immigration and sport",
+          "Visa, scholarship and volunteer assistance",
+          "Admission, registration, legalization and translation",
+          "Reservation, insurance and consular preparation"
+        ],
+        "ctaLabel": "PREPARING A TRAVEL",
+        "ctaWhatsappMessage": "Hello, I wish to prepare my trip with Compañeros.",
+        "image": "/main/image.jpg",
+        "imageAlt": "Preparation of the Compañeros file",
+        "floatingBadge": "Education • Work • Tourism"
+      },
+      "languages": {
+        "heading": "Learning a language",
+        "description": "Taking into account the great cultural diversity in Cameroon, linguistic pluralism and living together, Compañeros helps to transmit the linguistic cultural heritage.",
+        "international": {
+          "title": "International languages",
+          "description": "Programs for study, travel and work.",
+          "items": [
+            "English",
+            "Spanish",
+            "Chinese",
+            "French",
+            "Russian",
+            "Portuguese",
+            "Italian"
+          ]
+        },
+        "national": {
+          "title": "National languages",
+          "description": "Oral and written courses to transmit and practice Cameroonian cultural heritage.",
+          "items": [
+            "Cultural heritage",
+            "Oral expression",
+            "Guided courses",
+            "Progressive practice"
+          ]
+        }
+      },
+      "support": {
+        "heading": "Support course",
+        "description": "Compañeros offers capacity-building courses for students in exam classes. Avoid 0/20 with specialized follow-up.",
+        "subjectsTitle": "Key Materials",
+        "subjects": [
+          "Mathematics",
+          "Physical chemistry",
+          "English",
+          "Spanish",
+          "German",
+          "SVT",
+          "French"
+        ],
+        "pricingTitle": "Advantageous rates",
+        "pricingRows": [
+          {
+            "label": "Primary / Secondary",
+            "value": "10.000 F/month"
+          },
+          {
+            "label": "Package (3 items)",
+            "value": "CFAF 25 000"
+          },
+          {
+            "label": "University (by EU)",
+            "value": "CFAF 3,000"
+          }
+        ],
+        "ctaLabel": "TAKE OUT",
+        "ctaWhatsappMessage": "Hello, I wish to enrol my child in the Compañeros support courses."
+      },
+      "finalCta": {
+        "heading": "A project to prepare?",
+        "description": "The Compañeros team can direct you to the right service and tell you the next steps for your project.",
+        "buttonLabel": "WRITE ON WHATSAPP",
+        "buttonWhatsappMessage": "Hello, I have a project to prepare and I wish to be guided by the Compañeros team."
+      }
+    },
+    "companerosOrientation": {
+      "hero": {
+        "badge": "Travel orientation",
+        "title": "Travel tracking",
+        "subtitle": "A successful trip is above all, a better preparation!"
+      },
+      "travelTypesTitle": "TYPES OF TRAVEL",
+      "travelTypesLine1": "STUDIES - WORK - TOURISM - IMMIGRATION - SPORT",
+      "travelTypesLine2": "VOLONTARIAT - ASSISTANCE VISA - ASSISTANCE BOURSE",
+      "paragraphs": [
+        "Nothing more comfortable than a travel follow-up as you prepare to travel abroad. It is so nice to be able to withdraw your visa, without travelling distances to group the documents necessary for the visa application. Trust Compañeros with your file.",
+        "For example, for study trips, it is a question of ensuring for our travellers, all the steps that precede the visa application. Among other things:"
+      ],
+      "studySteps": [
+        "The proposal of the best universities in the destination country in terms of price quality",
+        "Information on registration periods",
+        "Application for admission",
+        "Pre-registration",
+        "Registration",
+        "Approval or equivalence",
+        "Legalization of documents",
+        "Simple Translation or Asserted Translation of Documents",
+        "Accreditation",
+        "Flight Ticket Reservation",
+        "Accommodation booking",
+        "Health and theft insurance",
+        "Travel advice",
+        "Control of language level (by country)",
+        "Preparation for interview with consular service, etc..."
+      ],
+      "closingParagraphs": [
+        "Each travel reason includes a series of documents and professional work that helps the traveller to have a clear visa application file. You have a study trip project, don't wait for the last minute! Trust your file now at the Compañeros Center, for a successful trip.",
+        "In Compañeros, we offer language courses if necessary. Not only to succeed in your travel interview, but also to have the language level necessary to ensure your development once you arrive abroad.",
+        "Register for free now, take the necessary information and pay your follow-up fees only when you start your travel procedure."
+      ],
+      "bottomImage": {
+        "src": "/organized-content/voyage-orentation.png",
+        "alt": "Travel orientation Compañeros"
+      },
+      "destinationsIntro": "We work for travel tracking to more than 60 countries. Our currently open destinations are:",
+      "destinations": [
+        {
+          "country": "SOUTH AFRICA",
+          "flag": "🇿🇦",
+          "url": "https://www.tropicalement-votre.com/destinations/10-bonnes-raisons-d-aller-en-afrique-du-sud.php"
+        },
+        {
+          "country": "ALBANIE",
+          "flag": "🇦🇱",
+          "url": "https://www.experience-albanie.com/fr/actualites/10-raisons-de-choisir-lalbanie.html"
+        },
+        {
+          "country": "ALGERIA",
+          "flag": "🇩🇿",
+          "url": "https://www.maisonsduvoyage.com/autour-du-voyage/carnet-de-voyage/experts/5-bonnes-raisons-de-partir-algerie"
+        },
+        {
+          "country": "ALLEMAGNE",
+          "flag": "🇩🇪",
+          "url": "https://www.connexion-emploi.com/fr/a/top-10-des-raisons-pour-aller-vivre-en-allemagne"
+        },
+        {
+          "country": "SAUDI ARABIA",
+          "flag": "🇸🇦",
+          "url": "https://www.halian.com/fr/article/royaume-d-arabie-saoudite-1"
+        },
+        {
+          "country": "ARGENTINE",
+          "flag": "🇦🇷",
+          "url": "https://www.mamaisonsurledos.com/ameriques/15-raisons-de-partir-en-argentine/"
+        },
+        {
+          "country": "AUTRICHE",
+          "flag": "🇦🇹",
+          "url": "https://www.lonelyplanet.fr/article/10-bonnes-raisons-daller-en-autriche"
+        },
+        {
+          "country": "BELGIQUE",
+          "flag": "🇧🇪",
+          "url": "https://www.courrierinternational.com/article/conseils-dix-raisons-de-sinstaller-en-belgique"
+        },
+        {
+          "country": "BIELORUSSIE",
+          "flag": "🇧🇾",
+          "url": "https://www.petitfute.com/p181-bielorussie/guide-touristique/c47773-mode-de-vie.html"
+        },
+        {
+          "country": "BOLIVIE",
+          "flag": "🇧🇴",
+          "url": "https://www.hastamerica.com/voyage-expatriation-bolivie/"
+        },
+        {
+          "country": "BRESIL",
+          "flag": "🇧🇷",
+          "url": "https://www.villa-isolabella.com/2018/02/20/sinstaller-bresil-8-raisons-changer-de-vie/"
+        },
+        {
+          "country": "CANADA",
+          "flag": "🇨🇦",
+          "url": "https://www.voyage-canada.info/vivre-au-canada-10-bonnes-raisons-de-franchir-le-pas/"
+        },
+        {
+          "country": "CHILI",
+          "flag": "🇨🇱",
+          "url": "https://www.daytours4u.com/fr/travel-guide/10-bonnes-raisons-de-visiter-le-chili?srsltid=AfmBOopd3ZmpOJL85vDKiI3W2OBsFqEYqQsuTLOW57BDUBsYR2nqcfLN"
+        },
+        {
+          "country": "CHINE",
+          "flag": "🇨🇳",
+          "url": "https://chine.in/actualite/bonnes-raisons-aimer_68799.html"
+        },
+        {
+          "country": "CHYPRE",
+          "flag": "🇨🇾",
+          "url": "https://www.latribudechacha.com/2016/05/10-bonnes-raisons-daller-chypre.html"
+        },
+        {
+          "country": "COLOMBIE",
+          "flag": "🇨🇴",
+          "url": "https://www.instinct-voyageur.fr/sinstaller-colombie-raisons-changer-de-vie/"
+        },
+        {
+          "country": "CROATIE",
+          "flag": "🇭🇷",
+          "url": "https://croatiarealestates.com/fr/la-croatie-est-elle-un-pays-ou-il-fait-bon-vivre-uncover-the-benefits-and-charm-of-this-mediterranean-gem/"
+        },
+        {
+          "country": "CUBA",
+          "flag": "🇨🇺",
+          "url": "https://visitworld.today/fr/cuba/immigration/info"
+        },
+        {
+          "country": "DANEMARK",
+          "flag": "🇩🇰",
+          "url": "https://www.lesechos.fr/travailler-mieux/vie-au-travail/expatries-au-danemark-on-decouvre-une-culture-ou-le-travail-nest-pas-au-centre-de-tout-2073825"
+        },
+        {
+          "country": "UNITED ARAB EMIRATES",
+          "flag": "🇦🇪",
+          "url": "https://www.google.com/search?q=Avantages+de+vivre+au+%C3%89MIRATS+ARABES+UNIS+&sca_esv=137b759269c363f4&biw=1047&bih=493&sxsrf=AE3TifOdVE1cQhpDQyzjYE-x_dKE8QsiUQ%3A1751995899258&ei=-1VtaOq0D7Xki-gP2cSZ4QY&ved=0ahUKEwiqnuSp5a2OAxU18gIHHVliJmwQ4dUDCBA&oq=Avantages+de+vivre+au+%C3%89MIRATS+ARABES+UNIS+&gs_lp=Egxnd3Mtd2l6LXNlcnAiK0F2YW50YWdlcyBkZSB2aXZyZSBhdSDDiU1JUkFUUyBBUkFCRVMgVU5JUyAyBRAhGJ8FSJGVBFD7Blj7BnABeACQAQCYAYIEoAHsBqoBBzMtMS4wLjG4AQzIAQD4AQL4AQGYAgKgAqAEwgIKEAAYsAMY1gQYR5gDAIgGAZAGCJIHBTEuNC0xoAfKB7IHAzQtMbgHkQTCBwUyLTEuMcgHEA&sclient=gws-wiz-serp"
+        },
+        {
+          "country": "ESPAGNE",
+          "flag": "🇪🇸",
+          "url": "https://www.riftrust.com/fr/les-avantages-de-la-residence-en-espagne-incluent-un-cout-de-la-vie-moins-eleve/"
+        },
+        {
+          "country": "ESTONIE",
+          "flag": "🇪🇪",
+          "url": "https://vivre-de-son-site-internet.com/sexpatrier-en-estonie-18-bonnes-raisons-de-tenter-laventure/"
+        },
+        {
+          "country": "UNITED STATES",
+          "flag": "🇺🇸",
+          "url": "https://www.europusa.com/vivre-aux-etats-unis/vie-personnelle-aux-usa/vie-quotidienne/expatries-etats-unis-les-6-villes-ou-sexpatrier-aux-usa/10-bonnes-raisons-de-sexpatrier-aux-usa/"
+        },
+        {
+          "country": "ECU",
+          "flag": "🇪🇨",
+          "url": "https://www.voyageequateur.com/10-raisons-de-choisir-lequateur-pour-vos-prochaines-vacances"
+        },
+        {
+          "country": "FINLANDE",
+          "flag": "🇫🇮",
+          "url": "https://www.topito.com/top-raisons-aller-vivre-finlande"
+        },
+        {
+          "country": "GUATEMALA",
+          "flag": "🇬🇹",
+          "url": "https://mamasoladeuxtortillas.com/2016/10/13/le-guatemala-10-raisons-pour-y-vivre/"
+        },
+        {
+          "country": "FRANCE",
+          "flag": "🇫🇷",
+          "url": "https://www.listes.com/quotidien/vivre-france.html"
+        },
+        {
+          "country": "GEORGIA",
+          "flag": "🇬🇪",
+          "url": "https://www.shantitravel.com/fr/guide-voyage-georgie/10-bonnes-raisons-partir-georgie"
+        },
+        {
+          "country": "GREECE",
+          "flag": "🇬🇷",
+          "url": "https://www.lisbob.net/fr/blog-vivre-grece/10-bonnes-raisons-de-partir-vivre-grece"
+        },
+        {
+          "country": "INDE",
+          "flag": "🇮🇳",
+          "url": "http://www.la-coutch.com/10-raisons-pour-lesquelles-il-fait-bon-detre-en-inde/"
+        },
+        {
+          "country": "IRAN",
+          "flag": "🇮🇷",
+          "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/iran/bonnes-raisons"
+        },
+        {
+          "country": "IRLANDE",
+          "flag": "🇮🇪",
+          "url": "https://societe-france-irlande.com/vivre-en-irlande/"
+        },
+        {
+          "country": "ITALIE",
+          "flag": "🇮🇹",
+          "url": "https://www.youtube.com/watch?v=H6Rf4bQ-4vg"
+        },
+        {
+          "country": "JAPON",
+          "flag": "🇯🇵",
+          "url": "https://france-japon.net/wiki/index.php?title=100_bonnes_raisons_pour_vivre_au_Japon"
+        },
+        {
+          "country": "JORDANIE",
+          "flag": "🇯🇴",
+          "url": "https://www.arabiaweather.com/fr/content/14-raisons-pour-lesquelles-la-jordanie-est-une-destination-touristique-unique-visiter"
+        },
+        {
+          "country": "LETTONIE",
+          "flag": "🇱🇻",
+          "url": "https://www.studentum.fr/study-guides/europe/study-in-latvia/student-housing-13497"
+        },
+        {
+          "country": "LITUANIE",
+          "flag": "🇱🇹",
+          "url": "https://www.expat.com/fr/forum/europe/lituanie/196751-5-bonnes-raisons-de-vivre-en-lituanie.html"
+        },
+        {
+          "country": "LUXEMBOURG",
+          "flag": "🇱🇺",
+          "url": "https://www.lesfrontaliers.lu/emploi/10-raisons-de-venir-travailler-au-luxembourg/"
+        },
+        {
+          "country": "MALTE",
+          "flag": "🇲🇹",
+          "url": "https://boomstudies.com/fr/raisons-detudier-et-de-vivre-a-malte-2/"
+        },
+        {
+          "country": "MEXIQUE",
+          "flag": "🇲🇽",
+          "url": "https://porelmundovoyages.com/top-10-des-raisons-pour-partir-vivre-au-mexique/"
+        },
+        {
+          "country": "NICARAGUA",
+          "flag": "🇳🇮",
+          "url": "https://nomadjunkies.com/10-bonnes-raisons-triper-nicaragua-nomadtalks/"
+        },
+        {
+          "country": "NORVEGE",
+          "flag": "🇳🇴",
+          "url": "https://www.koha.net/fr/lifestyle/7-arsyet-pse-norvegjia-eshte-vendi-me-i-mire-ne-bote-per-te-jetuar"
+        },
+        {
+          "country": "PARAGUAY",
+          "flag": "🇵🇾",
+          "url": "https://www.hastamerica.com/2025/03/28/vivre-paraguay-10-choses/"
+        },
+        {
+          "country": "PEROU",
+          "flag": "🇵🇪",
+          "url": "https://www.lonelyplanet.fr/article/top-10-des-experiences-vivre-au-perou"
+        },
+        {
+          "country": "PHILIPPINES",
+          "flag": "🇵🇭",
+          "url": "https://www.lonelyplanet.fr/article/10-experiences-vivre-aux-philippines"
+        },
+        {
+          "country": "POLOGNE",
+          "flag": "🇵🇱",
+          "url": "https://aljawaz.com/fr/etudier-en-pologne/"
+        },
+        {
+          "country": "PORTO RICO",
+          "flag": "🇵🇷",
+          "url": "https://www.lalibre.be/lifestyle/voyages/2017/08/01/8-raisons-de-voyager-a-porto-rico-destination-tendance-DRX5VFTXM5AF5M6YZURZKPU4EU/"
+        },
+        {
+          "country": "PORTUGAL",
+          "flag": "🇵🇹",
+          "url": "https://mcs.pt/fr/vivre-au-Portugal-10-raisons-imp%C3%A9rieuses-pour-2025/"
+        },
+        {
+          "country": "QATAR",
+          "flag": "🇶🇦",
+          "url": "https://visitqatar.com/fr-fr/plan-your-trip/education/why-qatar/ten-reasons-to-study-in-qatar"
+        },
+        {
+          "country": "CZECH REPUBLIC",
+          "flag": "🇨🇿",
+          "url": "https://www.studentum.fr/articles-and-advice/seven-smart-reasons-to-study-in-the-czech-republic-19871"
+        },
+        {
+          "country": "ROUMANIE",
+          "flag": "🇷🇴",
+          "url": "https://lepetitjournal.com/bucarest/communaute/communaute-9-raisons-pour-venir-vivre-en-roumanie-228830"
+        },
+        {
+          "country": "ROYAUME-UNI",
+          "flag": "🇬🇧",
+          "url": "https://lepetitjournal.com/londres/les-20-bonnes-raisons-de-rester-vivre-londres-apres-le-confinement-279322"
+        },
+        {
+          "country": "RUSSIE",
+          "flag": "🇷🇺",
+          "url": "https://fr.rbth.com/lifestyle/84558-raisons-expatriation-russie"
+        },
+        {
+          "country": "SALVADOR",
+          "flag": "🇸🇻",
+          "url": "https://www.ledevoir.com/plaisirs/voyage/826512/salvador-petit-pays-revient-loin?"
+        },
+        {
+          "country": "SERBIE",
+          "flag": "🇷🇸",
+          "url": "https://www.magazine-avantages.fr/,voyage-decouvrez-la-richesse-de-la-serbie,2300152,21760.asp"
+        },
+        {
+          "country": "SLOVAQUIE",
+          "flag": "🇸🇰",
+          "url": "https://www.petitfute.com/p59-slovaquie/que-voir-que-faire/"
+        },
+        {
+          "country": "SLOVENIA",
+          "flag": "🇸🇮",
+          "url": "https://www.slovenia.info/fr/histoires/10-raisons-d-ajouter-la-slovenie-sur-votre-liste-de-destinations-a-decouvrir-absolument"
+        },
+        {
+          "country": "SWEDEN",
+          "flag": "🇸🇪",
+          "url": "https://fr.berlin-translate.de/vie-dexpatrie-10-raisons-de-sexpatrier-en-suede/"
+        },
+        {
+          "country": "SUISSE",
+          "flag": "🇨🇭",
+          "url": "https://www.topito.com/top-bonnes-raisons-vivre-suisse-chocolat-chocolat-chocolat"
+        },
+        {
+          "country": "TAIWAN",
+          "flag": "🇹🇼",
+          "url": "https://insidetaiwan.net/taiwan-pratique/11-raisons-de-demenager-a-taiwan#google_vignette"
+        },
+        {
+          "country": "TUNISIE",
+          "flag": "🇹🇳",
+          "url": "https://www.opodo.fr/blog/raisons-visiter-tunis.html"
+        },
+        {
+          "country": "TURQUIE",
+          "flag": "🇹🇷",
+          "url": "https://www.alanyaexperience.com/blogs/expatriation/avantage-inconvenient"
+        },
+        {
+          "country": "URUGUAY",
+          "flag": "🇺🇾",
+          "url": "https://blog.chapkadirect.fr/10-raisons-de-voyager-en-uruguay/"
+        },
+        {
+          "country": "VENEZUELA",
+          "flag": "🇻🇪",
+          "url": "https://www.legrandsoir.info/des-etrangers-qui-ont-choisi-de-vivre-au-venezuela-expliquent-pourquoi-ils-y-restent-34847.html"
+        },
+        {
+          "country": "VIETNAM",
+          "flag": "🇻🇳",
+          "url": "https://guidefrancophone.com/10-principales-raisons-de-sinstaller-au-vietnam/#google_vignette"
+        }
+      ],
+      "videoSection": {
+        "intro": "FIND IN THIS VIDEO, THE LIST OF OUR COUNTRIES OF DESTINATION AND THE DURATION OF PROCEDURES:",
+        "url": "https://youtu.be/RYApnmx-tGA?si=e_mUwMAh-_xqmAMU",
+        "embedUrl": "https://www.youtube.com/embed/RYApnmx-tGA"
+      },
+      "cta": {
+        "buttonLabel": "TAKE OUT",
+        "whatsappMessage": "Hello, I wish a Compañeros travel follow-up for my study project."
+      }
+    },
+    "companerosConcours": {
+      "hero": {
+        "badge": "Continuous preparation",
+        "title": "Preparation",
+        "subtitle": "Pass your entrance exams with a proven methodology."
+      },
+      "firstImage": {
+        "src": "/organized-content/preparation-concours.webp",
+        "alt": "Preparation of Compañeros competition"
+      },
+      "introText": "We offer continuous preparation for competitions (ENS, GENDARMERIE, POLICE, CUSTOMS, IDE) The training covers the whole year. However, candidates may choose to work over a specified period of time according to their preferences.",
+      "ensSection": {
+        "title": "E.N.S",
+        "paragraphs": [
+          "There are four Higher Normal Schools (ENS) in Cameroon: the ENS of Yaoundé, the ENS of Maroua, the ENS of Bamenda, and the ENS of Bertoua.",
+          "ENS is a higher institution for educational studies. It comprises 14 departments of education. It confers national diplomas (DIPES 1, DIPES 2, DIP. CO and DIPEN). In addition to the various administrative services, it houses a city, a restaurant and sports facilities. For optimal research, the campus is irrigated by free wifi access to students and teachers. Through its selective recruitment, it is one of the best training schools in Cameroon. This is reflected in the employment of ENS graduates in all sectors related to the country's development. Foreign students have the opportunity to pursue some or all of their university studies at ENS. It also hosts many foreign professors-researchers in colloquiums and other university meetings organized there."
+        ],
+        "campusLabel": "Visit Yaoundé Campus",
+        "campusUrl": "https://www.ens-yde.cm/a-propos-de-lens/"
+      },
+      "secondImage": {
+        "src": "/organized-content/preparation-concours-02.webp",
+        "alt": "Further information preparation assistance"
+      },
+      "articleParagraphs": [
+        "You can also change the title above and add new articles. Edit your articles from the Pages tab by clicking the modification button. This is a generic article that you can use to add article content/topics to your website.",
+        "You can change all this text and replace it with everything you have to say in your news/topic article. You can also change the title above and add new articles. Edit your articles from the Pages tab by clicking the modification button. This is a generic article that you can use to add article content/topics to your website.",
+        "You can change all this text and replace it with everything you have to say in your news/topic article. You can also change the title above and add new articles. Edit your articles from the Pages tab by clicking the modification button. This is a generic article that you can use to add article content/topics to your website. You can change all this text and replace it with everything you have to say in your news/topic article. You can also change the title above and add new articles. Edit your articles from the Pages tab by clicking the modification button. This is a generic article that you can use to add article content/topics to your website.",
+        "You can change all this text and replace it with everything you have to say in your news/topic article. You can also change the title above and add new articles. Edit your articles from the Pages tab by clicking the modification button."
+      ],
+      "cta": {
+        "buttonLabel": "MAKE A RENT",
+        "whatsappMessage": "Hello, I wish to make an appointment for the preparation contest."
+      }
+    },
+    "companerosLangues": {
+      "hero": {
+        "badge": "Language courses",
+        "title": "National & International Languages",
+        "subtitle": "Master a new language for your studies or culture."
+      },
+      "firstImage": {
+        "src": "/organized-content/cours-de-langue-01.webp",
+        "alt": "Compañeros National Language Courses"
+      },
+      "nationalLanguages": {
+        "title": "LANGUAGES",
+        "paragraphs": [
+          "Taking into account the great cultural diversity in Cameroon, linguistic pluralism and living together, several homes are generally found in a situation where both parents are ethnically different in Cameroon and have only French or English as the language of communication with the family. This makes it difficult, if not impossible, to pass on linguistic cultural heritage to children.",
+          "That's why Compañeros offers national language courses allowing children to speak fluently any language among more than 250 spoken in Cameroon.",
+          "NB: Our national language courses are both oral and written. However, our educational objectives place much more emphasis on oral language. Because it is essential to take the student to fluently speak his or her mother tongue within 3 or 6 months at most.",
+          "We have over 500 qualified teachers across the country and our courses are delivered in three forms:"
+        ],
+        "formats": [
+          {
+            "title": "COURSES OF NATIONAL LANGUAGES IN DOMICILE",
+            "description": "Irrespective of your city of residence, our teachers will travel to work with you at home, during the times that are right for you."
+          },
+          {
+            "title": "COURSES OF NATIONAL LANGUAGES IN PRESENTEL",
+            "description": "The learner will have to get closer to our center to receive classes."
+          },
+          {
+            "title": "COURSES OF NATIONAL LANGUAGES ONLINE",
+            "description": "With us, you can also apply for national language courses online, according to your preference."
+          }
+        ]
+      },
+      "secondImage": {
+        "src": "/organized-content/cours-de-langue-02.webp",
+        "alt": "National language courses in presentation"
+      },
+      "thirdImage": {
+        "src": "/organized-content/cours-de-langue-03.webp",
+        "alt": "National language courses at home"
+      },
+      "internationalLanguages": {
+        "title": "INTERNATIONAL LANGUAGES",
+        "description": "We offer face-to-face language courses in our centre and online courses. Our languages are preferably the most spoken and important in international business. These are the following languages:",
+        "items": [
+          {
+            "name": "English",
+            "flag": "🇬🇧"
+          },
+          {
+            "name": "Spanish",
+            "flag": "🇪🇸"
+          },
+          {
+            "name": "Chinese",
+            "flag": "🇨🇳"
+          },
+          {
+            "name": "French",
+            "flag": "🇫🇷"
+          },
+          {
+            "name": "Russian",
+            "flag": "🇷🇺"
+          },
+          {
+            "name": "Portuguese",
+            "flag": "🇵🇹"
+          },
+          {
+            "name": "Italian",
+            "flag": "🇮🇹"
+          }
+        ]
+      },
+      "fourthImage": {
+        "src": "/organized-content/cours-de-langue-04.webp",
+        "alt": "International Language Courses"
+      },
+      "translationSection": {
+        "title": "INTERPRETATION STRENGTHENING COURSES",
+        "description": "For translation students, we offer reinforcement courses based on practical translation work and practical simulations of interpretations with scenes of the situations of the professional life of a translator-interpreter."
+      },
+      "fifthImage": {
+        "src": "/organized-content/cours-de-langue-05.webp",
+        "alt": "Strengthening of translation and interpretation"
+      },
+      "holidayCampSection": {
+        "title": "VACANCE CAMPS",
+        "description": "In our centre, we also organize holiday camps to allow children to have fun by speaking their mother tongues among themselves. It is both a period of linguistic immersion and learning of a musical tool (Piano, guitar, flute...)."
+      },
+      "sixthImage": {
+        "src": "/organized-content/cours-de-langue-06.webp",
+        "alt": "Compañeros language holiday camps"
+      },
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for language courses."
+      }
+    },
+    "companerosLanguesEnLigne": {
+      "hero": {
+        "badge": "Online courses",
+        "title": "Online language courses",
+        "subtitle": "Watch the presentation video and make an appointment with our team."
+      },
+      "video": {
+        "url": "https://www.youtube.com/watch?v=zxQnDeKdK00",
+        "embedUrl": "https://www.youtube.com/embed/zxQnDeKdK00"
+      },
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for the online language courses."
+      }
+    },
+    "companerosTraduction": {
+      "hero": {
+        "badge": "Language Service",
+        "title": "Translation & Interpretation",
+        "subtitle": "The sworn translation is a legal translation recognized in all countries of the world by governments and foreign ministries. Contact Compañeros for sworn translation services."
+      },
+      "firstImage": {
+        "src": "/organized-content/traduction-01.webp",
+        "alt": "Compañeros Translation Service"
+      },
+      "introText": "Simple translation is done within the delivery time of 3 working days for documents of less than 5 pages. For sworn translation, the delivery time is 7 working days for documents of less than 5 pages. NB: Delivery time for documents over 5 pages is arranged. It is also possible for the customer to request an express translation which is also done after arrangement, according to the desired delivery time.",
+      "secondImage": {
+        "src": "/organized-content/traduction-02.webp",
+        "alt": "Translation and interpretation Compañeros"
+      },
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for a translation and interpretation service."
+      }
+    },
+    "companerosSoutien": {
+      "hero": {
+        "badge": "Support course",
+        "title": "Support course",
+        "subtitle": "Strengthen the achievements of students with targeted coaching."
+      },
+      "firstImage": {
+        "src": "/organized-content/cours-de-soutien-01.webp",
+        "alt": "Compañeros Support Course"
+      },
+      "examSection": {
+        "title": "CLASSES OF REVIEW",
+        "intro": "Compañeros offers capacity-building courses for students in exam classes. The subjects we propose are those of compulsory tests with high coefficients. These are also the tests where students have to work hard to avoid the score of 0/20 (zero out of twenty). The courses for students offered by our centre are as follows:",
+        "subjects": [
+          {
+            "title": "MATHS",
+            "description": "Mathematics is fundamental to students in exam classes because they develop essential skills, such as problem solving, critical thinking and contribute to a better understanding of other subjects, cognitively."
+          },
+          {
+            "title": "PHYSIQUE-CHIMIE",
+            "description": "The study of physics-chemistry in examination classes is crucial because it provides a solid basis for understanding the fundamental laws of nature and the phenomena surrounding us."
+          },
+          {
+            "title": "ANGLAIS",
+            "description": "Learning English is crucial for students in exam classes, as it opens doors to many academic and professional opportunities."
+          },
+          {
+            "title": "FRANCAIS",
+            "description": "Students in exam classes study French for several essential reasons. In addition to being a primary language of communication for the student, it helps to understand all other subjects from a semantic perspective."
+          },
+          {
+            "title": "ALLEMAND",
+            "description": "German is often called the black beast for most students in exam classes. Hence the need to give him a lot of importance in order to avoid the playoff mark on the official exam."
+          },
+          {
+            "title": "ESPAGNOL",
+            "description": "Although it is the basic subject for several students, Spanish is a subject that those in exam classes must take very seriously. Because it often happens to several of them, to find themselves with unserious notes, because of some misunderstandings due to linguistic interferences and other phenomena such as false friends, misinterpretations of the work requested etc."
+          },
+          {
+            "title": "SVT",
+            "description": "Students in examination classes need to be strengthened in SVT (Life and Earth Sciences) to acquire basic knowledge about the world. It is also a high coefficient subject for scientific series. It is one of the main causes of failure at official examinations."
+          }
+        ],
+        "pricingTitle": "RATES OF SUPPORT COURSE",
+        "pricingLines": [
+          "Classes : 3rd / 1st / 6th",
+          "10,000 F.Cfa per month for each subject.",
+          "Minimum number of materials to choose : 01",
+          "Package 3 subjects: 25,000 Fcfa per month",
+          "Number of sessions per week: 02 (09 sessions per month) for each subject."
+        ]
+      },
+      "secondImage": {
+        "src": "/organized-content/cours-de-soutien-02.webp",
+        "alt": "Support course examination classes"
+      },
+      "highlightText": "Optimize luck for your child!",
+      "studentsSection": {
+        "title": "SPANISH & ENGLISH STUDENTS",
+        "description": "The secret for not having to catch up during the academic year is to follow the various support courses, still called Cafés. These courses are intended to support the student academically, and allow him to better understand the master courses recorded at the amphitheatre. The student has the opportunity to choose with us, only the Teaching Unit that poses problems of understanding. He is not obliged to attend the support courses at home for all the Units offered during the 2 semesters.",
+        "pricingTitle": "RATES OF SUPPORT COURSE",
+        "pricingLines": [
+          "LEVEL I / LEVEL 2 / LEVEL 3",
+          "3.000 F.Cfa per month for each EU",
+          "Minimum number of EU to choose: 01",
+          "Package 3 EU: 10.000 Fcfa per month",
+          "Number of sessions per week: 02 (09 sessions per month) for each EU."
+        ]
+      },
+      "thirdImage": {
+        "src": "/organized-content/cours-de-soutien-03.webp",
+        "alt": "University support courses"
+      },
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for the support courses."
+      }
+    },
+    "companerosFlamenco": {
+      "hero": {
+        "badge": "Flamenco Escuela",
+        "title": "Flamenco Escuela de Andalucía",
+        "subtitle": "Become a Flamenco dance professional and participate in international Flamenco events in all countries of the world thanks to the EFA.\nVisit the EFA website: https://www.efaflamenco.com/"
+      },
+      "firstImage": {
+        "src": "/organized-content/flamenco-01.webp",
+        "alt": "Flamenco Compañeros"
+      },
+      "introText": "Learn Flamenco in Cameroon with Compañeros Escuela de Flamenco de Andalucía, which is the representation of LA EFA in Central Africa. You can visit the official website of LA EFA from which you can also complete your registration and attend Flamenco dance classes in Compañeros:",
+      "efaWebsite": {
+        "label": "Official EFA website",
+        "url": "https://www.efaflamenco.com/"
+      },
+      "extraCoursesText": "We also offer lessons in guitar, piano, flute etc.",
+      "secondImage": {
+        "src": "/organized-content/flamenco-02.webp",
+        "alt": "Flamenco class in group"
+      },
+      "thirdImage": {
+        "src": "/organized-content/flamenco-03.webp",
+        "alt": "Flamenco performance Compañeros"
+      },
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for Flamenco training."
+      }
+    },
+    "jbk": {
+      "hero": {
+        "image": "/main/hero.jpg",
+        "imageAlt": "Hero JBK Films",
+        "badge": "Films • Event • Communication",
+        "titleLine1": "Films, com &",
+        "titleHighlight": "creative services",
+        "description": "JBK Films brings together a production company, a technical team, an agency of actors and creative services in the artistic field.",
+        "primaryButtonLabel": "REQUEST A SERVICE",
+        "secondaryButtonLabel": "WHATSAPP",
+        "primaryWhatsappMessage": "Hello, I wish to request a service from JBK Films.",
+        "secondaryWhatsappMessage": "Hello, I would like to contact the JBK Films team."
+      },
+      "services": {
+        "heading": "JBK expertise",
+        "description": "We accompany your projects from the idea to the dissemination with professional tools.",
+        "cardCtaLabel": "Further information",
+        "cardWhatsappTemplate": "Hello, I want to know more about the JBK expertise: {serviceTitle}}",
+        "redirectByServiceId": {
+          "graphisme": "/jbk/graphisme-impression",
+          "evenement": "/jbk/evenements",
+          "web": "/jbk/site-web",
+          "doublage": "/jbk/doublage",
+          "voix": "/jbk/voix-off",
+          "drone": "/jbk/drone",
+          "vente": "/jbk/vente-materiel",
+          "pub": "/jbk/publicite-tv-web",
+          "com": "/jbk/communication-digitale",
+          "formation": "/jbk/formation-pro"
+        }
+      },
+      "directionSection": {
+        "heading": "DIRECTORATE JBK FILMS",
+        "members": [
+          {
+            "name": "BANDERAS KOUAM",
+            "role": "President Director General",
+            "bio": "Banderas Kouam, Founder of JBK, is President and CEO, bringing visionary leadership to the company and overseeing strategic operations to ensure success and growth in the short, medium and long term. Its specific objective is always to bring JBK as close as possible to perfection.",
+            "image": "/organized-content/jbk/images/direction/Banderas-Kouam-CEO.jpg",
+            "imageAlt": "Banderas Kouam"
+          },
+          {
+            "name": "FADDEL EMVOUTOU",
+            "role": "Administrative Director",
+            "bio": "FADDEL EMVOUTOU is Executive Director, playing a key role in overseeing the company's administrative operations in collaboration with the CEO. His expertise and dedication reinforce JBK's commitment to excellence and professional efficiency.",
+            "image": "/organized-content/jbk/images/direction/acteur-02-Faddel-Emvoutou.jpg",
+            "imageAlt": "Faddel Emvouto"
+          },
+          {
+            "name": "FRANK VERDUGO",
+            "role": "Administrative Officer",
+            "bio": "Frank Verdigo holds the position of Administrative Manager, where he ensures the proper functioning and efficiency of administrative tasks, he also participates in the management of organizational processes.",
+            "image": "/organized-content/jbk/images/direction/acteur-03-Franck-Verdugo.png",
+            "imageAlt": "Frank Verdugo"
+          },
+          {
+            "name": "N-KY",
+            "role": "Executive Assistant",
+            "bio": "N-KY is Executive Assistant and actively contributes to the coordination of administrative and organizational activities, supporting the effectiveness of our team.",
+            "image": "/organized-content/jbk/images/direction/acteur-04-N-KY.jpg",
+            "imageAlt": "N-KY"
+          },
+          {
+            "name": "MD",
+            "role": "Executive Assistant",
+            "bio": "M.D holds the position of Executive Assistant at JBK, where she applies her skills to effectively support the day-to-day operations of the leadership team.",
+            "image": "/organized-content/jbk/images/direction/MD.jpg",
+            "imageAlt": "MD"
+          },
+          {
+            "name": "GLORIANA BINTU",
+            "role": "Director",
+            "bio": "GLORIANA BINTU holds the position of Executive Assistant, where she plays a key role in effectively supporting the company's administrative and strategic operations. His dedication ensures optimal coordination within the team.",
+            "image": "/organized-content/jbk/images/direction/GLORIANA-BINTU.jpg",
+            "imageAlt": "Gloriana Bintu"
+          },
+          {
+            "name": "SETCHUIS",
+            "role": "Executive Assistant",
+            "bio": "SETCHUIS is Executive Assistant, providing invaluable expertise and critical administrative support to the JBK team's smooth functioning.",
+            "image": "/organized-content/jbk/images/direction/SETCHUIS.jpg",
+            "imageAlt": "Setchuis"
+          }
+        ]
+      },
+      "technicalTeamSection": {
+        "heading": "TECHNICAL EQUIPMENT & ACTORS AGENCY",
+        "members": [
+          {
+            "name": "BANDERAS KOUAM",
+            "role": "Director / Producer / Actor",
+            "bio": "Banderas Kouam is an accomplished Director, Producer and Actor, bringing exceptional expertise and passion to each film project in which he participates. Size: 1.78 m Weight: 79 Kg Tein: Black.",
+            "image": "/organized-content/jbk/images/acteurs/acteur-01-Banderas-Kouam.jpg",
+            "imageAlt": "Banderas Kouam actor"
+          },
+          {
+            "name": "FADDEL EMVOUTOU",
+            "role": "Assistant Director / Photo Director / Choreographer / Actor",
+            "bio": "Faddel Emvoutu is a central member of our team as Director Assistant, Director of Photography, Choreographer and Actor. He brings his artistic and technical expertise to enrich our productions, guaranteeing exceptional quality and a coherent creative vision.",
+            "image": "/organized-content/jbk/images/acteurs/acteur-02-Faddel-Emvoutou.jpg",
+            "imageAlt": "Faddel Emvoutu actor"
+          },
+          {
+            "name": "FRANK VERDUGO",
+            "role": "Production Assistant / Photo Director / Actor",
+            "bio": "FRANK VERDUGO is a competent Production Assistant, Innovative Photo Director and Passionate Actor. His contribution is essential to the success of our productions, where he combines management expertise with a unique artistic sense.",
+            "image": "/organized-content/jbk/images/acteurs/acteur-03-Franck-Verdugo.png",
+            "imageAlt": "Frank Verdugo actor"
+          },
+          {
+            "name": "N-KY",
+            "role": "Chief Builder / Actor",
+            "bio": "N-KY is a valuable member of our team, assuming the role of Chief Monteur and Actor. With his expertise in editing and his ability to give life to characters as actors, he makes a significant contribution to the success of our productions.",
+            "image": "/organized-content/jbk/images/acteurs/acteur-04-N-KY.jpg",
+            "imageAlt": "N-KY actor"
+          },
+          {
+            "name": "MD",
+            "role": "Make-up artist / Actress",
+            "bio": "M.D plays a versatile role in our team, combining his professional makeup skills with his talent for artistic interpretation, perfectly embodying the qualities necessary for the position of Makeupmaker and Actress.",
+            "image": "/organized-content/jbk/images/acteurs/acteur-06-MD.jpg",
+            "imageAlt": "M.D. actress"
+          },
+          {
+            "name": "GLORIANA BINTU",
+            "role": "Script / Actress",
+            "image": "/organized-content/jbk/images/acteurs/acteur-05-Gloriana-Bintu.jpg",
+            "imageAlt": "Gloriana Bintu actress"
+          },
+          {
+            "name": "SETCHUIS",
+            "role": "Production Assistant / Actress",
+            "image": "/organized-content/jbk/images/acteurs/acteur-07-SETCHUIS.jpg",
+            "imageAlt": "Setchuis actress"
+          },
+          {
+            "name": "JAMAL WAME",
+            "role": "Actor",
+            "image": "/organized-content/jbk/images/acteurs/acteur-08-Jamal-WAME.jpg",
+            "imageAlt": "Jamal Wame actor"
+          },
+          {
+            "name": "DAVE",
+            "role": "Actor",
+            "image": "/organized-content/jbk/images/acteurs/acteur-09-DAVE.jpg",
+            "imageAlt": "Dave actor"
+          },
+          {
+            "name": "KIRA",
+            "role": "Actress",
+            "image": "/organized-content/jbk/images/acteurs/acteur-10-KIRA.jpg",
+            "imageAlt": "Kira actress"
+          },
+          {
+            "name": "VIVIANE",
+            "role": "Actress",
+            "image": "/organized-content/jbk/images/acteurs/acteur-11-VIVIANE.jpg",
+            "imageAlt": "Viviane actress"
+          },
+          {
+            "name": "DONALD NDADEM",
+            "role": "Actor",
+            "image": "/organized-content/jbk/images/acteurs/acteur-12-DONALD-NDADEM.jpg",
+            "imageAlt": "Donald Ndadem actor"
+          },
+          {
+            "name": "MERVYBEL",
+            "role": "Actress",
+            "image": "/organized-content/jbk/images/acteurs/acteur-13-MERVYBEL.jpg",
+            "imageAlt": "Mervybel actress"
+          },
+          {
+            "name": "MC GARRETT",
+            "role": "Actor",
+            "image": "/organized-content/jbk/images/acteurs/MC-GARRETT.jpg",
+            "imageAlt": "MC Garrett actor"
+          },
+          {
+            "name": "ENXA LORES",
+            "role": "Actress",
+            "image": "/organized-content/jbk/images/acteurs/ENXA-LORES.jpg",
+            "imageAlt": "Enxa Lores actress"
+          },
+          {
+            "name": "OKAH ERIC",
+            "role": "Actor",
+            "image": "/organized-content/jbk/images/acteurs/ERIC-OKAH.jpg",
+            "imageAlt": "Eric Okah actor"
+          },
+          {
+            "name": "STEVE AYINA",
+            "role": "Actor",
+            "image": "/organized-content/jbk/images/acteurs/STEVE-AYINA.jpg",
+            "imageAlt": "Steve Ayina actor"
+          },
+          {
+            "name": "PATRICK",
+            "role": "Actor",
+            "image": "/organized-content/jbk/images/acteurs/PATRICK.jpg",
+            "imageAlt": "Patrick actor"
+          },
+          {
+            "name": "ANGE KESSENG",
+            "role": "Actress",
+            "image": "/organized-content/jbk/images/acteurs/ANGE-KESSSENG.jpg",
+            "imageAlt": "Angel Kesseng actress"
+          },
+          {
+            "name": "SMALL MALIN",
+            "role": "Actor",
+            "image": "/organized-content/jbk/images/acteurs/PETIT-MALIN.jpg",
+            "imageAlt": "Little evil actor"
+          },
+          {
+            "name": "MOPAO",
+            "role": "Actor",
+            "image": "/organized-content/jbk/images/acteurs/MOPAO.jpg",
+            "imageAlt": "Mopao actor"
+          },
+          {
+            "name": "MYRIAM",
+            "role": "Actress",
+            "image": "/organized-content/jbk/images/acteurs/FFF.jpg",
+            "imageAlt": "FFF actress"
+          },
+          {
+            "name": "SURVEY OBAMA",
+            "role": "Actor",
+            "image": "/organized-content/jbk/images/acteurs/AURELIEN-OBAMA.jpg",
+            "imageAlt": "Aurelink Obama actor"
+          },
+          {
+            "name": "GODLOVE",
+            "role": "Actor",
+            "image": "/organized-content/jbk/images/acteurs/DDD.jpg",
+            "imageAlt": "DDD actor"
+          },
+          {
+            "name": "LIGHT GRACE",
+            "role": "Make-up/Actress",
+            "image": "/organized-content/jbk/images/acteurs/GRACE-LUMIERE.jpg",
+            "imageAlt": "Grace Lumiere actress"
+          }
+        ]
+      },
+      "productions": {
+        "heading": "Our Productions",
+        "subtitle": "Short & Long Films",
+        "badge": "JBK Production"
+      },
+      "conversion": {
+        "kicker": "Start a project",
+        "headingLine1": "Give life",
+        "headingHighlight": "your ideas",
+        "description": "Whether it's a film, an advertising campaign or a major event, JBK Films transforms your vision into a striking visual reality.",
+        "primaryButtonLabel": "LEAVE MY PROJECT",
+        "secondaryButtonLabel": "DEVIS FREE",
+        "primaryWhatsappLink": "https://wa.me/237678032746",
+        "stats": [
+          {
+            "label": "Quality 4K",
+            "desc": "Ultra HD Production"
+          },
+          {
+            "label": "Expertise",
+            "desc": "10+ years of experience"
+          },
+          {
+            "label": "Creativity",
+            "desc": "Unique concepts"
+          },
+          {
+            "label": "Speed",
+            "desc": "Optimized delivery"
+          }
+        ]
+      }
+    },
+    "jbkEvenements": {
+      "title": "Event Coverage",
+      "introImage": {
+        "src": "/organized-content/evenements.webp",
+        "alt": "Event Coverage by JBK Films"
+      },
+      "introText": "JBK films offers you a coverage service of your events throughout Cameroon and internationally.\n\nFollow the links for each poster to discover examples of event coverage made by our team.",
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=-GRA0s0vHx4",
+          "embedUrl": "https://www.youtube.com/embed/-GRA0s0vHx4"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=CtQCHIhLbbs",
+          "embedUrl": "https://www.youtube.com/embed/CtQCHIhLbbs"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=RglglBN-wRA",
+          "embedUrl": "https://www.youtube.com/embed/RglglBN-wRA"
+        }
+      ],
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for the Event Service."
+      }
+    },
+    "jbkDoublage": {
+      "title": "Choose JBK Films for the dubbing and subtitling of your films!",
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=lRx0I5nZHiQ&t=26s",
+          "embedUrl": "https://www.youtube.com/embed/lRx0I5nZHiQ?start=26"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=kOFOAR8_vBE",
+          "embedUrl": "https://www.youtube.com/embed/kOFOAR8_vBE"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=wqFSAS23j30",
+          "embedUrl": "https://www.youtube.com/embed/wqFSAS23j30"
+        }
+      ],
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for the Dubbing & Subtitle service."
+      }
+    },
+    "jbkVenteMateriel": {
+      "title": "Sale of audio-visual equipment",
+      "introParagraphs": [
+        "JBK FILMS offers you a wide range of original audio-visual material, in new and second hand according to your preference.",
+        "This is an example of the second hand devices we offer. However, you can order your equipment from Spain and receive it in 20 to 30 days."
+      ],
+      "images": [
+        {
+          "src": "/organized-content/materiel-04.webp",
+          "alt": "Audiovisual equipment JBK 1"
+        },
+        {
+          "src": "/organized-content/materiel-01.webp",
+          "alt": "Audio-visual equipment JBK 2"
+        },
+        {
+          "src": "/organized-content/materiel-02.webp",
+          "alt": "Audiovisual equipment JBK 3"
+        },
+        {
+          "src": "/organized-content/materiel-03.webp",
+          "alt": "Audiovisual equipment JBK 4"
+        }
+      ],
+      "droneSection": {
+        "text": "In terms of drones, we offer you preferences the Mavic Pro, Mavic pro 2 and Mavic pro 3.",
+        "videos": [
+          {
+            "url": "https://www.youtube.com/watch?v=7SembcsxrQw&t=22s",
+            "embedUrl": "https://www.youtube.com/embed/7SembcsxrQw?start=22"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=r5kukRMmZNI",
+            "embedUrl": "https://www.youtube.com/embed/r5kukRMmZNI"
+          }
+        ]
+      },
+      "cameraSection": {
+        "text": "Speaking of cameras and cameras, we offer Canon models in the foreground.",
+        "videos": [
+          {
+            "url": "https://www.youtube.com/watch?v=_i7O5lppFPw",
+            "embedUrl": "https://www.youtube.com/embed/_i7O5lppFPw"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=CHi1fkbt9aw",
+            "embedUrl": "https://www.youtube.com/embed/CHi1fkbt9aw"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=4_5YIbseUAI",
+            "embedUrl": "https://www.youtube.com/embed/4_5YIbseUAI"
+          }
+        ]
+      },
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for the Material Sales Department."
+      }
+    },
+    "jbkSiteWeb": {
+      "title": "Web Creation",
+      "sections": [
+        {
+          "type": "text",
+          "text": "With us, create your website tailored to your needs and enjoy exceptional prices that include site design, domain name, one (1) year hosting and several other benefits! We offer you an infinite number of models to blow up your business. Among the most popular sites in our country are:\n\nVITRINE SITES: This type of site will allow you to present your business, your services, your products etc. It is also recommended for a high visibility of your business on small, medium or large scale such as restaurants, hairdressing salon...\n\nIt works as an online business card and can take different forms, such as a portfolio for an artist."
+        },
+        {
+          "type": "image",
+          "src": "/organized-content/site-web-01.webp",
+          "alt": "JBK window website"
+        },
+        {
+          "type": "text",
+          "text": "E-COMMERCE SITES: Your online sales site\n\nWith this site model, you can sell your products directly online."
+        },
+        {
+          "type": "image",
+          "src": "/organized-content/site-web-02.webp",
+          "alt": "JBK e-commerce website"
+        },
+        {
+          "type": "text",
+          "text": "E-LEARNING SITES: for distance learning\n\nWork remotely with your learners and receive payments directly from your services, regardless of their country of residence."
+        },
+        {
+          "type": "image",
+          "src": "/organized-content/site-web-03.webp",
+          "alt": "JBK e-learning site"
+        },
+        {
+          "type": "text",
+          "text": "PORTFOLIOS: This presentation tool template will allow you to compile and showcase your skills, achievements and experiences as an artist, public person, scientist, health professional, entrepreneur..."
+        },
+        {
+          "type": "image",
+          "src": "/organized-content/site-web-04.webp",
+          "alt": "JBK portfolio site"
+        }
+      ],
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for the Web Creation service."
+      }
+    },
+    "jbkGraphisme": {
+      "title": "Graphics & Printing",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Create your designs with JBK and impimate on all media at home!"
+        },
+        {
+          "type": "image",
+          "src": "/organized-content/graphisme-01.webp",
+          "alt": "Graphics and JBK printing"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=xwV1kb4ZuTc",
+          "embedUrl": "https://www.youtube.com/embed/xwV1kb4ZuTc",
+          "title": "Example JBK graphics"
+        },
+        {
+          "type": "text",
+          "text": "Expand your photos to JBK by choosing your supports and enlargement sizes:\n\nSTANDARD CARDING\n\nVITRATED CARDAGE\n\nLACKAGE\n\nDIBON\n\nPLEXIGLASS\n\nEtc.\n\n\nA NEW COLORATION FOR YOUR SALON"
+        },
+        {
+          "type": "imageGrid",
+          "images": [
+            {
+              "src": "/organized-content/graphisme-04.webp",
+              "alt": "Larger picture JBK 1"
+            },
+            {
+              "src": "/organized-content/graphisme-02.webp",
+              "alt": "Larger picture JBK 2"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for Graphic Design & Printing."
+      }
+    },
+    "jbkVoixOff": {
+      "title": "Vote Off",
+      "sections": [
+        {
+          "type": "image",
+          "src": "/organized-content/voix-off-01.webp",
+          "alt": "Voice Off JBK Films"
+        },
+        {
+          "type": "text",
+          "text": "Some examples of Voice Off JBK Films:"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=xwV1kb4ZuTc",
+          "embedUrl": "https://www.youtube.com/embed/xwV1kb4ZuTc",
+          "title": "Example voice off JBK"
+        }
+      ],
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for the Voice Off service."
+      }
+    },
+    "jbkDrone": {
+      "title": "Drone shots",
+      "sections": [
+        {
+          "type": "text",
+          "text": "JBK FILMS offers exceptional drone plans for your audiovisual projects (cinema, events, tourism...)\n\nWe also offer training courses in drone piloting (Mavic, Phantom...)"
+        },
+        {
+          "type": "text",
+          "text": "A few video presentations of our drone services, as well as Mavic models available permanently at JBK FILMS:"
+        },
+        {
+          "type": "video",
+          "url": "https://youtu.be/J5baSFg1cLk",
+          "embedUrl": "https://www.youtube.com/embed/J5baSFg1cLk",
+          "title": "Presentation drone JBK 1"
+        },
+        {
+          "type": "video",
+          "url": "https://youtu.be/RglglBN-wRA",
+          "embedUrl": "https://www.youtube.com/embed/RglglBN-wRA",
+          "title": "Presentation drone JBK 2"
+        }
+      ],
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I'd like to make an appointment for the Drone shooting service."
+      }
+    },
+    "jbkPublicite": {
+      "title": "TV & Web advertising",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Whatever the services of your company, we set up a quality audio-visual scenario and production to reach as many people as possible who will become potential customers! The production will be based on a professional design, with talented actors (JBK Films) and state-of-the-art audio-visual equipment."
+        },
+        {
+          "type": "imageGrid",
+          "images": [
+            {
+              "src": "/organized-content/conception-05.webp",
+              "alt": "Advertising Design JBK 1"
+            },
+            {
+              "src": "/organized-content/conception-01.webp",
+              "alt": "Advertising design JBK 2"
+            },
+            {
+              "src": "/organized-content/conception-02.webp",
+              "alt": "Advertising Design JBK 3"
+            },
+            {
+              "src": "/organized-content/conception-03.webp",
+              "alt": "Advertising Design JBK 4"
+            },
+            {
+              "src": "/organized-content/conception-04.webp",
+              "alt": "Advertising design JBK 5"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for the TV & Web advertising service."
+      }
+    },
+    "jbkCommunication": {
+      "title": "Digital Communication",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Touch a large number of clients through social networks. See our French and English grid for more details."
+        },
+        {
+          "type": "imageGrid",
+          "images": [
+            {
+              "src": "/organized-content/communication-01.webp",
+              "alt": "Digital communication JBK 1"
+            },
+            {
+              "src": "/organized-content/communication-02.webp",
+              "alt": "Digital communication JBK 2"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for the Digital Communication service."
+      }
+    },
+    "jbkFormation": {
+      "title": "Training",
+      "sections": [
+        {
+          "type": "text",
+          "text": "JBK films offers an extensive list of audio-visual training according to your needs:\n\nPhotograph\n\nDrone Piloting\n\nEdit Photos/Videos\n\nOutput/Production\n\nMake up\n\nActorate\n\nEtc."
+        },
+        {
+          "type": "image",
+          "src": "/organized-content/formation-01.webp",
+          "alt": "Vocational training JBK Films"
+        }
+      ],
+      "cta": {
+        "buttonLabel": "TAKE CARE",
+        "whatsappMessage": "Hello, I wish to make an appointment for the Training Pro service."
+      }
+    },
+    "about": {
+      "hero": {
+        "image": "/main/hero.jpg",
+        "imageAlt": "Hero About",
+        "badge": "Our History • Our Values",
+        "titleLine1": "Two poles, one",
+        "titleHighlight": "common vision",
+        "description": "Compañeros-JBK Empire brings together educational accompaniment and travel with audiovisual production, creative services and events."
+      },
+      "poles": {
+        "companerosTitle": "Compañeros",
+        "companerosDescription": "Pôle dedicated to training, languages, competitions and international mobility projects.",
+        "jbkTitle": "JBK Films",
+        "jbkDescription": "A centre dedicated to audiovisual creation, digital communication and creative services."
+      },
+      "presentationParagraphs": [
+        "Welcome to Compañeros-Jbk Empire!",
+        "Our company is a merger of Compañeros (the main activities of which are travel assistance abroad, language courses and preparation for competitions) and JBK (which mainly offers audiovisual productions and E-commerce).",
+        "These two complementary entities aim to meet your needs through its immense staff that will always meet your expectations.",
+        "The Empire Compañeros-Jbk whose P.D.G. is the Pedagogue, Director, Producer and Actor Banderas Kouam, offers a full range of services, including the major points mentioned in the Site Map. These points are detailed in the respective compartments: Compañeros & Services and JBK & Services which appear on the main menu of this website.",
+        "Compañeros-Jbk Empire is characterized by a commitment to innovation and customer satisfaction, our team strives to transform each service into an extraordinary experience, combining comfort and exploration."
+      ],
+      "history": {
+        "image": "/main/image.jpg",
+        "imageAlt": "History Compañeros-JBK Empire",
+        "headingLine1": "A group built",
+        "headingHighlight": "for you",
+        "description": "Weared by Banderas Kouam, teacher and director, the ensemble was born from a vision linking human formation and artistic creation."
+      },
+      "ceo": {
+        "image": "/organized-content/jbk/images/Banderas-Kouam-CEO.jpg",
+        "imageAlt": "Banderas Kouam",
+        "nameLine1": "Banderas",
+        "nameLine2": "Kouam",
+        "badge": "CEO Compañeros-JBK Empire",
+        "description": "Director, producer and passionate teacher. Banderas Kouam breathes creative energy and educational rigor to every pole of the group, with the mission of excellence and social impact in Cameroon.",
+        "visionButtonLabel": "DISCOVER VISION",
+        "visionWhatsappMessage": "Hello, I wish to exchange with the Banderas Kouam team."
+      },
+      "finalCta": {
+        "buttonLabel": "Discuss your vision"
+      }
+    },
+    "contact": {
+      "hero": {
+        "image": "/main/hero.jpg",
+        "imageAlt": "Hero contact",
+        "badge": "Compañeros-JBK Empire",
+        "titleLine1": "Let's talk about",
+        "titleHighlight": "your project",
+        "description": "Travel, training, translation, audiovisual production, event or partnership: the Compañeros-JBK Empire team is at your service."
+      },
+      "coordinates": {
+        "title": "Contact details",
+        "items": [
+          {
+            "label": "Phone / WhatsApp",
+            "value": "+237 678 032 746 / 698 058 931 / 698 329 535",
+            "icon": "Phone"
+          },
+          {
+            "label": "Email",
+            "value": "jbkfilms2014@gmail.com",
+            "icon": "Mail"
+          },
+          {
+            "label": "Address",
+            "value": "Carrefour Cradat - Street paved 3744, opposite the car school Kassap",
+            "icon": "MapPin"
+          },
+          {
+            "label": "Hours",
+            "value": "Monday to Friday - 8:00 a.m. to 7:00 p.m",
+            "icon": "Clock"
+          }
+        ],
+        "whatsappButtonLabel": "WHATSAPP",
+        "emailButtonLabel": "SEND AN EMAIL",
+        "whatsappLink": "https://wa.me/237678032746",
+        "emailLink": "mailto:jbkfilms2014@gmail.com"
+      },
+      "form": {
+        "title": "Direct Message",
+        "labels": {
+          "fullName": "Full name",
+          "phone": "Phone",
+          "email": "Email",
+          "service": "Service requested",
+          "message": "Message"
+        },
+        "placeholders": {
+          "fullName": "Your name...",
+          "phone": "Your number...",
+          "email": "Your email...",
+          "message": "Details of your project..."
+        },
+        "serviceOptions": [
+          "Compañeros - Travel",
+          "Compañeros - Language / Competition",
+          "JBK - Audiovisual Production",
+          "JBK - Event",
+          "Partnership / Other"
+        ],
+        "submitLabel": "ENVOYER"
+      }
+    },
+    "partenaires": {
+      "badge": "Trust network",
+      "title": "Our partners"
+    }
+  }
+}

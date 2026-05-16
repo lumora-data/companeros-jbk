@@ -2,7 +2,12 @@
 
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
-import { DEFAULT_SITE_LANGUAGE, SITE_LANGUAGE_STORAGE_KEY, type SiteLanguage } from "@/src/lib/i18n";
+import {
+  DEFAULT_SITE_LANGUAGE,
+  SITE_LANGUAGE_STORAGE_KEY,
+  setCurrentSiteLanguage,
+  type SiteLanguage,
+} from "@/src/lib/i18n";
 
 type LanguageContextValue = {
   language: SiteLanguage;
@@ -19,13 +24,16 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     if (stored === "fr" || stored === "en" || stored === "es") {
       setLanguageState(stored);
       document.documentElement.lang = stored;
+      setCurrentSiteLanguage(stored);
       return;
     }
     document.documentElement.lang = DEFAULT_SITE_LANGUAGE;
+    setCurrentSiteLanguage(DEFAULT_SITE_LANGUAGE);
   }, []);
 
   function setLanguage(next: SiteLanguage) {
     setLanguageState(next);
+    setCurrentSiteLanguage(next);
     if (typeof window !== "undefined") {
       window.localStorage.setItem(SITE_LANGUAGE_STORAGE_KEY, next);
       document.documentElement.lang = next;

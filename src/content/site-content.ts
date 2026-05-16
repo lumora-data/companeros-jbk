@@ -1,4 +1,7 @@
-import siteContent from "./site-content.json";
+import siteContentFr from "./site-content.json";
+import siteContentEn from "./site-content.en.json";
+import siteContentEs from "./site-content.es.json";
+import { getCurrentSiteLanguage, type SiteLanguage } from "@/src/lib/i18n";
 
 function normalizeNWithTilde(value: unknown): unknown {
   if (typeof value === "string") {
@@ -18,4 +21,23 @@ function normalizeNWithTilde(value: unknown): unknown {
   return value;
 }
 
-export const SITE_CONTENT = normalizeNWithTilde(siteContent) as typeof siteContent;
+const CONTENT_BY_LANGUAGE = {
+  fr: normalizeNWithTilde(siteContentFr) as typeof siteContentFr,
+  en: normalizeNWithTilde(siteContentEn) as typeof siteContentFr,
+  es: normalizeNWithTilde(siteContentEs) as typeof siteContentFr,
+};
+
+export function getSiteContentForLanguage(language: SiteLanguage): typeof siteContentFr {
+  return CONTENT_BY_LANGUAGE[language] || CONTENT_BY_LANGUAGE.fr;
+}
+
+function getActiveSiteContent(): typeof siteContentFr {
+  return getSiteContentForLanguage(getCurrentSiteLanguage());
+}
+
+export const SITE_CONTENT = new Proxy(CONTENT_BY_LANGUAGE.fr, {
+  get(_target, property, receiver) {
+    const active = getActiveSiteContent();
+    return Reflect.get(active, property, receiver);
+  },
+}) as typeof siteContentFr;

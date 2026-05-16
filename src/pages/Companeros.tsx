@@ -3,11 +3,16 @@
 import { motion } from "motion/react";
 import { ArrowRight, Plane, Globe, FileText, Languages, BookOpen, Music, CheckCircle2, MessageCircle } from "lucide-react";
 import Link from "next/link";
-import { COMPANEROS_SERVICES } from "../constants";
 import { SITE_CONTENT } from "@/src/content/site-content";
 
 export default function Companeros() {
   const content = SITE_CONTENT.pages.companeros;
+  const companerosServices = SITE_CONTENT.constants.companerosServices as Array<{
+    id: string;
+    title: string;
+    description: string;
+    icon: string;
+  }>;
   const routes = SITE_CONTENT.links.routes;
   const whatsappNumber = SITE_CONTENT.common.whatsappNumber;
   const whatsappBaseUrl = SITE_CONTENT.links.whatsappBaseUrl;
@@ -123,7 +128,7 @@ export default function Companeros() {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-            {COMPANEROS_SERVICES.map((service, idx) => {
+            {companerosServices.map((service, idx) => {
               const Icon = iconMap[service.icon as keyof typeof iconMap];
               const serviceRedirectUrl = serviceRedirects?.[service.id];
               return (

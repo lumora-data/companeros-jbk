@@ -3,10 +3,8 @@
 import { motion, useMotionValue, useTransform, animate, useInView } from "motion/react";
 import { ArrowRight, Crown, Plane } from "lucide-react";
 import Link from "next/link";
-import { STATS, PARTNERS } from "../constants";
 import { useEffect, useRef } from "react";
 import { SITE_CONTENT } from "@/src/content/site-content";
-import { translateUiLabel } from "@/src/lib/i18n";
 import { useSiteLanguage } from "@/src/components/i18n/LanguageProvider";
 
 interface CounterProps {
@@ -43,28 +41,18 @@ function Counter({ value, label, language, suffix = "", prefix = "" }: CounterPr
   );
 }
 
-function translateStatLabel(label: string, language: "fr" | "en" | "es"): string {
-  const key = label.trim().toLowerCase();
-  if (key === "expertise") {
-    return language === "en" ? "Expertise" : language === "es" ? "Experiencia" : "Expertise";
-  }
-  if (key === "projets d'impact") {
-    return language === "en" ? "Impact Projects" : language === "es" ? "Proyectos de impacto" : "Projets d'impact";
-  }
-  if (key === "followers") {
-    return language === "en" ? "Followers" : language === "es" ? "Seguidores" : "Followers";
-  }
-  if (key === "engagement") {
-    return language === "en" ? "Engagement" : language === "es" ? "Compromiso" : "Engagement";
-  }
-  return label;
-}
-
 export default function Home() {
   const { language } = useSiteLanguage();
   const { home } = SITE_CONTENT.pages;
   const routes = SITE_CONTENT.links.routes;
   const logos = SITE_CONTENT.navbar.logos;
+  const stats = SITE_CONTENT.constants.stats as Array<{ label: string; value: string }>;
+  const partners = SITE_CONTENT.constants.partners as Array<{
+    id: string;
+    name: string;
+    logo: string;
+    url?: string;
+  }>;
 
   return (
     <div className="flex flex-col">
@@ -112,7 +100,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
                 className="block"
               >
-                {translateUiLabel("homeHeroTitleLine1", language)}
+                {home.hero.titleLine1}
               </motion.span>
               <motion.span 
                 initial={{ opacity: 0, y: 50 }}
@@ -120,7 +108,7 @@ export default function Home() {
                 transition={{ delay: 0.3 }}
                 className="text-gold italic block"
               >
-                {translateUiLabel("homeHeroTitleLine2", language)}
+                {home.hero.titleLine2}
               </motion.span>
             </motion.h1>
 
@@ -130,7 +118,7 @@ export default function Home() {
               transition={{ delay: 0.4, duration: 1 }}
               className="text-text-para text-lg md:text-2xl max-w-4xl mx-auto mb-12 md:mb-16 leading-relaxed font-medium px-4"
             >
-              {translateUiLabel("homeHeroDescription", language)}
+              {home.hero.description}
             </motion.p>
 
             <motion.p
@@ -139,7 +127,7 @@ export default function Home() {
               transition={{ delay: 0.45 }}
               className="mx-auto -mt-6 mb-8 max-w-xs rounded-full border border-gold/40 bg-noir-deep/65 px-4 py-2 text-center text-sm font-black uppercase tracking-wide text-gold md:hidden"
             >
-              {translateUiLabel("homeTravelWithUs", language)}
+              {home.hero.mobileTravelCta}
             </motion.p>
           </div>
         </div>
@@ -163,11 +151,9 @@ export default function Home() {
                 />
               </div>
               <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-white leading-tight">{home.cards.companeros.titleLine1} <br />{home.cards.companeros.titleLine2}</h2>
-              <p className="text-text-para text-base md:text-lg mb-8 md:mb-12 max-w-sm">
-                {translateUiLabel("homeCompanerosDescription", language)}
-              </p>
+              <p className="text-text-para text-base md:text-lg mb-8 md:mb-12 max-w-sm">{home.cards.companeros.description}</p>
               <Link href={routes.companeros} className="bg-white text-noir-deep px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black inline-flex items-center gap-4 hover:bg-white/90 transition-all uppercase text-xs md:text-sm tracking-tighter w-fit">
-                {translateUiLabel("homeCompanerosCta", language)} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                {home.cards.companeros.ctaLabel} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
             <div className="absolute top-0 right-0 p-4 md:p-8 opacity-[0.03] pointer-events-none group-hover:opacity-10 transition-opacity">
@@ -192,11 +178,9 @@ export default function Home() {
                 />
               </div>
               <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 md:mb-6 text-gold leading-tight">{home.cards.jbk.titleLine1} <br />{home.cards.jbk.titleLine2}</h2>
-              <p className="text-text-para text-base md:text-lg mb-8 md:mb-12 max-w-sm">
-                {translateUiLabel("homeJbkDescription", language)}
-              </p>
+              <p className="text-text-para text-base md:text-lg mb-8 md:mb-12 max-w-sm">{home.cards.jbk.description}</p>
               <Link href={routes.jbk} className="gold-gradient text-noir-deep px-8 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black inline-flex items-center gap-4 hover:brightness-110 transition-all gold-glow shadow-2xl uppercase text-xs md:text-sm tracking-tighter w-fit text-center">
-                {translateUiLabel("homeJbkCta", language)} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                {home.cards.jbk.ctaLabel} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
             <div className="absolute top-0 right-0 p-4 md:p-8 opacity-[0.07] pointer-events-none group-hover:opacity-15 transition-opacity text-gold">
@@ -210,8 +194,8 @@ export default function Home() {
       <section className="py-24 bg-noir-deep border-y border-white/5 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-            {STATS.map((stat, idx) => {
-              if (stat.label === "Expertise") {
+            {stats.map((stat, idx) => {
+              if (idx === 0) {
                 return (
                   <motion.div
                     key={idx}
@@ -221,11 +205,9 @@ export default function Home() {
                     transition={{ delay: idx * 0.1 }}
                   >
                     <div className="text-3xl md:text-5xl font-display font-black text-gold mb-2 uppercase">
-                      {translateUiLabel("homeSince", language)} {stat.value}
+                      {stat.label} {stat.value}
                     </div>
-                    <div className="text-text-soft text-[10px] uppercase tracking-[0.3em] font-black">
-                      {translateStatLabel(stat.label, language)}
-                    </div>
+                    <div className="text-text-soft text-[10px] uppercase tracking-[0.3em] font-black">{stat.label}</div>
                   </motion.div>
                 );
               }
@@ -233,7 +215,7 @@ export default function Home() {
                 <Counter 
                   key={idx} 
                   value={parseInt(stat.value)} 
-                  label={translateStatLabel(stat.label, language)}
+                  label={stat.label}
                   language={language}
                   suffix={stat.label === "Engagement" ? "%" : "+"} 
                 />
@@ -258,7 +240,7 @@ export default function Home() {
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             className="flex items-center space-x-20 whitespace-nowrap px-10 md:px-20 min-w-max"
           >
-            {[...PARTNERS, ...PARTNERS, ...PARTNERS].map((partner, idx) => (
+            {[...partners, ...partners, ...partners].map((partner, idx) => (
               partner.url ? (
                 <a
                   key={`${partner.id}-${idx}`}
@@ -266,7 +248,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cursor-pointer"
-                  aria-label={`Visiter ${partner.name}`}
+                  aria-label={partner.name}
                 >
                   <img
                     src={partner.logo}
@@ -303,7 +285,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-4xl md:text-7xl font-display font-black uppercase tracking-tighter mb-10 text-noir-deep leading-tight"
             >
-              {translateUiLabel("homeCtaHeading", language)}
+              {home.cta.heading}
             </motion.h2>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -313,7 +295,7 @@ export default function Home() {
               className="flex flex-col sm:flex-row items-center justify-center gap-6"
             >
                <Link href={routes.contact} className="bg-noir-deep text-text-main px-12 py-6 rounded-2xl font-black text-xl hover:scale-105 hover:bg-noir-deep/90 transition-all shadow-2xl">
-                  {translateUiLabel("homeContactCta", language)}
+                  {home.cta.buttonLabel}
                </Link>
             </motion.div>
          </div>

@@ -3,7 +3,6 @@
 import { motion } from "motion/react";
 import { ArrowRight, Video, Camera, Smartphone, MessageCircle, Palette, Layout, Type, Mic, Wind, Tv, GraduationCap, Play, Globe, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
-import { JBK_SERVICES, PRODUCTIONS } from "../constants";
 import { SITE_CONTENT } from "@/src/content/site-content";
 
 type TeamMember = {
@@ -21,6 +20,17 @@ type TeamSection = {
 
 export default function Jbk() {
   const content = SITE_CONTENT.pages.jbk;
+  const jbkServices = SITE_CONTENT.constants.jbkServices as Array<{
+    id: string;
+    title: string;
+    description: string;
+    icon: string;
+  }>;
+  const productions = SITE_CONTENT.constants.productions as Array<{
+    id: string;
+    title: string;
+    image: string;
+  }>;
   const routes = SITE_CONTENT.links.routes;
   const whatsappNumber = SITE_CONTENT.common.whatsappNumber;
   const whatsappBaseUrl = SITE_CONTENT.links.whatsappBaseUrl;
@@ -143,7 +153,7 @@ export default function Jbk() {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-            {JBK_SERVICES.map((service, idx) => {
+            {jbkServices.map((service, idx) => {
               const Icon = iconMap[service.icon as keyof typeof iconMap];
               const serviceRedirectUrl = serviceRedirects?.[service.id];
               return (
@@ -279,7 +289,7 @@ export default function Jbk() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-8">
-            {PRODUCTIONS.map((prod, idx) => (
+            {productions.map((prod, idx) => (
               <motion.div
                 key={prod.id}
                 initial={{ opacity: 0, y: 20 }}

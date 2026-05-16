@@ -6,21 +6,16 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { SITE_CONTENT } from "@/src/content/site-content";
-import { translateRouteName, translateUiLabel } from "@/src/lib/i18n";
-import { useSiteLanguage } from "@/src/components/i18n/LanguageProvider";
 import LanguageSwitcher from "@/src/components/i18n/LanguageSwitcher";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const { language } = useSiteLanguage();
   const { links, desktopWhatsappLabel, mobileWhatsappLabel, logos } =
     SITE_CONTENT.navbar;
   const routes = SITE_CONTENT.links.routes;
   const whatsappUrl = `${SITE_CONTENT.links.whatsappBaseUrl}/${SITE_CONTENT.common.whatsappNumber}`;
-  const desktopWhatsappText = translateUiLabel("desktopWhatsapp", language) || desktopWhatsappLabel;
-  const mobileWhatsappText = translateUiLabel("mobileWhatsapp", language) || mobileWhatsappLabel;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,7 +85,7 @@ export default function Navbar() {
                   pathname === link.path ? "text-gold" : "text-text-para"
                 }`}
               >
-                {translateRouteName(link.path, link.name, language)}
+                {link.name}
                 <span className={`absolute -bottom-1 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full ${pathname === link.path ? 'w-full' : ''}`}></span>
               </Link>
             </motion.div>
@@ -103,7 +98,7 @@ export default function Navbar() {
             href={whatsappUrl}
             className="gold-gradient text-noir-deep px-6 py-2 rounded-full text-xs font-black transition-all transform hover:scale-105 active:scale-95 gold-glow uppercase tracking-tighter"
           >
-            {desktopWhatsappText}
+            {desktopWhatsappLabel}
           </motion.a>
         </div>
 
@@ -145,7 +140,7 @@ export default function Navbar() {
                     pathname === link.path ? "text-gold" : "text-text-main"
                   }`}
                 >
-                  {translateRouteName(link.path, link.name, language)}
+                  {link.name}
                 </Link>
               ))}
               <a
@@ -153,7 +148,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="gold-gradient text-noir-deep text-center py-5 rounded-2xl font-black text-xl gold-glow shadow-2xl"
               >
-                {mobileWhatsappText}
+                {mobileWhatsappLabel}
               </a>
             </div>
           </motion.div>
