@@ -1,18 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import {
-  CheckCircle2,
-  ChevronDown,
-  ChevronUp,
-  CircleDot,
-  Loader2,
-  RefreshCw,
-  Save,
-  Search,
-  Sparkles,
-} from "lucide-react";
-import JsonValueEditor from "@/src/components/admin/JsonValueEditor";
+import { useEffect, useState } from "react";
+import { CheckCircle2, Loader2 } from "lucide-react";
+import VisualEditor from "@/src/components/admin/editor/VisualEditor";
 
 type SectionDefinition = {
   key: string;
@@ -46,8 +36,6 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
   const [sections, setSections] = useState<Record<string, unknown>>({});
   const [initialSections, setInitialSections] = useState<Record<string, unknown>>({});
   const [lastCommitUrl, setLastCommitUrl] = useState<string | null>(null);
-  const [query, setQuery] = useState("");
-  const [openSections, setOpenSections] = useState<string[]>([]);
 
   async function fetchContent() {
     setLoading(true);
@@ -65,7 +53,6 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
       setDefinitions(payload.definitions);
       setSections(cloned);
       setInitialSections(cloned);
-      setOpenSections(payload.definitions.slice(0, 2).map((definition) => definition.key));
     } catch (err) {
       setError(err instanceof Error ? err.message : "Impossible de charger ce contenu.");
     } finally {
@@ -77,50 +64,6 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
     void fetchContent();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [type]);
-
-  const hasChanges = useMemo(
-    () => JSON.stringify(sections) !== JSON.stringify(initialSections),
-    [sections, initialSections],
-  );
-  const filteredDefinitions = useMemo(() => {
-    const normalized = query.trim().toLowerCase();
-    if (!normalized) {
-      return definitions;
-    }
-
-    return definitions.filter((definition) =>
-      `${definition.label} ${definition.description || ""}`.toLowerCase().includes(normalized),
-    );
-  }, [definitions, query]);
-  const changedKeys = useMemo(
-    () =>
-      definitions
-        .filter((definition) => JSON.stringify(sections[definition.key]) !== JSON.stringify(initialSections[definition.key]))
-        .map((definition) => definition.key),
-    [definitions, initialSections, sections],
-  );
-  const changedSet = useMemo(() => new Set(changedKeys), [changedKeys]);
-
-  function toggleSection(key: string) {
-    setOpenSections((previous) =>
-      previous.includes(key) ? previous.filter((item) => item !== key) : [...previous, key],
-    );
-  }
-
-  function openAllVisibleSections() {
-    setOpenSections((previous) => {
-      const merged = new Set(previous);
-      for (const definition of filteredDefinitions) {
-        merged.add(definition.key);
-      }
-      return [...merged];
-    });
-  }
-
-  function closeAllVisibleSections() {
-    const visibleKeys = new Set(filteredDefinitions.map((definition) => definition.key));
-    setOpenSections((previous) => previous.filter((key) => !visibleKeys.has(key)));
-  }
 
   async function uploadFile(file: File): Promise<string> {
     const data = new FormData();
@@ -172,73 +115,7 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
   }
 
   return (
-    <section className="rounded-2xl border border-black/10 bg-white p-4 shadow-sm md:p-6 lg:p-7">
-      <div className="mb-6 space-y-5 border-b border-black/10 pb-6">
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-[#f5f2ea] px-3 py-1 text-xs font-bold text-[#6f633d]">
-              <Sparkles className="h-3.5 w-3.5" />
-              Édition guidée
-            </div>
-            <h1 className="text-2xl font-black tracking-tight text-[#17130b] md:text-3xl">{title}</h1>
-            <p className="mt-2 max-w-2xl text-sm text-[#665e50]">
-              Ouvrez une section, modifiez les champs visibles, puis cliquez sur enregistrer pour publier.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full border border-black/10 bg-[#f5f2ea] px-3 py-1 text-xs font-semibold text-[#5c5343]">
-              {filteredDefinitions.length} section{filteredDefinitions.length > 1 ? "s" : ""}
-            </span>
-            <span
-              className={`rounded-full border px-3 py-1 text-xs font-semibold ${
-                hasChanges
-                  ? "border-gold/50 bg-gold/20 text-[#6f560f]"
-                  : "border-black/10 bg-[#f5f2ea] text-[#756b57]"
-              }`}
-            >
-              {hasChanges ? `${changedKeys.length} section(s) modifiée(s)` : "Aucune modification"}
-            </span>
-          </div>
-        </div>
-
-        <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_auto_auto_auto]">
-          <label className="flex items-center gap-2 rounded-xl border border-black/10 bg-[#f8f6ef] px-3 py-2">
-            <Search className="h-4 w-4 text-[#756b57]" />
-            <input
-              type="text"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="Rechercher une section..."
-              className="w-full bg-transparent text-sm text-[#17130b] outline-none placeholder:text-[#8a806b]"
-            />
-          </label>
-          <button
-            type="button"
-            onClick={openAllVisibleSections}
-            className="rounded-xl border border-black/10 bg-white px-3 py-2 text-xs font-bold uppercase tracking-wide text-[#17130b] transition hover:border-gold/70"
-          >
-            Tout ouvrir
-          </button>
-          <button
-            type="button"
-            onClick={closeAllVisibleSections}
-            className="rounded-xl border border-black/10 bg-white px-3 py-2 text-xs font-bold uppercase tracking-wide text-[#17130b] transition hover:border-gold/70"
-          >
-            Tout réduire
-          </button>
-          <button
-            type="button"
-            onClick={() => void fetchContent()}
-            disabled={saving}
-            className="inline-flex items-center justify-center gap-2 rounded-xl border border-black/10 bg-white px-3 py-2 text-xs font-bold uppercase tracking-wide text-[#17130b] transition hover:border-gold/70 disabled:opacity-50"
-          >
-            <RefreshCw className="h-3.5 w-3.5" />
-            Recharger
-          </button>
-        </div>
-      </div>
-
+    <>
       {error ? <p className="mb-5 rounded-lg border border-red-500/40 bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p> : null}
       {success ? (
         <div className="mb-5 rounded-lg border border-emerald-500/40 bg-emerald-50 px-3 py-2 text-sm text-emerald-800">
@@ -258,84 +135,18 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
           ) : null}
         </div>
       ) : null}
-
-      <div className="space-y-4">
-        {filteredDefinitions.map((sectionDef) => {
-          const isOpen = openSections.includes(sectionDef.key);
-          const isChanged = changedSet.has(sectionDef.key);
-          return (
-            <article key={sectionDef.key} className="rounded-2xl border border-black/10 bg-[#f8f6ef] p-3 md:p-4">
-              <button
-                type="button"
-                onClick={() => toggleSection(sectionDef.key)}
-                className="flex w-full items-start justify-between gap-3 text-left"
-                aria-expanded={isOpen}
-              >
-                <div className="min-w-0">
-                  <h2 className="flex items-center gap-2 text-sm font-black text-[#17130b]">
-                    <CircleDot className="h-4 w-4 text-gold" />
-                    {sectionDef.label}
-                  </h2>
-                  {sectionDef.description ? <p className="mt-1 text-xs text-[#756b57]">{sectionDef.description}</p> : null}
-                </div>
-                <div className="flex shrink-0 items-center gap-2">
-                  {isChanged ? (
-                    <span className="rounded-full border border-gold/50 bg-gold/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#6f560f]">
-                      Modifiée
-                    </span>
-                  ) : null}
-                  {isOpen ? <ChevronUp className="h-4 w-4 text-[#756b57]" /> : <ChevronDown className="h-4 w-4 text-[#756b57]" />}
-                </div>
-              </button>
-
-              {isOpen ? (
-                <div className="mt-4">
-                  <JsonValueEditor
-                    label={sectionDef.label}
-                    path={sectionDef.key}
-                    value={sections[sectionDef.key]}
-                    onChange={(nextValue) => setSections((previous) => ({ ...previous, [sectionDef.key]: nextValue }))}
-                    onUpload={uploadFile}
-                  />
-                </div>
-              ) : null}
-            </article>
-          );
-        })}
-        {filteredDefinitions.length === 0 ? (
-          <div className="rounded-2xl border border-black/10 bg-[#f8f6ef] p-4 text-sm text-[#756b57]">
-            Aucune section ne correspond à votre recherche.
-          </div>
-        ) : null}
-      </div>
-
-      <div className="sticky bottom-3 z-20 mt-6 rounded-2xl border border-black/10 bg-white/95 p-3 shadow-lg backdrop-blur">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs font-semibold text-[#665e50]">
-            {hasChanges ? "Des modifications sont en attente de publication." : "Tout est enregistré."}
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <button
-              type="button"
-              onClick={() => setSections(structuredClone(initialSections))}
-              disabled={!hasChanges || saving}
-              className="inline-flex items-center gap-2 rounded-xl border border-black/10 bg-white px-3 py-2 text-xs font-bold uppercase tracking-wide text-[#17130b] transition hover:border-gold/70 disabled:opacity-50"
-            >
-              <RefreshCw className="h-3.5 w-3.5" />
-              Réinitialiser
-            </button>
-            <button
-              type="button"
-              onClick={() => void saveContent()}
-              disabled={!hasChanges || saving}
-              className="inline-flex items-center gap-2 rounded-xl bg-gold px-4 py-2 text-xs font-black uppercase tracking-wide text-[#17130b] transition hover:brightness-105 disabled:opacity-70"
-            >
-              {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
-              Enregistrer
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+      <VisualEditor
+        type={type}
+        title={title}
+        sections={sections}
+        initialSections={initialSections}
+        definitions={definitions}
+        saving={saving}
+        onSectionsChange={setSections}
+        onSave={() => void saveContent()}
+        onReload={() => void fetchContent()}
+        onUpload={uploadFile}
+      />
+    </>
   );
 }
