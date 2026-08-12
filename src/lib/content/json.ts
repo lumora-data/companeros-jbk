@@ -58,7 +58,7 @@ export function normalizeEditableValue(value: unknown, path: string[] = []): Jso
   }
 
   if (typeof value === "number" || typeof value === "boolean" || value === null) {
-    return value;
+    return value as JsonPrimitive;
   }
 
   if (Array.isArray(value)) {

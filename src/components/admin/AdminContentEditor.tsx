@@ -1,7 +1,17 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { CheckCircle2, ChevronDown, ChevronUp, Loader2, RefreshCw, Save, Search } from "lucide-react";
+import {
+  CheckCircle2,
+  ChevronDown,
+  ChevronUp,
+  CircleDot,
+  Loader2,
+  RefreshCw,
+  Save,
+  Search,
+  Sparkles,
+} from "lucide-react";
 import JsonValueEditor from "@/src/components/admin/JsonValueEditor";
 
 type SectionDefinition = {
@@ -155,30 +165,36 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
 
   if (loading) {
     return (
-      <div className="flex min-h-[320px] items-center justify-center rounded-3xl border border-white/10 bg-noir-card">
+      <div className="flex min-h-[320px] items-center justify-center rounded-2xl border border-black/10 bg-white">
         <Loader2 className="h-7 w-7 animate-spin text-gold" />
       </div>
     );
   }
 
   return (
-    <section className="rounded-3xl border border-white/10 bg-noir-card p-4 md:p-6 lg:p-8">
-      <div className="mb-6 space-y-5 border-b border-white/10 pb-6">
+    <section className="rounded-2xl border border-black/10 bg-white p-4 shadow-sm md:p-6 lg:p-7">
+      <div className="mb-6 space-y-5 border-b border-black/10 pb-6">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <h1 className="text-2xl font-black uppercase tracking-tight text-white md:text-3xl">{title}</h1>
-            <p className="mt-2 text-sm text-text-para">Modifiez vos textes et images, puis publiez.</p>
+            <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-[#f5f2ea] px-3 py-1 text-xs font-bold text-[#6f633d]">
+              <Sparkles className="h-3.5 w-3.5" />
+              Édition guidée
+            </div>
+            <h1 className="text-2xl font-black tracking-tight text-[#17130b] md:text-3xl">{title}</h1>
+            <p className="mt-2 max-w-2xl text-sm text-[#665e50]">
+              Ouvrez une section, modifiez les champs visibles, puis cliquez sur enregistrer pour publier.
+            </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full border border-white/10 bg-noir-deep px-3 py-1 text-xs font-semibold text-text-soft">
+            <span className="rounded-full border border-black/10 bg-[#f5f2ea] px-3 py-1 text-xs font-semibold text-[#5c5343]">
               {filteredDefinitions.length} section{filteredDefinitions.length > 1 ? "s" : ""}
             </span>
             <span
               className={`rounded-full border px-3 py-1 text-xs font-semibold ${
                 hasChanges
-                  ? "border-gold/40 bg-gold/15 text-gold-light"
-                  : "border-white/10 bg-noir-deep text-text-soft"
+                  ? "border-gold/50 bg-gold/20 text-[#6f560f]"
+                  : "border-black/10 bg-[#f5f2ea] text-[#756b57]"
               }`}
             >
               {hasChanges ? `${changedKeys.length} section(s) modifiée(s)` : "Aucune modification"}
@@ -187,27 +203,27 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
         </div>
 
         <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_auto_auto_auto]">
-          <label className="flex items-center gap-2 rounded-xl border border-white/10 bg-noir-deep px-3 py-2">
-            <Search className="h-4 w-4 text-text-soft" />
+          <label className="flex items-center gap-2 rounded-xl border border-black/10 bg-[#f8f6ef] px-3 py-2">
+            <Search className="h-4 w-4 text-[#756b57]" />
             <input
               type="text"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Rechercher une section..."
-              className="w-full bg-transparent text-sm text-text-main outline-none placeholder:text-text-soft"
+              className="w-full bg-transparent text-sm text-[#17130b] outline-none placeholder:text-[#8a806b]"
             />
           </label>
           <button
             type="button"
             onClick={openAllVisibleSections}
-            className="rounded-xl border border-white/10 bg-noir-deep px-3 py-2 text-xs font-bold uppercase tracking-wide text-text-main transition hover:border-gold/40"
+            className="rounded-xl border border-black/10 bg-white px-3 py-2 text-xs font-bold uppercase tracking-wide text-[#17130b] transition hover:border-gold/70"
           >
             Tout ouvrir
           </button>
           <button
             type="button"
             onClick={closeAllVisibleSections}
-            className="rounded-xl border border-white/10 bg-noir-deep px-3 py-2 text-xs font-bold uppercase tracking-wide text-text-main transition hover:border-gold/40"
+            className="rounded-xl border border-black/10 bg-white px-3 py-2 text-xs font-bold uppercase tracking-wide text-[#17130b] transition hover:border-gold/70"
           >
             Tout réduire
           </button>
@@ -215,7 +231,7 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
             type="button"
             onClick={() => void fetchContent()}
             disabled={saving}
-            className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-noir-deep px-3 py-2 text-xs font-bold uppercase tracking-wide text-text-main transition hover:border-gold/40 disabled:opacity-50"
+            className="inline-flex items-center justify-center gap-2 rounded-xl border border-black/10 bg-white px-3 py-2 text-xs font-bold uppercase tracking-wide text-[#17130b] transition hover:border-gold/70 disabled:opacity-50"
           >
             <RefreshCw className="h-3.5 w-3.5" />
             Recharger
@@ -223,9 +239,9 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
         </div>
       </div>
 
-      {error ? <p className="mb-5 rounded-lg border border-red-500/40 bg-red-500/10 px-3 py-2 text-sm text-red-200">{error}</p> : null}
+      {error ? <p className="mb-5 rounded-lg border border-red-500/40 bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p> : null}
       {success ? (
-        <div className="mb-5 rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3 py-2 text-sm text-emerald-200">
+        <div className="mb-5 rounded-lg border border-emerald-500/40 bg-emerald-50 px-3 py-2 text-sm text-emerald-800">
           <div className="flex items-center gap-2">
             <CheckCircle2 className="h-4 w-4" />
             <span>{success}</span>
@@ -248,7 +264,7 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
           const isOpen = openSections.includes(sectionDef.key);
           const isChanged = changedSet.has(sectionDef.key);
           return (
-            <article key={sectionDef.key} className="rounded-2xl border border-white/10 bg-noir-deep/30 p-3 md:p-4">
+            <article key={sectionDef.key} className="rounded-2xl border border-black/10 bg-[#f8f6ef] p-3 md:p-4">
               <button
                 type="button"
                 onClick={() => toggleSection(sectionDef.key)}
@@ -256,16 +272,19 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
                 aria-expanded={isOpen}
               >
                 <div className="min-w-0">
-                  <h2 className="text-sm font-black uppercase tracking-wide text-gold">{sectionDef.label}</h2>
-                  {sectionDef.description ? <p className="mt-1 text-xs text-text-soft">{sectionDef.description}</p> : null}
+                  <h2 className="flex items-center gap-2 text-sm font-black text-[#17130b]">
+                    <CircleDot className="h-4 w-4 text-gold" />
+                    {sectionDef.label}
+                  </h2>
+                  {sectionDef.description ? <p className="mt-1 text-xs text-[#756b57]">{sectionDef.description}</p> : null}
                 </div>
                 <div className="flex shrink-0 items-center gap-2">
                   {isChanged ? (
-                    <span className="rounded-full border border-gold/50 bg-gold/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gold-light">
+                    <span className="rounded-full border border-gold/50 bg-gold/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#6f560f]">
                       Modifiée
                     </span>
                   ) : null}
-                  {isOpen ? <ChevronUp className="h-4 w-4 text-text-soft" /> : <ChevronDown className="h-4 w-4 text-text-soft" />}
+                  {isOpen ? <ChevronUp className="h-4 w-4 text-[#756b57]" /> : <ChevronDown className="h-4 w-4 text-[#756b57]" />}
                 </div>
               </button>
 
@@ -284,15 +303,15 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
           );
         })}
         {filteredDefinitions.length === 0 ? (
-          <div className="rounded-2xl border border-white/10 bg-noir-deep/30 p-4 text-sm text-text-soft">
+          <div className="rounded-2xl border border-black/10 bg-[#f8f6ef] p-4 text-sm text-[#756b57]">
             Aucune section ne correspond à votre recherche.
           </div>
         ) : null}
       </div>
 
-      <div className="sticky bottom-3 z-20 mt-6 rounded-2xl border border-white/15 bg-noir-card/95 p-3 backdrop-blur">
+      <div className="sticky bottom-3 z-20 mt-6 rounded-2xl border border-black/10 bg-white/95 p-3 shadow-lg backdrop-blur">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-text-soft">
+          <p className="text-xs font-semibold text-[#665e50]">
             {hasChanges ? "Des modifications sont en attente de publication." : "Tout est enregistré."}
           </p>
           <div className="flex flex-wrap gap-2">
@@ -300,7 +319,7 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
               type="button"
               onClick={() => setSections(structuredClone(initialSections))}
               disabled={!hasChanges || saving}
-              className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-noir-deep px-3 py-2 text-xs font-bold uppercase tracking-wide text-text-main transition hover:border-gold/40 disabled:opacity-50"
+              className="inline-flex items-center gap-2 rounded-xl border border-black/10 bg-white px-3 py-2 text-xs font-bold uppercase tracking-wide text-[#17130b] transition hover:border-gold/70 disabled:opacity-50"
             >
               <RefreshCw className="h-3.5 w-3.5" />
               Réinitialiser
@@ -309,7 +328,7 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
               type="button"
               onClick={() => void saveContent()}
               disabled={!hasChanges || saving}
-              className="inline-flex items-center gap-2 rounded-xl bg-gold px-4 py-2 text-xs font-black uppercase tracking-wide text-noir-deep transition hover:brightness-110 disabled:opacity-70"
+              className="inline-flex items-center gap-2 rounded-xl bg-gold px-4 py-2 text-xs font-black uppercase tracking-wide text-[#17130b] transition hover:brightness-105 disabled:opacity-70"
             >
               {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
               Enregistrer
