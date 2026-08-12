@@ -6,10 +6,17 @@ export const SITE_CONTENT_GITHUB_PATH = "src/content/site-content.json";
 
 export const EDITABLE_CONTENT_REGISTRY: Record<AdminContentType, EditableContentEntry> = {
   companeros: {
-    title: "Compañeros",
+    title: "Compañeros > Services",
     sections: [
-      { key: "pages.companeros", label: "Page Compañeros" },
       { key: "constants.companerosServices", label: "Cartes services Compañeros" },
+      { key: "pages.companeros", label: "Réglages de la section Services" },
+      { key: "pages.companerosOrientation", label: "Suivis de voyages" },
+      { key: "pages.companerosFlamenco", label: "Flamenco" },
+      { key: "pages.companerosConcours", label: "Préparation concours" },
+      { key: "pages.companerosLangues", label: "Cours de langues" },
+      { key: "pages.companerosLanguesEnLigne", label: "Cours de langue en ligne" },
+      { key: "pages.companerosTraduction", label: "Traduction & interprétation" },
+      { key: "pages.companerosSoutien", label: "Soutien scolaire" },
     ],
   },
   jbk: {

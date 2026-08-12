@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { CheckCircle2, Loader2 } from "lucide-react";
+import ServicesManager from "@/src/components/admin/companeros-services/ServicesManager";
 import VisualEditor from "@/src/components/admin/editor/VisualEditor";
 
 type SectionDefinition = {
@@ -117,7 +118,7 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
   return (
     <>
       {error ? <p className="mb-5 rounded-lg border border-red-500/40 bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p> : null}
-      {success ? (
+      {type !== "companeros" && success ? (
         <div className="mb-5 rounded-lg border border-emerald-500/40 bg-emerald-50 px-3 py-2 text-sm text-emerald-800">
           <div className="flex items-center gap-2">
             <CheckCircle2 className="h-4 w-4" />
@@ -135,18 +136,33 @@ export default function AdminContentEditor({ type }: AdminContentEditorProps) {
           ) : null}
         </div>
       ) : null}
-      <VisualEditor
-        type={type}
-        title={title}
-        sections={sections}
-        initialSections={initialSections}
-        definitions={definitions}
-        saving={saving}
-        onSectionsChange={setSections}
-        onSave={() => void saveContent()}
-        onReload={() => void fetchContent()}
-        onUpload={uploadFile}
-      />
+      {type === "companeros" ? (
+        <ServicesManager
+          title={title}
+          sections={sections}
+          initialSections={initialSections}
+          saving={saving}
+          success={success}
+          lastCommitUrl={lastCommitUrl}
+          onSectionsChange={setSections}
+          onSave={() => void saveContent()}
+          onReload={() => void fetchContent()}
+          onUpload={uploadFile}
+        />
+      ) : (
+        <VisualEditor
+          type={type}
+          title={title}
+          sections={sections}
+          initialSections={initialSections}
+          definitions={definitions}
+          saving={saving}
+          onSectionsChange={setSections}
+          onSave={() => void saveContent()}
+          onReload={() => void fetchContent()}
+          onUpload={uploadFile}
+        />
+      )}
     </>
   );
 }

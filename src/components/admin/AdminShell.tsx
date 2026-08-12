@@ -19,6 +19,9 @@ const NAV_ITEMS = [
 export default function AdminShell({ username, children }: AdminShellProps) {
   const pathname = usePathname();
   const [logoutBusy, setLogoutBusy] = useState(false);
+  const navItems = pathname?.startsWith("/admin/companeros")
+    ? NAV_ITEMS.filter((item) => item.href === "/admin/companeros")
+    : NAV_ITEMS;
 
   async function handleLogout() {
     setLogoutBusy(true);
@@ -51,7 +54,7 @@ export default function AdminShell({ username, children }: AdminShellProps) {
 
           <p className="mb-2 px-1 text-[11px] font-black uppercase tracking-wide text-[#8a806b]">Contenu à modifier</p>
           <nav className="grid grid-cols-2 gap-2 lg:grid-cols-1">
-            {NAV_ITEMS.map((item) => {
+            {navItems.map((item) => {
               const Icon = item.icon;
               const active = pathname === item.href || pathname?.startsWith(`${item.href}/`);
               return (
